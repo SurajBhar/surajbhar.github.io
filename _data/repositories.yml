@@ -1,11 +1,12 @@
 github_users:
-  - torvalds
+  - surajbhar
   - alshedivat
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
+  - SurajBhar/masterarbeit_sb
+  - SurajBhar/studienarbeit_repository
   - jekyll/jekyll
   - twbs/bootstrap
   - jquery/jquery

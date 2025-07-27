@@ -6,7 +6,7 @@ subtitle: I'm a Data Scientist & AI Researcher based in Frankfurt, Germany.
 
 profile:
   align: right
-  image: myphoto1.jpg
+  image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
      <p>Frankfurt, Germany</p>
