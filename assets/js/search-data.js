@@ -44,13 +44,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-teaching",
-          title: "teaching",
-          description: "Materials for courses you taught. Replace this text with your description.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/teaching/";
-          },
         },{id: "dropdown-bookshelf",
               title: "bookshelf",
               description: "",
@@ -438,11 +431,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
+            },},{id: "news-karli-final-event-led-technical-demonstrations-of-a-level-3-mercedes-benz-advanced-occupant-monitoring-system-communicating-its-machine-learning-pipeline-and-real-world-relevance-to-investors-scientists-and-public-sector-officials",
+          title: 'KARLI Final Event — Led technical demonstrations of a Level 3 Mercedes-Benz Advanced...',
           description: "",
-          section: "News",},{id: "news-july-2025-paper-accepted-for-publication-through-ieee-itsc-2025-my-paper-self-supervised-driver-distraction-detection-for-imbalanced-datasets-got-accepted-for-publication-and-presentation-as-full-paper-in-the-ieee-28th-international-conference-on-intelligent-transportation-systems-itsc-2025",
-          title: 'July 2025 — Paper Accepted for publication through IEEE ITSC 2025 My paper...',
+          section: "News",},{id: "news-publication-alert-my-paper-self-supervised-driver-distraction-detection-for-imbalanced-datasets-got-accepted-for-publication-and-presentation-as-full-paper-in-the-ieee-28th-international-conference-on-intelligent-transportation-systems-itsc-2025",
+          title: 'Publication Alert: My paper “Self-supervised Driver Distraction Detection for Imbalanced Datasets” got accepted...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
