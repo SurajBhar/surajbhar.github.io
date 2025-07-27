@@ -6,12 +6,12 @@ subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: myphoto1.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+#    <p>555 your office number</p>
+#    <p>123 your address street</p>
+    <p>Frankfurt, Germany</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,8 +27,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I design and develop machine learning models and applications that empower people to **understand the real-world impact of AI** and data-driven systems. Alongside building intelligent web tools and applications, I also craft insightful data visualizations and write interactive, engaging articles to make complex ideas more accessible and understandable.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I received my M.Sc. in Mechatronics from Universität Siegen, where I completed my master’s thesis under the guidance of [Prof. Michael Möller](https://sites.google.com/site/michaelmoellermath/) and [Dr. Jovita Lukasik](https://jovitalukasik.github.io/). My dissertation, titled **Improved Driver Distraction Detection Using Self-Supervised Learning**, was supported by the research institute *Fraunhofer IOSB*, where I worked part-time as a Research Assistant. In this role, I contributed to the Human-AI Interaction department under the supervision of [Dr.-Ing. Michael Voit](https://www.iosb.fraunhofer.de/en/press/press-releases/2024/human-ai-interaction-new-department-focus.html), [Dr.-Ing. Frederik Diederichs](https://www.iosb.fraunhofer.de/de/projekte-produkte/integrated-autonomous-driving-lab.html), and [M.Sc. David Lerch](https://scholar.google.com/citations?view_op=list_works&hl=de&hl=de&user=BDOfyn8AAAAJ).
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+During my time at [Fraunhofer IOSB](https://www.iosb.fraunhofer.de/), I collaborated closely with developers, and researchers on cutting-edge AI initiatives under the [KARLI](https://karli-projekt.de/) and [SALSA](https://projekt-salsa.de/en/) projects. I have worked on developing intelligent AI systems that combine large language models with retrieval-based architectures to enable scalable, context-aware information access. My experience also includes leading high-impact technical demonstrations, where I translated complex machine learning solutions into real-world applications for diverse stakeholders including researchers, industry leaders, and public sector officials.
