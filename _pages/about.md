@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <a href='#'>I'm a Data Scientist & AI Researcher.</a>. Address- Frankfurt, Germany.
 
 profile:
   align: right
