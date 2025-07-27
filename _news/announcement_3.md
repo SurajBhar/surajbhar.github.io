@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2024-09-19 07:59:00-0400
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+**KARLI Final Event** — Led technical demonstrations of a Level 3 Mercedes-Benz Advanced Occupant Monitoring System, communicating its machine learning pipeline and real-world relevance to investors, scientists, and public sector officials.
