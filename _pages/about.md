@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>I'm a Data Scientist & AI Researcher.</a>. Address- Frankfurt, Germany.
+subtitle: I'm a Data Scientist & AI Researcher based in Frankfurt, Germany.
 
 profile:
   align: right
@@ -31,4 +31,4 @@ I design and develop machine learning models and applications that empower peopl
 
 I received my M.Sc. in Mechatronics from Universität Siegen, where I completed my master’s thesis under the guidance of [Prof. Michael Möller](https://sites.google.com/site/michaelmoellermath/) and [Dr. Jovita Lukasik](https://jovitalukasik.github.io/). My dissertation, titled **Improved Driver Distraction Detection Using Self-Supervised Learning**, was supported by the research institute *Fraunhofer IOSB*, where I worked part-time as a Research Assistant. In this role, I contributed to the Human-AI Interaction department under the supervision of [Dr.-Ing. Michael Voit](https://www.iosb.fraunhofer.de/en/press/press-releases/2024/human-ai-interaction-new-department-focus.html), [Dr.-Ing. Frederik Diederichs](https://www.iosb.fraunhofer.de/de/projekte-produkte/integrated-autonomous-driving-lab.html), and [M.Sc. David Lerch](https://scholar.google.com/citations?view_op=list_works&hl=de&hl=de&user=BDOfyn8AAAAJ).
 
-During my time at [Fraunhofer IOSB](https://www.iosb.fraunhofer.de/), I collaborated closely with developers, and researchers on cutting-edge AI initiatives under the [KARLI](https://karli-projekt.de/) and [SALSA](https://projekt-salsa.de/en/) projects. I have worked on developing intelligent AI systems that combine large language models with retrieval-based architectures to enable scalable, context-aware information access. My experience also includes leading high-impact technical demonstrations, where I translated complex machine learning solutions into real-world applications for diverse stakeholders including researchers, industry leaders, and public sector officials.
+During my time at [Fraunhofer IOSB](https://www.iosb.fraunhofer.de/), I collaborated closely with developers and researchers on cutting-edge AI initiatives under the [KARLI](https://karli-projekt.de/) and [SALSA](https://projekt-salsa.de/en/) projects. I have worked on developing intelligent AI systems that combine large language models with retrieval-based architectures (e.g., RAG + RAPTOR) to enable scalable, context-aware information access. My experience also includes leading high-impact technical demonstrations, where I translated complex machine learning solutions into real-world applications for diverse stakeholders including researchers, industry leaders, and public sector officials.
