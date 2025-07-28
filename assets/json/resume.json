@@ -4,7 +4,7 @@
     "label": "AI Researcher & Data Scientist",
     "image": "",
     "email": "suraj.unisiegen@gmail.com",
-    "phone": "+49-15216841131",
+    "phone": "",
     "url": "https://surajbhar.github.io",
     "summary": "AI and data science professional with expertise in deep learning, LLMs, and computer vision. Experienced in developing scalable, research-driven ML systems and deploying them using modern MLOps tools.",
     "location": {
@@ -45,7 +45,7 @@
     },
     {
       "name": "Fraunhofer IOSB",
-      "position": "Master Thesis Researcher – Self-Supervised Learning for Driver Distraction Detection",
+      "position": "Master Thesis Researcher – Improved Driver Distraction Detection using Self-Supervised Learning",
       "url": "https://www.iosb.fraunhofer.de/",
       "startDate": "2023-11-01",
       "endDate": "2024-05-01",
@@ -59,14 +59,17 @@
   ],
   "volunteer": [
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "organization": "IEEE ITSC 2025 (International Conference on Intelligent Transportation Systems)",
+      "location": "Remote",
+      "position": "Conference Reviewer",
+      "url": "https://ieee-itsc.org/2025/",
+      "startDate": "2025-03-01",
+      "endDate": "2025-07-01",
+      "summary": "Served as a peer reviewer for the IEEE ITSC 2025 conference in the domains of machine learning and computer vision.",
+      "highlights": [
+        "Reviewed submissions in unsupervised learning, segmentation, and safe motion generation.",
+        "Focused on evaluating methods in ML, CV, and intelligent systems for transportation and autonomous driving."
+      ]
     }
   ],
   "education": [
@@ -74,10 +77,10 @@
       "institution": "University of Siegen",
       "location": "Siegen, Germany",
       "url": "https://www.uni-siegen.de/",
-      "area": "Mechatronics",
-      "studyType": "M.Sc.",
+      "area": "Department of Electrical Engineering and Computer Science",
+      "studyType": "M.Sc. Mechatronics",
       "startDate": "2019-10-01",
-      "endDate": "2025-01-01",
+      "endDate": "2025-30-01",
       "score": "GPA: 2.1 (German Scale)",
       "courses": [
         "Software Engineering",
@@ -90,69 +93,16 @@
       "institution": "National Institute of Technology Hamirpur",
       "location": "Himachal Pradesh, India",
       "url": "https://nith.ac.in/",
-      "area": "Mechanical Engineering",
-      "studyType": "B.Tech.",
+      "area": "Department of Mechanical Engineering",
+      "studyType": "B.Tech. Mechanical Engineering",
       "startDate": "2014-08-01",
-      "endDate": "2018-05-01",
+      "endDate": "2018-05-31",
       "score": "GPA: 2.5 (German Scale)",
       "courses": [
         "Engineering Mathematics",
         "Numerical Methods",
         "Data Structures"
       ]
-    }
-  ],
-  "awards": [
-    {
-      "title": "NSTEDB Research Grant",
-      "date": "2018-11-01",
-      "awarder": "National Science & Technology Entrepreneurship Development Board (NSTEDB), India",
-      "url": "https://dst.gov.in/scientific-programmes/st-and-socio-economic-development/national-science-technology-entrepreneurship-development-board-nstedb",
-      "summary": "Awarded for the research project 'Effect of Size and Cascading of Receivers on the Performance of a Solar Collector System'. Recognized for innovation in solar energy technology."
-    },
-    {
-      "title": "SJVN Silver Jubilee Merit Scholarship",
-      "date": "2014-06-01",
-      "awarder": "SJVN Foundation",
-      "url": "http://scholarship.himcon.org/resultdoc/himachalpradeshstateboard.pdf",
-      "summary": "Granted for securing 21st rank in Himachal Pradesh Board examinations."
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Modern Computer Vision™ PyTorch, Tensorflow2, Keras & OpenCV4",
-      "date": "2023-03-20",
-      "issuer": "Udemy (Instructor: Rajeev D. Ratan)",
-      "url": "",
-      "icon": "fa-solid fa-camera"
-    },
-    {
-      "name": "Unsupervised Learning, Recommenders, Reinforcement Learning",
-      "date": "2023-03-18",
-      "issuer": "DeepLearning.AI & Stanford University (Coursera)",
-      "url": "",
-      "icon": "fa-solid fa-brain"
-    },
-    {
-      "name": "Advanced Learning Algorithms",
-      "date": "2022-08-27",
-      "issuer": "DeepLearning.AI & Stanford University (Coursera)",
-      "url": "",
-      "icon": "fa-solid fa-robot"
-    },
-    {
-      "name": "Supervised Machine Learning: Regression and Classification",
-      "date": "2022-07-21",
-      "issuer": "DeepLearning.AI & Stanford University (Coursera)",
-      "url": "",
-      "icon": "fa-solid fa-chart-line"
-    },
-    {
-      "name": "Machine Learning",
-      "date": "2020-08-12",
-      "issuer": "Stanford University (Coursera, Instructor: Andrew Ng)",
-      "url": "",
-      "icon": "fa-solid fa-cogs"
     }
   ],
   "publications": [
@@ -169,6 +119,75 @@
       "releaseDate": "2020-02-01",
       "url": "https://doi.org/10.1007/978-981-15-0124-1_113",
       "summary": "This study examines how cascading configurations in parabolic dish solar collectors improve collection efficiency by 3.2%–5.4%, highlighting the impact of receiver size and layout on thermal performance."
+    }
+  ],
+  "projects": [
+    {
+      "name": "YOLO-Based Real-Time Object Detection in CARLA",
+      "summary": "Developed and deployed a real-time object detection system using YOLOv8–YOLOv11 models in CARLA simulator on a Tesla Model 3 setup.",
+      "highlights": [
+        "Simulated a sensor suite with 8 cameras, radar, and 12 ultrasonic sensors at 30 FPS.",
+        "Trained and evaluated 12 YOLO models on a custom dataset; YOLO8-m and YOLO11-m achieved best mAP@(50–95) scores.",
+        "Integrated the fine-tuned YOLO11-m model into the CARLA pipeline for live inference on cars, pedestrians, and traffic signs."
+      ],
+      "startDate": "2024-02-01",
+      "endDate": "2024-09-01",
+      "url": "https://github.com/SurajBhar/studienarbeit_repository"
+    },
+    {
+      "name": "RAG Chatbot using NVIDIA NIM",
+      "summary": "Implemented a Streamlit-based chatbot leveraging NVIDIA NIM and LangChain for querying research PDFs with contextual awareness.",
+      "highlights": [
+        "Utilized RAPTOR, FAISS, and ChromaDB for retrieval-augmented generation.",
+        "Designed for scalable, domain-specific document understanding."
+      ],
+      "startDate": "2024-03-01",
+      "endDate": "2024-05-01",
+      "url": "https://github.com/SurajBhar/rag_nim"
+    },
+    {
+      "name": "Codeninja: AI Code Assistant",
+      "summary": "Developed an LLM-based code assistant using Ollama, Gradio, and LangChain to enhance developer productivity.",
+      "highlights": [
+        "Integrated with a custom model served locally.",
+        "Provided contextual, real-time code generation and fixes."
+      ],
+      "startDate": "2024-01-01",
+      "endDate": "2024-03-01",
+      "url": "https://github.com/SurajBhar/codeninja"
+    },
+    {
+      "name": "Implicit 3D Model Generation",
+      "summary": "Built an implicit 3D object generator using Neural Unsigned Distance Fields (NDF) and latent diffusion.",
+      "highlights": [
+        "Trained on ShapeNet Cars using SLURM on OMNI cluster.",
+        "Implemented vector quantization and feature bottlenecks."
+      ],
+      "startDate": "2022-12-01",
+      "endDate": "2023-04-01",
+      "url": "https://github.com/SurajBhar/ndf"
+    },
+    {
+      "name": "OOD Robustness with AugMix",
+      "summary": "Evaluated OOD robustness of ConvNeXt and ResNet18 on CIFAR variants using AugMix augmentation.",
+      "highlights": [
+        "Applied transfer learning and tuning with cosine LR scheduling.",
+        "Achieved superior robustness scores for ConvNeXt-tiny."
+      ],
+      "startDate": "2022-10-01",
+      "endDate": "2022-11-01",
+      "url": "https://github.com/SurajBhar/augmix"
+    },
+    {
+      "name": "Real-Time Face Mask Detection",
+      "summary": "Built a VGG16-based face mask detector with live webcam stream input using OpenCV and Haar cascades.",
+      "highlights": [
+        "Achieved 93.5% accuracy in real-time prediction pipeline.",
+        "Applied transfer learning on VGG16 features."
+      ],
+      "startDate": "2022-06-01",
+      "endDate": "2022-08-01",
+      "url": "https://github.com/SurajBhar/Face_Mask_Detection"
     }
   ],
   "skills": [
@@ -282,6 +301,59 @@
       ]
     }
   ],
+  "certificates": [
+    {
+      "name": "Modern Computer Vision™ PyTorch, Tensorflow2, Keras & OpenCV4",
+      "date": "2023-03-20",
+      "issuer": "Udemy (Instructor: Rajeev D. Ratan)",
+      "url": "",
+      "icon": "fa-solid fa-camera"
+    },
+    {
+      "name": "Unsupervised Learning, Recommenders, Reinforcement Learning",
+      "date": "2023-03-18",
+      "issuer": "DeepLearning.AI & Stanford University (Coursera)",
+      "url": "",
+      "icon": "fa-solid fa-brain"
+    },
+    {
+      "name": "Advanced Learning Algorithms",
+      "date": "2022-08-27",
+      "issuer": "DeepLearning.AI & Stanford University (Coursera)",
+      "url": "",
+      "icon": "fa-solid fa-robot"
+    },
+    {
+      "name": "Supervised Machine Learning: Regression and Classification",
+      "date": "2022-07-21",
+      "issuer": "DeepLearning.AI & Stanford University (Coursera)",
+      "url": "",
+      "icon": "fa-solid fa-chart-line"
+    },
+    {
+      "name": "Machine Learning",
+      "date": "2020-08-12",
+      "issuer": "Stanford University (Coursera, Instructor: Andrew Ng)",
+      "url": "",
+      "icon": "fa-solid fa-cogs"
+    }
+  ],
+  "awards": [
+    {
+      "title": "NSTEDB Research Grant",
+      "date": "2018-11-01",
+      "awarder": "National Science & Technology Entrepreneurship Development Board (NSTEDB), India",
+      "url": "https://dst.gov.in/scientific-programmes/st-and-socio-economic-development/national-science-technology-entrepreneurship-development-board-nstedb",
+      "summary": "Awarded for the research project 'Effect of Size and Cascading of Receivers on the Performance of a Solar Collector System'. Recognized for innovation in solar energy technology."
+    },
+    {
+      "title": "SJVN Silver Jubilee Merit Scholarship",
+      "date": "2014-06-01",
+      "awarder": "SJVN Foundation",
+      "url": "http://scholarship.himcon.org/resultdoc/himachalpradeshstateboard.pdf",
+      "summary": "Granted for securing 21st rank in Himachal Pradesh Board examinations."
+    }
+  ],
   "references": [
     {
       "name": "David Lerch",
@@ -297,75 +369,6 @@
       "name": "Prof. Dr. Roman Obermaisser",
       "icon": "fa-solid fa-microchip",
       "reference": "Full Professor, Division for Embedded Systems, University of Siegen. Profile: https://blogs.uni-siegen.de/ms-cps/prof-dr-roman-obermaisser/"
-    }
-  ],
-  "projects": [
-    {
-      "name": "YOLO-Based Real-Time Object Detection in CARLA",
-      "summary": "Developed and deployed a real-time object detection system using YOLOv8–YOLOv11 models in CARLA simulator on a Tesla Model 3 setup.",
-      "highlights": [
-        "Simulated a sensor suite with 8 cameras, radar, and 12 ultrasonic sensors at 30 FPS.",
-        "Trained and evaluated 12 YOLO models on a custom dataset; YOLO8-m and YOLO11-m achieved best mAP@(50–95) scores.",
-        "Integrated the fine-tuned YOLO11-m model into the CARLA pipeline for live inference on cars, pedestrians, and traffic signs."
-      ],
-      "startDate": "2024-02-01",
-      "endDate": "2024-09-01",
-      "url": "https://github.com/SurajBhar/studienarbeit_repository"
-    },
-    {
-      "name": "RAG Chatbot using NVIDIA NIM",
-      "summary": "Implemented a Streamlit-based chatbot leveraging NVIDIA NIM and LangChain for querying research PDFs with contextual awareness.",
-      "highlights": [
-        "Utilized RAPTOR, FAISS, and ChromaDB for retrieval-augmented generation.",
-        "Designed for scalable, domain-specific document understanding."
-      ],
-      "startDate": "2024-03-01",
-      "endDate": "2024-05-01",
-      "url": "https://github.com/SurajBhar/rag_nim"
-    },
-    {
-      "name": "Codeninja: AI Code Assistant",
-      "summary": "Developed an LLM-based code assistant using Ollama, Gradio, and LangChain to enhance developer productivity.",
-      "highlights": [
-        "Integrated with a custom model served locally.",
-        "Provided contextual, real-time code generation and fixes."
-      ],
-      "startDate": "2024-01-01",
-      "endDate": "2024-03-01",
-      "url": "https://github.com/SurajBhar/codeninja"
-    },
-    {
-      "name": "Implicit 3D Model Generation",
-      "summary": "Built an implicit 3D object generator using Neural Unsigned Distance Fields (NDF) and latent diffusion.",
-      "highlights": [
-        "Trained on ShapeNet Cars using SLURM on OMNI cluster.",
-        "Implemented vector quantization and feature bottlenecks."
-      ],
-      "startDate": "2022-12-01",
-      "endDate": "2023-04-01",
-      "url": "https://github.com/SurajBhar/ndf"
-    },
-    {
-      "name": "OOD Robustness with AugMix",
-      "summary": "Evaluated OOD robustness of ConvNeXt and ResNet18 on CIFAR variants using AugMix augmentation.",
-      "highlights": [
-        "Applied transfer learning and tuning with cosine LR scheduling.",
-        "Achieved superior robustness scores for ConvNeXt-tiny."
-      ],
-      "startDate": "2022-10-01",
-      "endDate": "2022-11-01",
-      "url": "https://github.com/SurajBhar/augmix"
-    },
-    {
-      "name": "Real-Time Face Mask Detection",
-      "summary": "Built a VGG16-based face mask detector with live webcam stream input using OpenCV and Haar cascades.",
-      "highlights": [
-        "Achieved 93.5% accuracy in real-time prediction pipeline.",
-        "Applied transfer learning on VGG16 features."
-      ],
-      "startDate": "2022-06-01",
-      "endDate": "2022-08-01",
-      "url": "https://github.com/SurajBhar/Face_Mask_Detection"
     }
   ]
 }
