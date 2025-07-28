@@ -1,8 +1,8 @@
 ---
 layout: profiles
 permalink: /people/
-title: people
-description: members of the lab or group
+title: People
+description: List of all the members of the BHAR-AI Lab lab.
 nav: false
 nav_order: 7
 

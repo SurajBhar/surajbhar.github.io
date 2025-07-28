@@ -1,8 +1,8 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: A curated showcase of my research-driven and applied AI projects spanning LLMs, computer vision, and self-supervised learning.
 nav: true
 nav_order: 3
 display_categories: [work, fun]
