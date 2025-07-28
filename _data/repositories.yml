@@ -1,15 +1,16 @@
 github_users:
   - surajbhar
-  - alshedivat
 
-repo_description_lines_max: 2
+repo_description_lines_max: 1
 
 github_repos:
   - SurajBhar/masterarbeit_sb
   - SurajBhar/studienarbeit_repository
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - SurajBhar/data_science_sql_project
+  - SurajBhar/rag_nim
+  - SurajBhar/bayesian_opt
+  - SurajBhar/codeninja
+  - SurajBhar/langchain_projects
+  - SurajBhar/Face_Mask_Detection
+  - SurajBhar/augmix
+  - SurajBhar/ndf
