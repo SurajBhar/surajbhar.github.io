@@ -1,0 +1,371 @@
+{
+  "basics": {
+    "name": "Suraj Bhardwaj",
+    "label": "AI Researcher & Data Scientist",
+    "image": "",
+    "email": "suraj.unisiegen@gmail.com",
+    "phone": "+49-15216841131",
+    "url": "https://surajbhar.github.io",
+    "summary": "AI and data science professional with expertise in deep learning, LLMs, and computer vision. Experienced in developing scalable, research-driven ML systems and deploying them using modern MLOps tools.",
+    "location": {
+      "address": "",
+      "postalCode": "55127",
+      "city": "Mainz",
+      "countryCode": "DE",
+      "region": "Germany"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "bhardwaj-suraj",
+        "url": "https://www.linkedin.com/in/bhardwaj-suraj/"
+      },
+      {
+        "network": "GitHub",
+        "username": "SurajBhar",
+        "url": "https://github.com/SurajBhar"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Fraunhofer IOSB",
+      "position": "Research Assistant (KARLI and SALSA Projects)",
+      "url": "https://www.iosb.fraunhofer.de/",
+      "startDate": "2023-05-01",
+      "endDate": "2025-01-01",
+      "summary": "Conducted AI research for human-machine interaction and autonomous driving projects (KARLI, SALSA).",
+      "highlights": [
+        "Developed an LLM-based chatbot using RAG and RAPTOR for scalable retrieval in knowledge-intensive settings.",
+        "Designed the Clustered Feature Weighting (CFW) algorithm to mitigate class imbalance in multimodal datasets.",
+        "Contributed to VoxelNeXt deployment for LiDAR-based 3D object detection on the Pandaset dataset.",
+        "Led technical demos of a Level 3 Mercedes-Benz Occupant Monitoring System for stakeholders.",
+        "Worked with Python, PyTorch, Ray, FAISS, RAPTOR, LangChain, Docker, Streamlit, and AWS."
+      ]
+    },
+    {
+      "name": "Fraunhofer IOSB",
+      "position": "Master Thesis Researcher – Self-Supervised Learning for Driver Distraction Detection",
+      "url": "https://www.iosb.fraunhofer.de/",
+      "startDate": "2023-11-01",
+      "endDate": "2024-05-01",
+      "summary": "Investigated cross-modality generalization using self-supervised vision transformers for driver distraction detection.",
+      "highlights": [
+        "Innovated the Clustered Feature Weighting (CFW) algorithm using HDBSCAN for long-tailed distribution.",
+        "Achieved 7.17% performance improvement over supervised baselines using DINOv2-pretrained ViT-B/14.",
+        "Used tools like Ray, PyTorch, Scikit-learn, OpenCV, and Git for reproducible experimentation."
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "People's Climate March",
+      "location": "Zurich, Switzerland",
+      "position": "Lead Organizer",
+      "url": "https://example.com",
+      "startDate": "2014-04-01",
+      "endDate": "2015-07-01",
+      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
+      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Siegen",
+      "location": "Siegen, Germany",
+      "url": "https://www.uni-siegen.de/",
+      "area": "Mechatronics",
+      "studyType": "M.Sc.",
+      "startDate": "2019-10-01",
+      "endDate": "2025-01-01",
+      "score": "GPA: 2.1 (German Scale)",
+      "courses": [
+        "Software Engineering",
+        "Unsupervised Deep Learning",
+        "Artificial Intelligence",
+        "Mechatronic Systems"
+      ]
+    },
+    {
+      "institution": "National Institute of Technology Hamirpur",
+      "location": "Himachal Pradesh, India",
+      "url": "https://nith.ac.in/",
+      "area": "Mechanical Engineering",
+      "studyType": "B.Tech.",
+      "startDate": "2014-08-01",
+      "endDate": "2018-05-01",
+      "score": "GPA: 2.5 (German Scale)",
+      "courses": [
+        "Engineering Mathematics",
+        "Numerical Methods",
+        "Data Structures"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "NSTEDB Research Grant",
+      "date": "2018-11-01",
+      "awarder": "National Science & Technology Entrepreneurship Development Board (NSTEDB), India",
+      "url": "https://dst.gov.in/scientific-programmes/st-and-socio-economic-development/national-science-technology-entrepreneurship-development-board-nstedb",
+      "summary": "Awarded for the research project 'Effect of Size and Cascading of Receivers on the Performance of a Solar Collector System'. Recognized for innovation in solar energy technology."
+    },
+    {
+      "title": "SJVN Silver Jubilee Merit Scholarship",
+      "date": "2014-06-01",
+      "awarder": "SJVN Foundation",
+      "url": "http://scholarship.himcon.org/resultdoc/himachalpradeshstateboard.pdf",
+      "summary": "Granted for securing 21st rank in Himachal Pradesh Board examinations."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Modern Computer Vision™ PyTorch, Tensorflow2, Keras & OpenCV4",
+      "date": "2023-03-20",
+      "issuer": "Udemy (Instructor: Rajeev D. Ratan)",
+      "url": "",
+      "icon": "fa-solid fa-camera"
+    },
+    {
+      "name": "Unsupervised Learning, Recommenders, Reinforcement Learning",
+      "date": "2023-03-18",
+      "issuer": "DeepLearning.AI & Stanford University (Coursera)",
+      "url": "",
+      "icon": "fa-solid fa-brain"
+    },
+    {
+      "name": "Advanced Learning Algorithms",
+      "date": "2022-08-27",
+      "issuer": "DeepLearning.AI & Stanford University (Coursera)",
+      "url": "",
+      "icon": "fa-solid fa-robot"
+    },
+    {
+      "name": "Supervised Machine Learning: Regression and Classification",
+      "date": "2022-07-21",
+      "issuer": "DeepLearning.AI & Stanford University (Coursera)",
+      "url": "",
+      "icon": "fa-solid fa-chart-line"
+    },
+    {
+      "name": "Machine Learning",
+      "date": "2020-08-12",
+      "issuer": "Stanford University (Coursera, Instructor: Andrew Ng)",
+      "url": "",
+      "icon": "fa-solid fa-cogs"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Self-supervised Driver Distraction Detection for Imbalanced Datasets",
+      "publisher": "IEEE 28th International Conference on Intelligent Transportation Systems (ITSC 2025)",
+      "releaseDate": "2025-11-01",
+      "url": "https://ieee-itsc.org/2025/",
+      "summary": "Proposed a novel unsupervised adaptation strategy to address class imbalance and enhance generalization in computer vision tasks — directly applicable to clinical AI settings with limited or unlabelled data."
+    },
+    {
+      "name": "Effect of Size and Cascading of Receivers on the Performance of a Solar Collector System",
+      "publisher": "Springer, Singapore",
+      "releaseDate": "2020-02-01",
+      "url": "https://doi.org/10.1007/978-981-15-0124-1_113",
+      "summary": "This study examines how cascading configurations in parabolic dish solar collectors improve collection efficiency by 3.2%–5.4%, highlighting the impact of receiver size and layout on thermal performance."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming",
+      "level": "Advanced",
+      "icon": "fa-solid fa-code",
+      "keywords": ["Python", "C++", "SQL", "MATLAB", "Bash", "Git", "Linux"]
+    },
+    {
+      "name": "Machine Learning & Deep Learning",
+      "level": "Expert",
+      "icon": "fa-solid fa-brain",
+      "keywords": [
+        "Self-Supervised Learning",
+        "Large Language Models (LLMs)",
+        "Transformers",
+        "Graph Neural Networks",
+        "Diffusion Models",
+        "Variational Autoencoders",
+        "SparseCNNs",
+        "LSTMs",
+        "Object Detection",
+        "Image Segmentation"
+      ]
+    },
+    {
+      "name": "Frameworks & Libraries",
+      "level": "Proficient",
+      "icon": "fa-solid fa-cubes",
+      "keywords": [
+        "PyTorch", "TensorFlow", "Keras", "HuggingFace", "OpenCV", "Ray",
+        "FAISS", "LangChain", "ChromaDB", "Timm", "Optuna", "Scikit-learn"
+      ]
+    },
+    {
+      "name": "DevOps & Deployment",
+      "level": "Intermediate",
+      "icon": "fa-solid fa-rocket",
+      "keywords": [
+        "Docker", "AWS", "GitHub Actions", "GitLab CI/CD", "MLflow", "FastAPI", "Flask"
+      ]
+    },
+    {
+      "name": "Data Visualization",
+      "level": "Proficient",
+      "icon": "fa-solid fa-chart-bar",
+      "keywords": [
+        "Matplotlib", "Seaborn", "Plotly", "Pandas", "NumPy",
+        "Tableau", "Power BI", "Open3D", "Trimesh"
+      ]
+    },
+    {
+      "name": "NLP & LLMs",
+      "level": "Advanced",
+      "icon": "fa-solid fa-language",
+      "keywords": [
+        "LangChain", "Ollama", "Transformers", "SpaCy", "NLTK", "RAPTOR", "SentenceTransformers"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Proficient (IELTS C1)",
+      "icon": "fa-solid fa-language"
+    },
+    {
+      "language": "German",
+      "fluency": "Intermediate (B1 in progress)",
+      "icon": "fa-solid fa-language"
+    },
+    {
+      "language": "Hindi",
+      "fluency": "Native",
+      "icon": "fa-solid fa-language"
+    }
+  ],
+  "interests": [
+    {
+      "name": "AI Research & Machine Learning",
+      "icon": "fa-solid fa-brain",
+      "keywords": [
+        "Self-Supervised Learning",
+        "Large Language Models",
+        "Generative Models",
+        "Transformers",
+        "Deep Learning"
+      ]
+    },
+    {
+      "name": "Computer Vision & 3D Perception",
+      "icon": "fa-solid fa-eye",
+      "keywords": [
+        "Object Detection",
+        "NeRF & DIVeR",
+        "Voxel-based Models",
+        "LiDAR Systems",
+        "Point Cloud Processing"
+      ]
+    },
+    {
+      "name": "MLOps & Scalable Systems",
+      "icon": "fa-solid fa-server",
+      "keywords": [
+        "Model Deployment",
+        "CI/CD",
+        "Docker",
+        "AWS",
+        "MLflow"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "David Lerch",
+      "icon": "fa-solid fa-user-tie",
+      "reference": "Research Scientist, Perceptual User Interface Group, Fraunhofer IOSB, Karlsruhe, Germany. Email: david.lerch@iosb.fraunhofer.de"
+    },
+    {
+      "name": "Prof. Michael Moeller",
+      "icon": "fa-solid fa-chalkboard-teacher",
+      "reference": "Head of Computer Vision Department, University of Siegen. Website: https://sites.google.com/site/michaelmoellermath/"
+    },
+    {
+      "name": "Prof. Dr. Roman Obermaisser",
+      "icon": "fa-solid fa-microchip",
+      "reference": "Full Professor, Division for Embedded Systems, University of Siegen. Profile: https://blogs.uni-siegen.de/ms-cps/prof-dr-roman-obermaisser/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "YOLO-Based Real-Time Object Detection in CARLA",
+      "summary": "Developed and deployed a real-time object detection system using YOLOv8–YOLOv11 models in CARLA simulator on a Tesla Model 3 setup.",
+      "highlights": [
+        "Simulated a sensor suite with 8 cameras, radar, and 12 ultrasonic sensors at 30 FPS.",
+        "Trained and evaluated 12 YOLO models on a custom dataset; YOLO8-m and YOLO11-m achieved best mAP@(50–95) scores.",
+        "Integrated the fine-tuned YOLO11-m model into the CARLA pipeline for live inference on cars, pedestrians, and traffic signs."
+      ],
+      "startDate": "2024-02-01",
+      "endDate": "2024-09-01",
+      "url": "https://github.com/SurajBhar/studienarbeit_repository"
+    },
+    {
+      "name": "RAG Chatbot using NVIDIA NIM",
+      "summary": "Implemented a Streamlit-based chatbot leveraging NVIDIA NIM and LangChain for querying research PDFs with contextual awareness.",
+      "highlights": [
+        "Utilized RAPTOR, FAISS, and ChromaDB for retrieval-augmented generation.",
+        "Designed for scalable, domain-specific document understanding."
+      ],
+      "startDate": "2024-03-01",
+      "endDate": "2024-05-01",
+      "url": "https://github.com/SurajBhar/rag_nim"
+    },
+    {
+      "name": "Codeninja: AI Code Assistant",
+      "summary": "Developed an LLM-based code assistant using Ollama, Gradio, and LangChain to enhance developer productivity.",
+      "highlights": [
+        "Integrated with a custom model served locally.",
+        "Provided contextual, real-time code generation and fixes."
+      ],
+      "startDate": "2024-01-01",
+      "endDate": "2024-03-01",
+      "url": "https://github.com/SurajBhar/codeninja"
+    },
+    {
+      "name": "Implicit 3D Model Generation",
+      "summary": "Built an implicit 3D object generator using Neural Unsigned Distance Fields (NDF) and latent diffusion.",
+      "highlights": [
+        "Trained on ShapeNet Cars using SLURM on OMNI cluster.",
+        "Implemented vector quantization and feature bottlenecks."
+      ],
+      "startDate": "2022-12-01",
+      "endDate": "2023-04-01",
+      "url": "https://github.com/SurajBhar/ndf"
+    },
+    {
+      "name": "OOD Robustness with AugMix",
+      "summary": "Evaluated OOD robustness of ConvNeXt and ResNet18 on CIFAR variants using AugMix augmentation.",
+      "highlights": [
+        "Applied transfer learning and tuning with cosine LR scheduling.",
+        "Achieved superior robustness scores for ConvNeXt-tiny."
+      ],
+      "startDate": "2022-10-01",
+      "endDate": "2022-11-01",
+      "url": "https://github.com/SurajBhar/augmix"
+    },
+    {
+      "name": "Real-Time Face Mask Detection",
+      "summary": "Built a VGG16-based face mask detector with live webcam stream input using OpenCV and Haar cascades.",
+      "highlights": [
+        "Achieved 93.5% accuracy in real-time prediction pipeline.",
+        "Applied transfer learning on VGG16 features."
+      ],
+      "startDate": "2022-06-01",
+      "endDate": "2022-08-01",
+      "url": "https://github.com/SurajBhar/Face_Mask_Detection"
+    }
+  ]
+}
