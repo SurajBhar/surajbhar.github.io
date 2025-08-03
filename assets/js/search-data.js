@@ -423,9 +423,9 @@ ninja.data = [{
           section: "News",},{id: "news-publication-alert-my-paper-self-supervised-driver-distraction-detection-for-imbalanced-datasets-got-accepted-for-publication-and-presentation-as-full-paper-in-the-ieee-28th-international-conference-on-intelligent-transportation-systems-itsc-2025",
           title: 'Publication Alert: My paper “Self-supervised Driver Distraction Detection for Imbalanced Datasets” got accepted...',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-predicting-movie-sentiment-end-to-end-from-code-to-cloud",
+          title: 'Predicting Movie Sentiment End-to-End- From Code to Cloud',
+          description: "Movie Sentiment Prediction Microservice",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-project-2",
