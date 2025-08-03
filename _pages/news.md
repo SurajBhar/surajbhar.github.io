@@ -6,6 +6,9 @@ permalink: /news/
 
 ## Latest News
 
+- **July 2025 — Movie Sentiment Prediction Microservice**  
+  Developed the Movie Sentiment Prediction Microservice which delivers an end-to-end workflow—from raw data to live inference—so you can develop, deploy, version, and monitor sentiment models in production with confidence.
+
 - **July 2025 — Paper Accepted for publication through IEEE ITSC 2025**  
   My paper *"Self-supervised Driver Distraction Detection for Imbalanced Datasets"* got accepted for publication and presentation as full paper in the IEEE 28th International Conference on Intelligent Transportation Systems (ITSC 2025).
 
