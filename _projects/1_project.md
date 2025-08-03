@@ -5,10 +5,8 @@ description: Movie Sentiment Prediction Microservice
 img: assets/img/p_moviesentiment/3_app_1.png
 importance: 1
 category: work
-related_publications: true
+related_publications: false
 ---
-
-**Predicting Movie Sentiment End-to-End: From Code to Cloud**
 
 In an era when audiences encounter thousands of film reviews every day, turning unstructured text into clear, actionable insights is a crucial skill. I designed and built a completely automated Movie Sentiment Prediction pipeline that applies modern data-science best practices and cloud-native deployments to transform raw reviews into sentiment scores—served through a high-performance, production-grade API. Below, I describe my motivations, architecture, key components, and lessons learned during development.
 
