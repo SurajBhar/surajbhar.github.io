@@ -65,13 +65,13 @@ ninja.data = [{
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
             },},{id: "news-karli-final-event-led-technical-demonstrations-of-a-level-3-mercedes-benz-advanced-occupant-monitoring-system-communicating-its-machine-learning-pipeline-and-real-world-relevance-to-investors-scientists-and-public-sector-officials",
-          title: 'KARLI Final Event — Led technical demonstrations of a Level 3 Mercedes-Benz Advanced...',
+          title: 'KARLI Final Event: Led technical demonstrations of a Level 3 Mercedes-Benz Advanced Occupant...',
           description: "",
           section: "News",},{id: "news-publication-alert-my-paper-self-supervised-driver-distraction-detection-for-imbalanced-datasets-got-accepted-for-publication-and-presentation-as-full-paper-in-the-ieee-28th-international-conference-on-intelligent-transportation-systems-itsc-2025",
           title: 'Publication Alert: My paper “Self-supervised Driver Distraction Detection for Imbalanced Datasets” got accepted...',
           description: "",
-          section: "News",},{id: "news-project-alert-movie-sentiment-prediction-microservice-developed-the-movie-sentiment-prediction-microservice-which-delivers-an-end-to-end-workflow-from-raw-data-to-live-inference-so-you-can-develop-deploy-version-and-monitor-sentiment-models-in-production-with-confidence",
-          title: 'Project Alert — Movie Sentiment Prediction Microservice Developed the Movie Sentiment Prediction Microservice...',
+          section: "News",},{id: "news-project-alert-developed-the-movie-sentiment-prediction-microservice-which-delivers-an-end-to-end-workflow-from-raw-data-to-live-inference-so-you-can-develop-deploy-version-and-monitor-sentiment-models-in-production-with-confidence",
+          title: 'Project Alert: Developed the Movie Sentiment Prediction Microservice which delivers an end-to-end workflow—from...',
           description: "",
           section: "News",},{id: "projects-predicting-movie-sentiment-end-to-end-from-code-to-cloud",
           title: 'Predicting Movie Sentiment End-to-End- From Code to Cloud',
