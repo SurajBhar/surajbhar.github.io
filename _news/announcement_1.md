@@ -5,5 +5,4 @@ inline: true
 related_posts: false
 ---
 
-**Project Alert — Movie Sentiment Prediction Microservice**  
-Developed the Movie Sentiment Prediction Microservice which delivers an end-to-end workflow—from raw data to live inference—so you can develop, deploy, version, and monitor sentiment models in production with confidence.
+**Project Alert:**  Developed the Movie Sentiment Prediction Microservice which delivers an end-to-end workflow—from raw data to live inference—so you can develop, deploy, version, and monitor sentiment models in production with confidence.

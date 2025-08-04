@@ -2,14 +2,16 @@
 layout: about
 title: About
 permalink: /
-subtitle: I'm a Data Scientist & AI Researcher based in Frankfurt, Germany.
+subtitle: I'm a Data Scientist & AI Researcher.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-     <p>Data Scientist & AI Researcher</p>
+     <p>Data Scientist</p>
+     <p>AI Researcher</p>
+     <p>Machine Learning Engineer</p>
 #    <p>555 your office number</p>
 #    <p>123 your address street</p>
     

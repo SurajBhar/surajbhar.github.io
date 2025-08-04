@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-**KARLI Final Event** — Led technical demonstrations of a Level 3 Mercedes-Benz Advanced Occupant Monitoring System, communicating its machine learning pipeline and real-world relevance to investors, scientists, and public sector officials.
+**KARLI Final Event:** Led technical demonstrations of a Level 3 Mercedes-Benz Advanced Occupant Monitoring System, communicating its machine learning pipeline and real-world relevance to investors, scientists, and public sector officials.
