@@ -5,7 +5,7 @@ description: Hotel Reservation Cancellation Prediction — From Notebook to Prod
 img: assets/img/p_hrprediction/app.png
 importance: 2
 category: work
-giscus_comments: true
+giscus_comments: false
 ---
 
 Cancellations hurt occupancy forecasts and revenue. If we can predict, at booking time, whether a reservation is likely to be canceled, the hotel can adjust inventory, pricing, and outreach more intelligently. This project takes a real-world dataset of hotel reservations and turns it into a production web app that scores bookings in real time.
