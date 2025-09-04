@@ -33,7 +33,7 @@
       "position": "Research Assistant (KARLI and SALSA Projects)",
       "url": "https://www.iosb.fraunhofer.de/",
       "startDate": "2023-05-01",
-      "endDate": "2025-01-01",
+      "endDate": "2025-01-31",
       "summary": "Conducted AI research for human-machine interaction and autonomous driving projects (KARLI, SALSA).",
       "highlights": [
         "Developed an LLM-based chatbot using RAG and RAPTOR for scalable retrieval in knowledge-intensive settings.",
@@ -79,8 +79,8 @@
       "url": "https://www.uni-siegen.de/",
       "area": "Department of Electrical Engineering and Computer Science",
       "studyType": "M.Sc. Mechatronics",
-      "startDate": "2019-10-01",
-      "endDate": "2025-30-01",
+      "startDate": "2019-01-10",
+      "endDate": "2025-01-30",
       "score": "GPA: 2.1 (German Scale)",
       "courses": [
         "Software Engineering",
@@ -303,10 +303,31 @@
   ],
   "certificates": [
     {
+      "name": "IBM Data Science Professional Certificate",
+      "date": "2025-08-08",
+      "issuer": "Coursera (Instructor: Rav Ahuja)",
+      "url": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/CTEKRCM7O5KT",
+      "icon": "fa-solid fa-camera"
+    },
+    {
+      "name": "Introduction to Containers w/ Docker, Kubernetes & OpenShift",
+      "date": "2025-07-15",
+      "issuer": "Coursera (Instructors: Alex Parker and Upkar Lidder)",
+      "url": "https://www.coursera.org/account/accomplishments/verify/IVDCQILPVKA7",
+      "icon": "fa-solid fa-camera"
+    },
+    {
+      "name": "Introduction to Retrieval Augmented Generation (RAG)",
+      "date": "2024-08-01",
+      "issuer": "Coursera (Instructor: Alfredo Deza)",
+      "url": "https://www.coursera.org/account/accomplishments/verify/60F0VRB6TWH1?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project",
+      "icon": "fa-solid fa-camera"
+    },
+    {
       "name": "Modern Computer Vision™ PyTorch, Tensorflow2, Keras & OpenCV4",
       "date": "2023-03-20",
       "issuer": "Udemy (Instructor: Rajeev D. Ratan)",
-      "url": "",
+      "url": "https://www.udemy.com/certificate/UC-cc6c34bd-de63-406e-a24d-421573e0a528/",
       "icon": "fa-solid fa-camera"
     },
     {
@@ -334,7 +355,7 @@
       "name": "Machine Learning",
       "date": "2020-08-12",
       "issuer": "Stanford University (Coursera, Instructor: Andrew Ng)",
-      "url": "",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/VAEBSRPXL6VR",
       "icon": "fa-solid fa-cogs"
     }
   ],
@@ -345,13 +366,6 @@
       "awarder": "National Science & Technology Entrepreneurship Development Board (NSTEDB), India",
       "url": "https://dst.gov.in/scientific-programmes/st-and-socio-economic-development/national-science-technology-entrepreneurship-development-board-nstedb",
       "summary": "Awarded for the research project 'Effect of Size and Cascading of Receivers on the Performance of a Solar Collector System'. Recognized for innovation in solar energy technology."
-    },
-    {
-      "title": "SJVN Silver Jubilee Merit Scholarship",
-      "date": "2014-06-01",
-      "awarder": "SJVN Foundation",
-      "url": "http://scholarship.himcon.org/resultdoc/himachalpradeshstateboard.pdf",
-      "summary": "Granted for securing 21st rank in Himachal Pradesh Board examinations."
     }
   ],
   "references": [
