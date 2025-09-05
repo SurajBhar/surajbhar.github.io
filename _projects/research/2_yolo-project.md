@@ -32,10 +32,10 @@ The dataset included vehicles, traffic lights, pedestrians, and traffic signs. M
 ## Visuals
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include image.liquid path="assets/img/p_research/04_labeling_process.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/p_research/04_labeling_process.png" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include image.liquid path="assets/img/p_research/14_Component_dia.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/p_research/14_Component_dia.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -44,10 +44,10 @@ The dataset included vehicles, traffic lights, pedestrians, and traffic signs. M
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include image.liquid path="assets/img/p_research/Tesla_model_3_2.PNG" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/p_research/Tesla_model_3_2.PNG" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include image.liquid path="assets/img/p_research/advantage_higly_occluded_detection_town_3_daytime_w1.PNG" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/p_research/advantage_higly_occluded_detection_town_3_daytime_w1.PNG" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
