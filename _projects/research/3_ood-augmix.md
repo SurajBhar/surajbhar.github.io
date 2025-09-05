@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Research Project on Robustness
+title: Robust Vision Models
 description: Out-of-Distribution (OOD) Robustness with AugMix
-img: assets/img/projects/robustness.png
+img: assets/img/p_research/augmix.gif
 importance: 3
 category: research-thesis
 related_publications: false
@@ -41,7 +41,7 @@ My study implemented **ResNet18** and **ConvNeXt-tiny** architectures (both pret
 ---
 
 ## Resources
-- 📄 [Download Project Report PDF](assets/docs/Bhardwaj-Suraj-1531066.pdf)  
+- 📄 [Download Project Report PDF](/assets/docs/Bhardwaj-Suraj-1531066.pdf)  
 - 💻 [View Source on GitHub](https://github.com/SurajBhar/augmix)  
 - 📑 [ICLR 2020 AugMix Paper](https://arxiv.org/abs/1912.02781)  
 

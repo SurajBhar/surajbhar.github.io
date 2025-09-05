@@ -37,5 +37,5 @@ CFW improved dataset balance and boosted **cross-modality generalization** by up
 ---
 
 ## Resources
-- 📄 [Download Thesis PDF](assets/docs/Suraj_Bhardwaj_M_Thesis.pdf)  
+- 📄 [Download Thesis PDF](/assets/docs/Suraj_Bhardwaj_M_Thesis.pdf)  
 - 💻 [View Source on GitHub](https://github.com/SurajBhar/masterarbeit_sb/tree/main)  

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Student Research Project
+title: Studienarbeit
 description: YOLO-Based Real-Time Object Detection for Autonomous Driving in CARLA
-img: assets/img/projects/student_research.png
+img: assets/img/p_research/advantage_higly_occluded_detection_town_3_daytime_w1.PNG
 importance: 2
 category: research-thesis
 related_publications: false
@@ -67,5 +67,5 @@ The dataset included vehicles, traffic lights, pedestrians, and traffic signs. M
 ---
 
 ## Resources
-- 📄 [Download Project Report PDF](assets/docs/SB_Studienarbeit.pdf)  
+- 📄 [Download Project Report PDF](/assets/docs/SB_Studienarbeit.pdf)  
 - 💻 [View Source on GitHub](https://github.com/SurajBhar/studienarbeit_repository)  
