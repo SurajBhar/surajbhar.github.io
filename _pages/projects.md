@@ -6,11 +6,12 @@ description: A curated showcase of my research-driven and applied AI projects sp
 nav: true
 nav_order: 3
 # display_categories: [work, fun]
-display_categories: 
+display_categories:
+  - mlops-cloud 
   - research-thesis
-  - vision-multimodal
   - language-agentic
-  - mlops-cloud
+  - vision-multimodal
+  - visualization
 horizontal: false
 ---
 
