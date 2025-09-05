@@ -84,13 +84,13 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-chat-with-your-documents",
-          title: 'Chat with your documents',
-          description: "Streamlit-based chatbot application that allows users to interact with their documents",
+          title: 'Chat with Your Documents',
+          description: "Retrieval-Augmented Generation (RAG) chatbot with NVIDIA NIM and Streamlit",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rag/1_chat-pdf/";
             },},{id: "projects-code-assistant",
           title: 'Code Assistant',
-          description: "Gradio-based chatbot application that allows users to generate code.",
+          description: "Local AI-powered coding assistant with Gradio and Ollama",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rag/2_codeassistant/";
             },},{id: "projects-master-thesis",
@@ -98,26 +98,26 @@ ninja.data = [{
           description: "Improved Driver Distraction Detection Using Self-Supervised Learning",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research/1_master-thesis/";
-            },},{id: "projects-student-research-project",
-          title: 'Student Research Project',
+            },},{id: "projects-studienarbeit",
+          title: 'Studienarbeit',
           description: "YOLO-Based Real-Time Object Detection for Autonomous Driving in CARLA",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research/2_yolo-project/";
-            },},{id: "projects-research-project-on-robustness",
-          title: 'Research Project on Robustness',
+            },},{id: "projects-robust-vision-models",
+          title: 'Robust Vision Models',
           description: "Out-of-Distribution (OOD) Robustness with AugMix",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research/3_ood-augmix/";
-            },},{id: "projects-research-project-on-3d-representation-learning",
-          title: 'Research Project on 3D Representation Learning',
-          description: "Neural Unsigned Distance Fields for Implicit Function Learning",
+            },},{id: "projects-3d-representation-learning",
+          title: '3D Representation Learning',
+          description: "Advancing Neural Unsigned Distance Fields for Implicit 3D Function Learning",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research/4_ndf-project/";
-            },},{id: "projects-bachelor-thesis",
-          title: 'Bachelor-Thesis',
-          description: "Experimental Investigations on Performance Evaluation of two-stage Solar Receiver System",
+            },},{id: "projects-face-mask-detection",
+          title: 'Face Mask Detection',
+          description: "Real-time mask detection using VGG16 and HaarCascade",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/research/5_bachelor-thesis/";
+              window.location.href = "/projects/vision/1_facemask/";
             },},{
         id: 'social-email',
         title: 'email',
