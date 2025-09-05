@@ -88,8 +88,8 @@ ninja.data = [{
           description: "Retrieval-Augmented Generation (RAG) chatbot with NVIDIA NIM and Streamlit",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rag/1_chat-pdf/";
-            },},{id: "projects-code-assistant",
-          title: 'Code Assistant',
+            },},{id: "projects-codeninja-local-code-assistant",
+          title: 'Codeninja-Local Code Assistant',
           description: "Local AI-powered coding assistant with Gradio and Ollama",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rag/2_codeassistant/";
@@ -98,8 +98,8 @@ ninja.data = [{
           description: "Improved Driver Distraction Detection Using Self-Supervised Learning",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research/1_master-thesis/";
-            },},{id: "projects-studienarbeit",
-          title: 'Studienarbeit',
+            },},{id: "projects-studienarbeit-real-time-object-detection",
+          title: 'Studienarbeit-Real-Time Object Detection',
           description: "YOLO-Based Real-Time Object Detection for Autonomous Driving in CARLA",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research/2_yolo-project/";
