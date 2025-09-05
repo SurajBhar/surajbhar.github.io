@@ -5,7 +5,12 @@ permalink: /projects/
 description: A curated showcase of my research-driven and applied AI projects spanning LLMs, computer vision, and self-supervised learning.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+# display_categories: [work, fun]
+display_categories: 
+  - research-thesis
+  - vision-multimodal
+  - language-agentic
+  - mlops-cloud
 horizontal: false
 ---
 
@@ -15,7 +20,10 @@ horizontal: false
   <!-- Display categorized projects -->
   {% for category in page.display_categories %}
   <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
+    <!--<h2 class="category">{{ category }}</h2>-->
+    <h2 class="category">
+      {{ site.data.categories[category] | default: category }}
+    </h2>
   </a>
   {% assign categorized_projects = site.projects | where: "category", category %}
   {% assign sorted_projects = categorized_projects | sort: "importance" %}

@@ -4,7 +4,7 @@ title: Hotel Reservation Cancellation Prediction
 description: Hotel Reservation Cancellation Prediction — From Notebook to Production on GCP
 img: assets/img/p_hrprediction/app.png
 importance: 2
-category: work
+category: mlops-cloud
 giscus_comments: false
 ---
 
