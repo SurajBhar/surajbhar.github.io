@@ -8,9 +8,6 @@ category: research-thesis
 related_publications: false
 ---
 
-# Research Project on 3D Representation Learning  
-*Neural Unsigned Distance Fields (NDFs) for Implicit Function Learning*  
-
 ### My Contributions
 - Enhanced the **NDF encoder bottleneck** with vector quantization and a learned codebook to capture features in both continuous and discrete modes.  
 - Trained a modified NDF model on the **ShapeNet Cars dataset** using the Uni-Siegen OMNI GPU cluster (runtime: 5 days).  
@@ -19,7 +16,7 @@ related_publications: false
 ### Context
 This project builds on the seminal work *Neural Unsigned Distance Fields for Implicit Function Learning* by [Julian Chibane](http://virtualhumans.mpi-inf.mpg.de/people/Chibane.html), [Aymen Mir](http://virtualhumans.mpi-inf.mpg.de/people/Mir.html), and [Gerard Pons-Moll](http://virtualhumans.mpi-inf.mpg.de/people/pons-moll.html), published at **NeurIPS 2020**.  
 
-- [Original Paper (PDF)](http://virtualhumans.mpi-inf.mpg.de/papers/chibane2020ndf/chibane2020ndf.pdf) | [Supplementary](http://virtualhumans.mpi-inf.mpg.de/papers/chibane2020ndf/chibane2020ndf-supp.pdf) | [Project Website](http://virtualhumans.mpi-inf.mpg.de/ndf/) | [Arxiv](https://arxiv.org/abs/2010.13938)  
+[Original Paper (PDF)](http://virtualhumans.mpi-inf.mpg.de/papers/chibane2020ndf/chibane2020ndf.pdf) | [Supplementary](http://virtualhumans.mpi-inf.mpg.de/papers/chibane2020ndf/chibane2020ndf-supp.pdf) | [Project Website](http://virtualhumans.mpi-inf.mpg.de/ndf/) | [Arxiv](https://arxiv.org/abs/2010.13938)  
 
 ### Citation
 If referencing this project, please cite the original NDF paper and GIFS paper for vector quantization:  

@@ -8,14 +8,18 @@ category: language-agentic
 related_publications: false
 ---
 
-# Chat with Your Documents – RAG Chatbot using NVIDIA NIM
-
-This project demonstrates how to build a **Retrieval-Augmented Generation (RAG) chatbot** that allows users to upload documents (PDFs) and query them in natural language.  
-The chatbot is implemented in **Streamlit**, powered by **NVIDIA NIM** for embeddings and inference, and uses **LangChain** for document processing.  
+This project demonstrates how to build a **Retrieval-Augmented Generation (RAG) chatbot** that allows users to upload documents (PDFs) and query them in natural language. The chatbot is implemented in **Streamlit**, powered by **NVIDIA NIM** for embeddings and inference, and uses **LangChain** for document processing.  
 
 The result: a clean interface where you can *ask questions to your own documents* and get context-aware answers in real time.  
 
-![Chatbot Demo](/assets/img/p_rag/rag_demo.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="/assets/img/p_rag/rag_demo.png" title="RAG based Chatbot" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Chatbot Demo
+</div>
 
 ---
 

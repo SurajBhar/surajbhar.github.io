@@ -1,14 +1,12 @@
 ---
 layout: page
-title: Studienarbeit
+title: Studienarbeit-Real-Time Object Detection
 description: YOLO-Based Real-Time Object Detection for Autonomous Driving in CARLA
 img: assets/img/p_research/advantage_higly_occluded_detection_town_3_daytime_w1.PNG
 importance: 2
 category: research-thesis
 related_publications: false
 ---
-
-# YOLO-Based Real-Time Object Detection for Autonomous Driving in CARLA
 
 This project explored **real-time object detection for autonomous driving** using the [CARLA Simulator](https://carla.org/). A simulated **Tesla Model 3** was equipped with eight cameras, 12 ultrasonic sensors, and a radar to generate **multi-modal synthetic data** for training and evaluating state-of-the-art object detection models.  
 

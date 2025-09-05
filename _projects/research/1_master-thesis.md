@@ -8,11 +8,7 @@ category: research-thesis
 related_publications: false
 ---
 
-# Master Thesis – Improved Driver Distraction Detection Using Self-Supervised Learning
-
-This project investigates **driver distraction detection** using the [Drive&Act dataset](https://driveandact.com) and **Vision Transformers (ViTs)** trained with supervised and self-supervised learning (SSL).  
-The core challenge addressed was **imbalanced data** and **generalization across views and modalities (RGB vs. IR)**.  
-To tackle this, I proposed the **Clustered Feature Weighting (CFW) algorithm**, a *label-free sampling strategy* that balances training batches using unsupervised clustering (HDBSCAN) and weighted random sampling.  
+This thesis investigates **driver distraction detection** using the [Drive&Act dataset](https://driveandact.com) and **Vision Transformers (ViTs)** trained with supervised and self-supervised learning (SSL). The core challenge addressed was **imbalanced data** and **generalization across views and modalities (RGB vs. IR)**. To tackle this, I proposed the **Clustered Feature Weighting (CFW) algorithm**, a *label-free sampling strategy* that balances training batches using unsupervised clustering (HDBSCAN) and weighted random sampling.  
 
 CFW improved dataset balance and boosted **cross-modality generalization** by up to **+7.17% balanced accuracy** when adapting RGB-trained models to infrared imagery. SSL-based encoders (DINOv2) consistently outperformed supervised ViTs in generalization, particularly for grayscale and IR modalities, affirming their potential for **robust, adaptable distraction detection systems** in automotive safety.  
 

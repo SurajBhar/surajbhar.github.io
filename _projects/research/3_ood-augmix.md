@@ -8,8 +8,6 @@ category: research-thesis
 related_publications: false
 ---
 
-# Out-of-Distribution Robustness with AugMix
-
 This project explored **out-of-distribution (OOD) robustness** in image classification using the **AugMix data augmentation technique**. AugMix generates diverse augmented views of input images and enforces consistency across them, which significantly improves robustness and uncertainty calibration without extensive tuning.  
 
 My study implemented **ResNet18** and **ConvNeXt-tiny** architectures (both pretrained and non-pretrained) on **CIFAR-10, CIFAR-10-C, and CIFAR-10-P** datasets. I benchmarked models using different **optimizers (AdamW, SGD)** and **learning rate schedulers (CosineAnnealingLR, LambdaLR)**, and tuned hyperparameters for ConvNeXt-tiny.  

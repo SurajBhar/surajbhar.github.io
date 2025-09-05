@@ -1,14 +1,12 @@
 ---
 layout: page
-title: Code Assistant
+title: Codeninja-Local Code Assistant 
 description: Local AI-powered coding assistant with Gradio and Ollama
 img: assets/img/p_rag/codeninja_demo.png
 importance: 2
 category: language-agentic
 related_publications: false
 ---
-
-# Codeninja: Local Code Assistant  
 
 **Codeninja** is a lightweight, local **AI-powered coding assistant** built using a custom model (`codeninja`) hosted with **Ollama** and accessed through a **Gradio interface**. It provides contextual coding suggestions, keeps a history of prompts, and runs entirely offline — ensuring privacy and fast inference.  
 
