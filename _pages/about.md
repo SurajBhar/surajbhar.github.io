@@ -6,7 +6,7 @@ subtitle: AI Engineer & Researcher | Multimodal Learning, LLMs, and Agentic AI S
 
 profile:
   align: right
-  image: best_2_flipped.png
+  image: b1_flip2.png
   image_circular: false # crops the image to make it circular
   more_info: >
      <p>AI Engineer and Researcher</p>
