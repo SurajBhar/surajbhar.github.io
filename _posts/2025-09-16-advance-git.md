@@ -2,11 +2,10 @@
 layout: distill
 title: Advance Git Commands
 description: A practical guide to advanced Git workflows — rewriting history, rebasing, fetching, pulling with rebase, and using reflog to recover lost commits.
-tags: git version-control
+tags: distill formatting # git version-control
 giscus_comments: true
-date: 2025-09-16
+date: 2025-09-16 13:29:00
 featured: true # <-- Pinned!
-
 mermaid:
   enabled: true
   zoomable: true
@@ -16,11 +15,16 @@ chart:
   echarts: false
   vega_lite: false
 
+tikzjax: false
+typograms: false
+
 authors:
   - name: Suraj Bhardwaj
     url: "https://surajbhar.github.io/"
     affiliations:
       name: AI Engineer & Researcher
+
+bibliography: 2018-12-22-distill.bib
 
 toc:
   - name: Commit History Rewriting in Git
@@ -33,33 +37,35 @@ toc:
       - name: Key Takeaways
   - name: Git Fetch
     subsections:
-      - name: Step 1: Checking Branches
-      - name: Step 2: Detecting Divergence
-      - name: Step 3: Inspecting Remote Changes
-      - name: Step 4: Merging Remote Changes
+      - name: Step 1- Checking Branches
+      - name: Step 2- Detecting Divergence
+      - name: Step 3- Inspecting Remote Changes
+      - name: Step 4- Merging Remote Changes
       - name: Advantages of git fetch
       - name: Disadvantages / Gotchas
       - name: Tips for Users
       - name: Key Takeaway
   - name: Git Pull and Pull with Rebase
     subsections:
-      - name: Step 1: Basic Git Pull
-      - name: Step 2: Why Pull with Rebase?
-      - name: Step 3: Example Walkthrough
-      - name: Step 4: After Rebase
+      - name: Step 1- Basic Git Pull
+      - name: Step 2- Why Pull with Rebase?
+      - name: Step 3- Example Walkthrough
+      - name: Step 4- After Rebase
       - name: Advantages of git pull --rebase
       - name: Disadvantages / Cautions
       - name: Tips for Using Pull with Rebase
       - name: Key Takeaway
   - name: Git Reference Logs (Reflog)
     subsections:
-      - name: Step 1: Viewing the Reflog
-      - name: Step 2: Why Reflog Matters
-      - name: Step 3: Inspecting Historical States
-      - name: Step 4: Using Reflog to Recover from Mistakes
-      - name: Step 5: Where Reflog Data Lives
-      - name: Step 6: Cheat Sheet
+      - name: Step 1- Viewing the Reflog
+      - name: Step 2- Why Reflog Matters
+      - name: Step 3- Inspecting Historical States
+      - name: Step 4- Using Reflog to Recover from Mistakes
+      - name: Step 5- Where Reflog Data Lives
+      - name: Step 6- Cheat Sheet
       - name: Key Takeaways
+  - name: Final Thoughts
+  - name: What’s Next?
 ---
 
 # Advance Git Commands
@@ -192,7 +198,7 @@ In this walkthrough, we will simulate a real scenario: creating a feature branch
 
 ---
 
-#### Step 1: Create a New Feature Branch
+#### Step 1- Create a New Feature Branch
 
 ```bash
 git checkout -b feature-branch
@@ -208,7 +214,7 @@ At this point, both `main` and `feature-branch` point to the same commit.
 
 ---
 
-#### Step 2: Add Commits to Feature Branch
+#### Step 2- Add Commits to Feature Branch
 
 ```bash
 git commit -am "feature-branch: modified title - 404.html"
@@ -224,7 +230,7 @@ Now, `feature-branch` has two commits that are not present in `main`.
 
 ---
 
-#### Step 3: Add Commits to Main
+#### Step 3- Add Commits to Main
 
 Switch back to `main` and simulate independent changes:
 
@@ -255,7 +261,7 @@ Now both branches have diverged.
 
 ---
 
-#### Step 4: Start Rebasing
+#### Step 4- Start Rebasing
 
 ```bash
 git checkout feature-branch
@@ -278,7 +284,7 @@ Git stopped because of a conflict in `404.html`.
 
 ---
 
-#### Step 5: Resolve the First Conflict
+#### Step 5- Resolve the First Conflict
 
 ```bash
 git mergetool
@@ -316,7 +322,7 @@ Another conflict occurred in the next commit.
 
 ---
 
-#### Step 6: Resolve the Second Conflict
+#### Step 6- Resolve the Second Conflict
 
 Fix the file again, then run:
 
@@ -337,7 +343,7 @@ All conflicts are resolved, and rebasing is complete.
 
 ---
 
-#### Step 7: Verify Commit History
+#### Step 7- Verify Commit History
 
 ```bash
 git log --oneline --decorate --graph --all
@@ -358,7 +364,7 @@ Notice how `feature-branch` commits are now **on top of `main`**, forming a line
 
 ---
 
-#### Step 8: Merge Feature Branch into Main
+#### Step 8- Merge Feature Branch into Main
 
 Since `feature-branch` is rebased, merging results in a **fast-forward**:
 
@@ -380,7 +386,7 @@ Fast-forward
 
 ---
 
-#### Step 9: Cleanup
+#### Step 9- Cleanup
 
 ```bash
 git branch -d feature-branch
@@ -439,7 +445,7 @@ This makes `git fetch` a safe operation—you can inspect remote changes before 
 
 ---
 
-## Step 1: Checking Branches
+## Step 1- Checking Branches
 
 List all local and remote branches:
 
@@ -497,7 +503,7 @@ Both point to the same commit `453b2c9`, meaning your local branch is **in sync*
 
 ---
 
-## Step 2: Detecting Divergence
+## Step 2- Detecting Divergence
 
 Suppose new commits were added on the remote repository. Before fetching:
 
@@ -535,7 +541,7 @@ Remote-tracking branch `origin/main` is now updated, but **local `main` is untou
 
 ---
 
-## Step 3: Inspect Remote Changes
+## Step 3- Inspect Remote Changes
 
 Check remote branch logs:
 
@@ -562,7 +568,7 @@ At this point:
 
 ---
 
-## Step 4: Merging Remote Changes
+## Step 4- Merging Remote Changes
 
 To bring your local branch up to date:
 
@@ -642,7 +648,7 @@ git pull = git fetch + git merge
 
 ---
 
-## Step 1: Basic Git Pull
+## Step 1- Basic Git Pull
 
 Let’s say you are on `main` and new commits have appeared on the remote repository. Running:
 
@@ -660,7 +666,7 @@ git pull origin main
 
 ---
 
-## Step 2: Why Pull with Rebase?
+## Step 2- Why Pull with Rebase?
 
 Sometimes merging is not the cleanest solution. If you are working on **local changes** but also want to integrate the latest updates from remote:
 
@@ -680,7 +686,7 @@ works like this:
 
 ---
 
-## Step 3: Example Walkthrough
+## Step 3- Example Walkthrough
 
 Before pulling, the commit history looks like this:
 
@@ -716,7 +722,7 @@ Successfully rebased and updated refs/heads/main.
 
 ---
 
-## Step 4: After Rebase
+## Step 4- After Rebase
 
 Check the new commit history:
 
@@ -796,7 +802,7 @@ Think of the reflog as a **personal diary of your Git actions**, maintained loca
 
 ---
 
-## Step 1: Viewing the Reflog
+## Step 1- Viewing the Reflog
 
 Run:
 
@@ -826,7 +832,7 @@ Unlike `git log`, these entries **remain visible even after resets or rebases**.
 
 ---
 
-## Step 2: Why Reflog Matters
+## Step 2- Why Reflog Matters
 
 Let’s say you reset a branch or made changes you regret.
 
@@ -837,7 +843,7 @@ That’s why reflog is Git’s **time machine**.
 
 ---
 
-## Step 3: Inspecting Historical States
+## Step 3- Inspecting Historical States
 
 You can inspect any past state of the repository with:
 
@@ -889,7 +895,7 @@ Date:   Fri Sep 12 10:29:35 2025 +0200
 
 ---
 
-## Step 4: Using Reflog to Recover from Mistakes
+## Step 4- Using Reflog to Recover from Mistakes
 
 ### Scenario: Hard Reset
 
@@ -913,7 +919,7 @@ You can still recover the commits via their reflog entries.
 
 ---
 
-### Scenario: Restoring Lost Commits
+### Scenario- Restoring Lost Commits
 
 You decide those commits weren’t mistakes after all. To bring them back:
 
@@ -936,7 +942,7 @@ Now your “lost” commits are restored into your main history.
 
 ---
 
-## Step 5: Where Reflog Data Lives
+## Step 5- Where Reflog Data Lives
 
 * Reflog entries are stored inside `.git/logs/`
 * They are **local only** – other collaborators cannot see your reflog.
@@ -944,7 +950,7 @@ Now your “lost” commits are restored into your main history.
 
 ---
 
-## Step 6: Cheat Sheet
+## Step 6- Cheat Sheet
 
 Here’s a quick summary of useful reflog commands:
 
