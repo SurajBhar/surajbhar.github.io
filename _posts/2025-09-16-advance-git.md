@@ -68,13 +68,9 @@ toc:
   - name: What’s Next?
 ---
 
-# Advance Git Commands
-
-Git is more than `add`, `commit`, and `push`. Once you start collaborating on real projects, you’ll often need to rewrite history, clean up commits, rebase branches, or even recover “lost” work. This guide explores advanced Git features with explanations and space for practical demonstrations.
-
----
 
 ## 1. Commit History Rewriting in Git
+Git is more than `add`, `commit`, and `push`. Once you start collaborating on real projects, you’ll often need to rewrite history, clean up commits, rebase branches, or even recover “lost” work. This guide explores advanced Git features with explanations and space for practical demonstrations.
 
 ### 1.1 Amending Git Commits
 Amending in Git is like fixing or updating your most recent commit without creating a brand-new one. Instead of stacking another commit on top, you “rewrite” the last one.
