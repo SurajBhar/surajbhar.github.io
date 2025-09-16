@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-publications",
-          title: "Publications",
-          description: "Research publications and conference papers, listed in reverse chronological order.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/publications/";
-          },
         },{id: "nav-projects",
           title: "Projects",
           description: "A curated showcase of my research-driven and applied AI projects spanning LLMs, computer vision, and self-supervised learning.",
@@ -37,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
+        },{id: "nav-publications",
+          title: "Publications",
+          description: "Research publications and conference papers, listed in reverse chronological order.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
         },{id: "nav-cv",
           title: "CV",
           description: "View or download my latest curriculum vitae, highlighting my academic background, research experience, technical skills, and professional achievements.",
@@ -44,7 +44,21 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-a-post-with-plotly-js",
+        },{id: "dropdown-bookshelf",
+              title: "bookshelf",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/books/";
+              },
+            },{id: "dropdown-blog",
+              title: "blog",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/blog/";
+              },
+            },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
