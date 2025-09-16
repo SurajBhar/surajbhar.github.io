@@ -44,15 +44,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-",
+        },{id: "post-advance-git-commands",
         
-          title: "",
+          title: "Advance Git Commands",
         
-        description: "",
+        description: "A practical guide to advanced Git workflows — rewriting history, rebasing, fetching, pulling with rebase, and using reflog to recover lost commits.",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/09/2025-09-16-advance-git/";
+            window.location.href = "/blog/2025/09/advance-git/";
           
         },
       },{id: "post-a-post-with-plotly-js",
