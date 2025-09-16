@@ -1,11 +1,11 @@
 ---
 layout: distill
-title: "Advance Git Commands"
-description: "A practical guide to advanced Git workflows — rewriting history, rebasing, fetching, pulling with rebase, and using reflog to recover lost commits."
-tags: [git, github, version-control, tutorial]
+title: Advance Git Commands
+description: A practical guide to advanced Git workflows — rewriting history, rebasing, fetching, pulling with rebase, and using reflog to recover lost commits.
+tags: git version-control
 giscus_comments: true
 date: 2025-09-16
-featured: true
+featured: true # <-- Pinned!
 
 mermaid:
   enabled: true
