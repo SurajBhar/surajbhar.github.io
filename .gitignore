@@ -11,3 +11,5 @@ assets/libs/
 node_modules/
 vendor
 .idea
+posts_warehouse
+projects_warehouse

@@ -123,8 +123,8 @@ disqus_shortname: al-folio # put your disqus shortname
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
   - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-  - name: Google Blog
+    rss_url: https://medium.com/@suraj.unisiegen
+  - name: Technical Blog
     posts:
       - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
         published_date: 2024-05-14
@@ -193,13 +193,6 @@ exclude:
   - readme_preview/
   - vendor
   - assets/jupyter/blog.ipynb
-  - _projects/3_project.md
-  - _projects/4_project.md
-  - _projects/5_project.md
-  - _projects/6_project.md
-  - _projects/7_project.md
-  - _projects/8_project.md
-  - _projects/9_project.md
 keep_files:
   - CNAME
   - .nojekyll
