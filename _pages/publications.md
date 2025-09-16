@@ -4,7 +4,7 @@ permalink: /publications/
 title: Publications
 description: Research publications and conference papers, listed in reverse chronological order.
 nav: true
-nav_order: 2
+nav_order: 4
 ---
 
 <!-- _pages/publications.md -->

@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Submenus
-nav: false # true
+nav: true # true
 nav_order: 8
-dropdown: false # true
+dropdown: true # true
 children:
   - title: bookshelf
     permalink: /books/

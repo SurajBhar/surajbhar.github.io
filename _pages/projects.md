@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 description: A curated showcase of my research-driven and applied AI projects spanning LLMs, computer vision, and self-supervised learning.
 nav: true
-nav_order: 3
+nav_order: 2
 # display_categories: [work, fun]
 display_categories:
   - mlops-cloud 
