@@ -3,7 +3,7 @@ layout: distill
 title: Vector Databases — Concepts, Terminologies, and Industry Players
 description: A deep dive into vector databases, their key concepts, and the major providers shaping this critical AI infrastructure.
 tags: llms agentic-ai
-categories: ai, infrastructure
+categories: ai-ml
 giscus_comments: true
 date: 2025-09-28 21:40:00
 featured: false

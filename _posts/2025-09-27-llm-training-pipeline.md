@@ -1,9 +1,7 @@
 ---
 layout: post
-title: "Understanding the GPT-Style Assistant Training Pipeline"
-description: "From raw text to aligned AI assistants — a clear overview of how models like ChatGPT are built"
-
-tags: distill formatting # git version-control
+title: Understanding the GPT-Style Assistant Training Pipeline
+description: From raw text to aligned AI assistants — a clear overview of how models like ChatGPT are built
 date: 2025-09-27 20:42:00
 tags: llms
 categories: ai-ml
