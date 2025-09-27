@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-advance-git-commands",
+        },{id: "post-understanding-the-gpt-style-assistant-training-pipeline",
+        
+          title: "Understanding the GPT-Style Assistant Training Pipeline",
+        
+        description: "From raw text to aligned AI assistants — a clear overview of how models like ChatGPT are built",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/09/llm-training-pipeline/";
+          
+        },
+      },{id: "post-advance-git-commands",
         
           title: "Advance Git Commands",
         
