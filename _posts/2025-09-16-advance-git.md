@@ -2,8 +2,8 @@
 layout: distill
 title: Advance Git Commands
 description: A practical guide to advanced Git workflows — rewriting history, rebasing, fetching, pulling with rebase, and using reflog to recover lost commits.
-tags: distill formatting # git version-control
-giscus_comments: true
+tags: git version-control # git version-control
+giscus_comments: false
 date: 2025-09-16 13:29:00
 featured: true # <-- Pinned!
 mermaid:
@@ -68,8 +68,8 @@ toc:
   - name: What’s Next?
 ---
 
-
 ## 1. Commit History Rewriting in Git
+
 Git is more than `add`, `commit`, and `push`. Once you start collaborating on real projects, you’ll often need to rewrite history, clean up commits, rebase branches, or even recover “lost” work. This guide explores advanced Git features with explanations and space for practical demonstrations.
 
 ### 1.1 Amending Git Commits
