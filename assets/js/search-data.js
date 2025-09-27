@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-understanding-the-gpt-style-assistant-training-pipeline",
+        },{id: "post-lifecycle-of-a-large-language-model-llm",
+        
+          title: "Lifecycle of a Large Language Model (LLM)",
+        
+        description: "Understanding the six key stages in an LLM journey — from data collection to monitoring and continuous improvement.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/09/llm-lifecycle/";
+          
+        },
+      },{id: "post-understanding-the-gpt-style-assistant-training-pipeline",
         
           title: "Understanding the GPT-Style Assistant Training Pipeline",
         
