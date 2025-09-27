@@ -2,29 +2,16 @@
 layout: distill
 title: Advance Git Commands
 description: A practical guide to advanced Git workflows — rewriting history, rebasing, fetching, pulling with rebase, and using reflog to recover lost commits.
-tags: git version-control # git version-control
+tags: version-control # git version-control
 giscus_comments: false
 date: 2025-09-16 13:29:00
-featured: true # <-- Pinned!
-mermaid:
-  enabled: true
-  zoomable: true
-code_diff: true
-chart:
-  chartjs: false
-  echarts: false
-  vega_lite: false
-
-tikzjax: false
-typograms: false
+featured: false # <-- Pinned!
 
 authors:
   - name: Suraj Bhardwaj
     url: "https://surajbhar.github.io/"
     affiliations:
       name: AI Engineer & Researcher
-
-bibliography: 2018-12-22-distill.bib
 
 toc:
   - name: Commit History Rewriting in Git

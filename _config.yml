@@ -86,8 +86,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: From Papers to Pipelines # blog_name will be displayed in your blog page
-blog_description: Insights from working at the intersection of deep learning research, ML engineering, and production deployment. (Under Maintainance)
+blog_name: Notes on Machine Intelligence # blog_name will be displayed in your blog page
+blog_description: Personal reflections on AI, from theory to deployment. Opinions are solely my own.
 permalink: /blog/:year/:month/:title/ # /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -257,7 +257,7 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["git", "version-control", "llms", "links", "math", "code", ] # these tags will be displayed on the front page of your blog
+display_tags: ["version-control", "llms", ] # these tags will be displayed on the front page of your blog
 display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
