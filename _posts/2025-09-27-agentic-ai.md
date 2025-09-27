@@ -1,27 +1,10 @@
 ---
-layout: distill
+layout: post
 title: Understanding AI Agents and Agentic AI
 description: A primer on AI agents, why they matter, and the mathematical and system-level intuition behind Agentic AI.
-tags: agentic-ai llms
-categories: ai-ml
-giscus_comments: false
+tags: llms
 date: 2025-09-27 21:30:00
-featured: false
-
-authors:
-  - name: Suraj Bhardwaj
-    url: "https://surajbhar.github.io/"
-    affiliations:
-      name: AI Engineer & Researcher
-
-toc:
-  - name: What Are Agents?
-  - name: What Does Agentic AI Mean?
-  - name: Why Do We Need Agents?
-  - name: Building Blocks of Agents
-  - name: Role of Vector Databases
-  - name: Role of MCP Servers
-  - name: Mathematical Intuition Behind Agentic AI
+author: Suraj Bhardwaj
 ---
 
 # Understanding AI Agents and Agentic AI

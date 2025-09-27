@@ -1,28 +1,10 @@
 ---
-layout: distill
+layout: post
 title: Lifecycle of a Large Language Model (LLM)
 description: Understanding the six key stages in an LLM’s journey — from data collection to monitoring and continuous improvement.
 tags: llms
-categories: ai-ml
-giscus_comments: false
 date: 2025-09-27 21:00:00
-featured: false
-
-authors:
-  - name: Suraj Bhardwaj
-    url: "https://surajbhar.github.io/"
-    affiliations:
-      name: AI Engineer & Researcher
-
-toc:
-  - name: Data Collection & Curation
-  - name: Pretraining
-  - name: Fine-tuning & Alignment
-  - name: Evaluation & Benchmarking
-  - name: Deployment & Inference
-  - name: Monitoring, Feedback & Continuous Improvement
-  - name: Summary — LLM Lifecycle Map
-  - name: Related Practices (LLMOps)
+author: Suraj Bhardwaj
 ---
 
 # Lifecycle of a Large Language Model (LLM)

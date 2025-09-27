@@ -4,16 +4,7 @@ title: Attention Mechanisms in Deep Learning
 date: 2025-09-27 22:19:00
 description: A comprehensive guide to attention mechanisms — from their origins in machine translation to modern variants powering Transformers, GANs, and beyond.
 tags: llms
-categories: deep-learning
-giscus_comments: false
-featured: false # <-- Pinned!
-related_posts: false
-
-authors:
-  - name: Suraj Bhardwaj
-    url: "https://surajbhar.github.io/"
-    affiliations:
-      name: AI Engineer & Researcher
+author: Suraj Bhardwaj
 ---
 
 ## Introduction  

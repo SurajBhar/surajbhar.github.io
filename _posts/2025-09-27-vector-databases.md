@@ -1,25 +1,10 @@
 ---
-layout: distill
+layout: post
 title: Vector Databases — Concepts, Terminologies, and Industry Players
 description: A deep dive into vector databases, their key concepts, and the major providers shaping this critical AI infrastructure.
-tags: llms agentic-ai
-categories: ai-ml
-giscus_comments: true
+tags: llms
 date: 2025-09-28 21:40:00
-featured: false
-
-authors:
-  - name: Suraj Bhardwaj
-    url: "https://surajbhar.github.io/"
-    affiliations:
-      name: AI Engineer & Researcher
-
-toc:
-  - name: What Are Vector Databases?
-  - name: Why Do We Need Them?
-  - name: Key Concepts and Terminologies
-  - name: Vector Database Providers in the Market
-  - name: Final Thoughts
+author: Suraj Bhardwaj
 ---
 
 # Vector Databases — Concepts, Terminologies, and Industry Players

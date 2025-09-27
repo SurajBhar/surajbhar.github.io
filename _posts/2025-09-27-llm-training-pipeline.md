@@ -4,16 +4,7 @@ title: Understanding the GPT-Style Assistant Training Pipeline
 description: From raw text to aligned AI assistants — a clear overview of how models like ChatGPT are built
 date: 2025-09-27 20:42:00
 tags: llms
-categories: ai-ml
-giscus_comments: false
-related_posts: false
-related_publications: false
-
-authors:
-  - name: Suraj Bhardwaj
-    url: "https://surajbhar.github.io/"
-    affiliations:
-      name: AI Engineer & Researcher
+author: Suraj Bhardwaj
 ---
 
 ## GPT-Style Assistant Training Pipeline
