@@ -2,7 +2,7 @@
 layout: post
 title: Understanding AI Agents and Agentic AI
 description: A primer on AI agents, why they matter, and the mathematical and system-level intuition behind Agentic AI.
-date: 2025-09-28 01:02:00
+date: 2025-08-28 01:02:00
 author: Suraj Bhardwaj
 ---
 

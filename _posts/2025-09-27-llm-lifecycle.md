@@ -2,7 +2,7 @@
 layout: post
 title: Lifecycle of a Large Language Model (LLM)
 description: Understanding the six key stages in an LLM journey — from data collection to monitoring and continuous improvement.
-date: 2025-09-27 21:00:00
+date: 2025-08-27 21:00:00
 tags: llms
 author: Suraj Bhardwaj
 ---

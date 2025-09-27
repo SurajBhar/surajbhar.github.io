@@ -2,7 +2,7 @@
 layout: post
 title: Attention Mechanisms in Deep Learning
 description: A comprehensive guide to attention mechanisms — from their origins in machine translation to modern variants powering Transformers, GANs, and beyond.
-date: 2025-09-27 22:19:00
+date: 2025-08-27 22:19:00
 author: Suraj Bhardwaj
 ---
 

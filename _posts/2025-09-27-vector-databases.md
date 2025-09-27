@@ -2,7 +2,7 @@
 layout: post
 title: Vector Databases — Concepts, Terminologies, and Industry Players
 description: A deep dive into vector databases, their key concepts, and the major providers shaping this critical AI infrastructure.
-date: 2025-09-28 21:40:00
+date: 2025-08-28 21:40:00
 author: Suraj Bhardwaj
 ---
 

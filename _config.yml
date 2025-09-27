@@ -133,7 +133,7 @@ external_sources:
   - name: Meta Blog (DINOv3)
     posts:
       - url: https://ai.meta.com/dinov3/
-        published_date: 2025-09-28
+        published_date: 2025-08-28
 # -----------------------------------------------------------------------------
 # Newsletter
 # -----------------------------------------------------------------------------
