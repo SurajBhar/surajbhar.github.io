@@ -263,7 +263,7 @@ jekyll-archives:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
 display_tags: ["version-control", "llms", ] # these tags will be displayed on the front page of your blog
-display_categories: ["ai-ml", ] # Add new categories-these categories will be displayed on the front page of your blog: "external-services",
+display_categories: ["ai-ml", "external-services",] # Add new categories-these categories will be displayed on the front page of your blog: "external-services",
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
