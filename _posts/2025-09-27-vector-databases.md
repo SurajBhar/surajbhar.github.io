@@ -3,7 +3,6 @@ layout: post
 title: Vector Databases — Concepts, Terminologies, and Industry Players
 description: A deep dive into vector databases, their key concepts, and the major providers shaping this critical AI infrastructure.
 date: 2025-09-28 21:40:00
-tags: llms
 author: Suraj Bhardwaj
 ---
 
@@ -11,8 +10,6 @@ Vector Databases — Concepts, Terminologies, and Industry Players
 
 ## What Are Vector Databases?  
 Traditional databases store structured data in rows and columns. **Vector databases**, by contrast, are designed to store and query **embeddings** — high-dimensional vectors produced by models that capture semantic meaning. For example, the sentence *"The cat sat on the mat"* can be transformed into a 1,536-dimensional vector (using OpenAI embeddings). Storing such vectors allows for **similarity search**, enabling systems to retrieve semantically relevant information instead of relying on keyword matching.  
-
----
 
 ## Why Do We Need Them?  
 As LLMs and multimodal systems become context-hungry, agents must recall knowledge, past interactions, and reference documents. A vector database provides:  
@@ -24,8 +21,6 @@ As LLMs and multimodal systems become context-hungry, agents must recall knowled
 
 Without vector stores, AI systems would remain **memory-less** and struggle to scale in production.  
 
----
-
 ## Key Concepts and Terminologies  
 
 - **Embeddings:** numerical representations of text, images, audio, or code in high-dimensional space.  
@@ -36,8 +31,6 @@ Without vector stores, AI systems would remain **memory-less** and struggle to s
 - **Recall vs. Latency Trade-off:** higher recall ensures better accuracy but increases query time; ANN balances both.  
 - **Hybrid Search:** combining semantic vector search with keyword/metadata filters.  
 - **Persistence & Scaling:** distributed storage, replication, and cloud-native scaling for production workloads.  
-
----
 
 ## Vector Database Providers in the Market  
 
@@ -53,8 +46,6 @@ Several players provide vector databases or integrate vector search into broader
 - **Elasticsearch / OpenSearch** – Traditional search engines that now support dense vector search alongside keyword indexing.  
 - **Redis Vector** – Redis modules with vector similarity search, blending cache + vector store.  
 - **Postgres Extensions (pgvector)** – Add-on for PostgreSQL to handle embeddings directly in relational DB workflows.  
-
----
 
 ## Final Thoughts  
 Vector databases are the **memory layer of modern AI systems**. They transform embeddings into actionable context, powering RAG, semantic search, and Agentic AI workflows. With diverse players — from fully managed SaaS (Pinecone) to open-source frameworks (Milvus, Weaviate, FAISS) — the space is evolving rapidly. As models scale and applications demand **low-latency semantic recall**, vector databases will remain a foundational pillar of AI infrastructure.  

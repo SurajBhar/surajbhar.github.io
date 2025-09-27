@@ -7,8 +7,6 @@ tags: llms
 author: Suraj Bhardwaj
 ---
 
-## Lifecycle of a Large Language Model (LLM)
-
 You can think of an LLM’s journey as **six main stages**:
 
 1. Data Collection & Curation  
@@ -17,8 +15,6 @@ You can think of an LLM’s journey as **six main stages**:
 4. Evaluation & Benchmarking  
 5. Deployment & Inference  
 6. Monitoring, Feedback & Continuous Improvement  
-
----
 
 ### 1. Data Collection & Curation
 
@@ -41,8 +37,6 @@ LLMs rely on **huge, diverse datasets** to learn language patterns.
 
 *Key challenge:* scaling to hundreds of billions of tokens while keeping quality under control.  
 
----
-
 ### 2. Pretraining
 
 The **core step** — learning general language patterns from massive datasets.
@@ -55,8 +49,6 @@ The **core step** — learning general language patterns from massive datasets.
 
 *Outcome:* a base model with grammar, reasoning, and factual knowledge — but not yet aligned or task-specific.  
 
----
-
 ### 3. Fine-tuning & Alignment
 
 Once pretrained, the model is adapted for **safe and useful behavior**.
@@ -67,8 +59,6 @@ Once pretrained, the model is adapted for **safe and useful behavior**.
 - **Safety Guardrails:** moderation filters, refusal policies.  
 
 *Outcome:* aligned, instruction-following models (e.g., GPT-3 → InstructGPT → ChatGPT).  
-
----
 
 ### 4. Evaluation & Benchmarking
 
@@ -88,7 +78,6 @@ Models are tested before deployment.
 
 *Outcome:* validated performance and safety.  
 
----
 
 ### 5. Deployment & Inference
 
@@ -102,8 +91,6 @@ Turning the LLM into a **production-ready service**.
 
 *Outcome:* usable APIs for chatbots, copilots, analytics tools.  
 
----
-
 ### 6. Monitoring, Feedback & Continuous Improvement
 
 Deployed models must evolve continuously.
@@ -115,8 +102,6 @@ Deployed models must evolve continuously.
 
 *Outcome:* LLMs stay safe, cost-efficient, and aligned with user needs.  
 
----
-
 ### Summary — LLM Lifecycle Map
 
 Data Collection → Preprocessing → Pretraining → Fine-tuning & RLHF → Evaluation → Deployment → Monitoring & Iteration
@@ -124,8 +109,6 @@ Data Collection → Preprocessing → Pretraining → Fine-tuning & RLHF → Eva
 - **Base model** = general knowledge.  
 - **Instruction-tuned model** = safe and task-optimized.  
 - **Production system** = deployed, monitored, continuously improved.  
-
----
 
 ### Related Practices (LLMOps)
 
