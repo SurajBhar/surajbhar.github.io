@@ -86,8 +86,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Notes on Machine Intelligence # blog_name will be displayed in your blog page
-blog_description: Personal reflections on AI, from theory to deployment. Opinions are solely my own.
+blog_name: Thinking Machines # blog_name will be displayed in your blog page
+blog_description: AI insights- personal takes, practical lessons.
 permalink: /blog/:year/:month/:title/ # /blog/:year/:title/
 lsi: false # produce an index for related posts
 
