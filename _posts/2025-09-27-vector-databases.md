@@ -2,12 +2,12 @@
 layout: post
 title: Vector Databases — Concepts, Terminologies, and Industry Players
 description: A deep dive into vector databases, their key concepts, and the major providers shaping this critical AI infrastructure.
-tags: llms
 date: 2025-09-28 21:40:00
+tags: llms
 author: Suraj Bhardwaj
 ---
 
-# Vector Databases — Concepts, Terminologies, and Industry Players
+Vector Databases — Concepts, Terminologies, and Industry Players
 
 ## What Are Vector Databases?  
 Traditional databases store structured data in rows and columns. **Vector databases**, by contrast, are designed to store and query **embeddings** — high-dimensional vectors produced by models that capture semantic meaning. For example, the sentence *"The cat sat on the mat"* can be transformed into a 1,536-dimensional vector (using OpenAI embeddings). Storing such vectors allows for **similarity search**, enabling systems to retrieve semantically relevant information instead of relying on keyword matching.  

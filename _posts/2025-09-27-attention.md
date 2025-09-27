@@ -1,13 +1,11 @@
 ---
 layout: post
 title: Attention Mechanisms in Deep Learning
-date: 2025-09-27 22:19:00
 description: A comprehensive guide to attention mechanisms — from their origins in machine translation to modern variants powering Transformers, GANs, and beyond.
+date: 2025-09-27 22:19:00
 tags: llms
 author: Suraj Bhardwaj
 ---
-
-## Introduction  
 
 The **attention mechanism** has reshaped modern AI, becoming the foundation of models like Transformers, GPT, and Vision Transformers. It was originally proposed to overcome a weakness in **sequence-to-sequence (seq2seq)** models: the inability to remember long inputs when compressed into a single fixed-length vector.  
 

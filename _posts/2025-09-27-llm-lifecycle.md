@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Lifecycle of a Large Language Model (LLM)
-description: Understanding the six key stages in an LLM’s journey — from data collection to monitoring and continuous improvement.
-tags: llms
+description: Understanding the six key stages in an LLM journey — from data collection to monitoring and continuous improvement.
 date: 2025-09-27 21:00:00
+tags: llms
 author: Suraj Bhardwaj
 ---
 
-# Lifecycle of a Large Language Model (LLM)
+## Lifecycle of a Large Language Model (LLM)
 
 You can think of an LLM’s journey as **six main stages**:
 
@@ -20,7 +20,7 @@ You can think of an LLM’s journey as **six main stages**:
 
 ---
 
-## Data Collection & Curation
+### 1. Data Collection & Curation
 
 LLMs rely on **huge, diverse datasets** to learn language patterns.
 
@@ -43,7 +43,7 @@ LLMs rely on **huge, diverse datasets** to learn language patterns.
 
 ---
 
-## Pretraining
+### 2. Pretraining
 
 The **core step** — learning general language patterns from massive datasets.
 
@@ -57,7 +57,7 @@ The **core step** — learning general language patterns from massive datasets.
 
 ---
 
-## Fine-tuning & Alignment
+### 3. Fine-tuning & Alignment
 
 Once pretrained, the model is adapted for **safe and useful behavior**.
 
@@ -70,7 +70,7 @@ Once pretrained, the model is adapted for **safe and useful behavior**.
 
 ---
 
-## Evaluation & Benchmarking
+### 4. Evaluation & Benchmarking
 
 Models are tested before deployment.
 
@@ -90,7 +90,7 @@ Models are tested before deployment.
 
 ---
 
-## Deployment & Inference
+### 5. Deployment & Inference
 
 Turning the LLM into a **production-ready service**.
 
@@ -104,7 +104,7 @@ Turning the LLM into a **production-ready service**.
 
 ---
 
-## Monitoring, Feedback & Continuous Improvement
+### 6. Monitoring, Feedback & Continuous Improvement
 
 Deployed models must evolve continuously.
 
@@ -117,7 +117,7 @@ Deployed models must evolve continuously.
 
 ---
 
-## Summary — LLM Lifecycle Map
+### Summary — LLM Lifecycle Map
 
 Data Collection → Preprocessing → Pretraining → Fine-tuning & RLHF → Evaluation → Deployment → Monitoring & Iteration
 
@@ -127,7 +127,7 @@ Data Collection → Preprocessing → Pretraining → Fine-tuning & RLHF → Eva
 
 ---
 
-## Related Practices (LLMOps)
+### Related Practices (LLMOps)
 
 For production-grade LLMs, **LLMOps** extends MLOps with:  
 
