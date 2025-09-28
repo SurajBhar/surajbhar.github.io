@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-understanding-the-gpt-style-assistant-training-pipeline",
+        },{id: "post-understanding-ai-agents-and-agentic-ai",
+        
+          title: "Understanding AI Agents and Agentic AI",
+        
+        description: "A primer on AI agents, why they matter, and the mathematical and system-level intuition behind Agentic AI.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/09/agentic-ai/";
+          
+        },
+      },{id: "post-understanding-the-gpt-style-assistant-training-pipeline",
         
           title: "Understanding the GPT-Style Assistant Training Pipeline",
         
@@ -53,6 +64,28 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/09/llm-training-pipeline/";
+          
+        },
+      },{id: "post-vector-databases-concepts-terminologies-and-industry-players",
+        
+          title: "Vector Databases — Concepts, Terminologies, and Industry Players",
+        
+        description: "A deep dive into vector databases, their key concepts, and the major providers shaping this critical AI infrastructure.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/09/vector-databases/";
+          
+        },
+      },{id: "post-attention-mechanisms-in-deep-learning",
+        
+          title: "Attention Mechanisms in Deep Learning",
+        
+        description: "A comprehensive guide to attention mechanisms — from their origins in machine translation to modern variants powering Transformers, GANs, and beyond.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/09/attention/";
           
         },
       },{id: "post-advance-git-commands",
