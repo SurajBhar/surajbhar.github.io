@@ -44,18 +44,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-lifecycle-of-a-large-language-model-llm",
-        
-          title: "Lifecycle of a Large Language Model (LLM)",
-        
-        description: "Understanding the six key stages in an LLM journey — from data collection to monitoring and continuous improvement.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/09/llm-lifecycle/";
-          
-        },
-      },{id: "post-understanding-the-gpt-style-assistant-training-pipeline",
+        },{id: "post-understanding-the-gpt-style-assistant-training-pipeline",
         
           title: "Understanding the GPT-Style Assistant Training Pipeline",
         
@@ -77,6 +66,50 @@ ninja.data = [{
             window.location.href = "/blog/2025/09/advance-git/";
           
         },
+      },{id: "post-git-stash-practically-how-to-keep-teams-moving-without-losing-work",
+        
+          title: 'Git Stash, Practically: How to keep Teams Moving Without Losing Work <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@suraj.unisiegen/git-stash-practically-how-to-keep-teams-moving-without-losing-work-affcbcd0053f?source=rss-c33466f117a1------2", "_blank");
+          
+        },
+      },{id: "post-mastering-advanced-git-amending-rebasing-reflog-and-remote-workflows",
+        
+          title: 'Mastering Advanced Git: Amending, Rebasing, Reflog, and Remote Workflows <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@suraj.unisiegen/mastering-advanced-git-amending-rebasing-reflog-and-remote-workflows-fd1a16f82350?source=rss-c33466f117a1------2", "_blank");
+          
+        },
+      },{id: "post-dinov3",
+        
+          title: 'DINOv3 <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "DINOv3 scales self-supervised learning (SSL) for images to produce our strongest universal vision backbones, enabling breakthrough performance across...",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://ai.meta.com/dinov3/", "_blank");
+          
+        },
+      },{id: "post-lifecycle-of-a-large-language-model-llm",
+        
+          title: "Lifecycle of a Large Language Model (LLM)",
+        
+        description: "Understanding the six key stages in an LLM journey — from data collection to monitoring and continuous improvement.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/08/llm-lifecycle/";
+          
+        },
       },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
         
           title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
@@ -86,17 +119,6 @@ ninja.data = [{
         handler: () => {
           
             window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
-          
-        },
-      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
-        
-          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
           
         },
       },{id: "books-the-godfather",
