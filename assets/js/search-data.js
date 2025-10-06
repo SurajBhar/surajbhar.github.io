@@ -37,13 +37,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-cv",
-          title: "CV",
-          description: "View or download my latest curriculum vitae, highlighting my academic background, research experience, technical skills, and professional achievements.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
         },{id: "post-understanding-ai-agents-and-agentic-ai",
         
           title: "Understanding AI Agents and Agentic AI",
