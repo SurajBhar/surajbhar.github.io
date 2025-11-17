@@ -7,11 +7,10 @@ nav: true
 nav_order: 2
 # display_categories: [work, fun]
 display_categories:
-  - mlops-cloud 
-  - research-thesis
-  - language-agentic
-  - vision-multimodal
-  - visualization
+  - generative-ai
+  - computer-vision
+  - mlops
+  
 horizontal: false
 ---
 

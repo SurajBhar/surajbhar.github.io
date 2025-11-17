@@ -4,7 +4,7 @@ title: Robust Vision Models
 description: Out-of-Distribution (OOD) Robustness with AugMix
 img: assets/img/p_research/augmix.gif
 importance: 3
-category: research-thesis
+category: computer-vision
 related_publications: false
 ---
 

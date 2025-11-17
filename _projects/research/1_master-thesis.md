@@ -4,7 +4,7 @@ title: Master Thesis
 description: Improved Driver Distraction Detection Using Self-Supervised Learning
 img: assets/img/p_research/thesis_views_daa.PNG
 importance: 1
-category: research-thesis
+category: computer-vision
 related_publications: false
 ---
 

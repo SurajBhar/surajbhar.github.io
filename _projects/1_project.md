@@ -4,7 +4,7 @@ title: Predicting Movie Sentiment End-to-End- From Code to Cloud
 description: Movie Sentiment Prediction Microservice
 img: assets/img/p_moviesentiment/3_app_1.png
 importance: 1
-category: mlops-cloud
+category: mlops
 related_publications: false
 ---
 
