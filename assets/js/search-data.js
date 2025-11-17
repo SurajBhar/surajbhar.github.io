@@ -158,8 +158,8 @@ ninja.data = [{
           section: "News",},{id: "news-publication-alert-my-paper-self-supervised-driver-distraction-detection-for-imbalanced-datasets-got-accepted-for-publication-and-presentation-as-full-paper-in-the-ieee-28th-international-conference-on-intelligent-transportation-systems-itsc-2025",
           title: 'Publication Alert: My paper “Self-supervised Driver Distraction Detection for Imbalanced Datasets” got accepted...',
           description: "",
-          section: "News",},{id: "news-project-alert-developed-the-movie-sentiment-prediction-microservice-which-delivers-an-end-to-end-workflow-from-raw-data-to-live-inference-so-you-can-develop-deploy-version-and-monitor-sentiment-models-in-production-with-confidence",
-          title: 'Project Alert: Developed the Movie Sentiment Prediction Microservice which delivers an end-to-end workflow—from...',
+          section: "News",},{id: "news-project-alert-developed-the-gdpr-rag-assistant-evaluation-first-legal-compliance-chatbot-framed-and-implemented-the-problem-of-trustworthy-gdpr-q-amp-amp-a-a-rag-system-that-provides-auditable-citation-backed-answers-and-clearly-signals-when-the-knowledge-base-lacks-coverage",
+          title: 'Project Alert: Developed the GDPR RAG Assistant – Evaluation-First Legal Compliance Chatbot. Framed...',
           description: "",
           section: "News",},{id: "projects-predicting-movie-sentiment-end-to-end-from-code-to-cloud",
           title: 'Predicting Movie Sentiment End-to-End- From Code to Cloud',
@@ -181,6 +181,11 @@ ninja.data = [{
           description: "Local AI-powered coding assistant with Gradio and Ollama",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rag/2_codeassistant/";
+            },},{id: "projects-gdpr-rag-assistant",
+          title: 'GDPR RAG Assistant',
+          description: "Evaluation-first GDPR Retrieval-Augmented Generation (RAG) assistant with FastAPI, Azure OpenAI, Azure AI Search, and automated RAG evaluation.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/rag/3_gdpr_assistant/";
             },},{id: "projects-master-thesis",
           title: 'Master Thesis',
           description: "Improved Driver Distraction Detection Using Self-Supervised Learning",
