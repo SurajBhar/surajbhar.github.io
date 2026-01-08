@@ -12,7 +12,7 @@ This project is a multi-page Tableau dashboard built on an *Amazon Sales* datase
 
 **Published on Tableau Public:** 
 
-Click on the link to interact with the live dashboard: (https://public.tableau.com/app/profile/suraj.bhardwaj2195/viz/Amz_Dashboard_22Sep/ItemAnalysis)
+[Click here to interact with live dashboard](https://public.tableau.com/app/profile/suraj.bhardwaj2195/viz/Amz_Dashboard_22Sep/ItemAnalysis)
 
 ---
 
@@ -89,7 +89,14 @@ Each page is built from dedicated worksheets (listed below) and connected via da
 
 **Goal:** Give a quick snapshot of overall performance + geographic profitability.
 
-![Homepage](/assets/img/p_amz_sales_dashboard/Home.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/p_amz_sales_dashboard/Home.png" title="Dashboard Homepage" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Dashboard Homepage.
+</div>
 
 ### KPI tiles (single-value cards)
 - **Revenue** (SUM of Total Revenue)
@@ -116,7 +123,14 @@ Worksheets used:
 
 **Goal:** Provide a management view for demand and operational movement.
 
-![Executive Page](/assets/img/p_amz_sales_dashboard/Executive.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/p_amz_sales_dashboard/Executive.png" title="Executive Page" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Executive Page.
+</div>
 
 ### Views included
 - **Orders Per Year**  
@@ -143,7 +157,14 @@ Worksheets used:
 
 **Goal:** Understand revenue trends over time and relate them to delivery/ship timing.
 
-![Revenue Analysis](/assets/img/p_amz_sales_dashboard/Revenue.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/p_amz_sales_dashboard/Revenue.png" title="Revenue Analysis" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Revenue Analysis.
+</div>
 
 ### View included
 - **Revenue Per Year**
@@ -162,7 +183,14 @@ Worksheets used:
 
 **Goal:** Compare **Item Type** performance across key business metrics.
 
-![Item Analysis](/assets/img/p_amz_sales_dashboard/Item_Analysis.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/p_amz_sales_dashboard/Item_Analysis.png" title="Item Analysis" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Item Analysis.
+</div>
 
 ### Views included
 All four views are organized by **Item Type** and highlight the best performer using the *color max row* helper.
@@ -238,6 +266,6 @@ Item drill-down:
 
 ## Author
 **Suraj Bhardwaj**  
-Portfolio: https://surajbhar.github.io  
-GitHub: https://github.com/SurajBhar  
-Tableau Public: https://public.tableau.com/app/profile/suraj.bhardwaj2195
+[Portfolio](https://surajbhar.github.io)
+[GitHub](https://github.com/SurajBhar)  
+[Tableau Public](https://public.tableau.com/app/profile/suraj.bhardwaj2195)

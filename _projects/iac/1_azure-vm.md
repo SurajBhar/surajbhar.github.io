@@ -51,7 +51,14 @@ This repo provisions a scalable web tier in Azure with:
 
 ## Architecture
 
-![Architecture](/assets/img/p_azure_vm/vmss_tf.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/p_azure_vm/vmss_tf.png" title="Architecture" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Architecture!
+</div>
 
 ---
 
@@ -105,26 +112,31 @@ Typical layout in this repo:
 ## Authentication options
 
 ### Option A: Interactive (developer laptop)
-
+{% raw %}
 ```bash
 az login
 az account set --subscription "<SUBSCRIPTION_ID>"
 ```
+{% endraw %}
 
 ### Option B: Service Principal (recommended for CI/CD)
 
 Create SP and export the standard Terraform ARM variables:
 
+{% raw %}
 ```bash
 az ad sp create-for-rbac -n az-demo --role="Contributor" --scopes="/subscriptions/$SUBSCRIPTION_ID"
 ```
+{% endraw %}
 
+{% raw %}
 ```bash
 export ARM_CLIENT_ID="..."
 export ARM_CLIENT_SECRET="..."
 export ARM_SUBSCRIPTION_ID="..."
 export ARM_TENANT_ID="..."
 ```
+{% endraw %}
 
 ---
 
@@ -136,6 +148,7 @@ This project uses an **Azure Storage Account backend** to store the Terraform st
 
 Example script (similar to your `backend.sh`):
 
+{% raw %}
 ```bash
 RESOURCE_GROUP_NAME=tfstate-vmss
 STORAGE_ACCOUNT_NAME=vmss<unique>
@@ -145,9 +158,11 @@ az group create --name $RESOURCE_GROUP_NAME --location eastus
 az storage account create --resource-group $RESOURCE_GROUP_NAME --name $STORAGE_ACCOUNT_NAME --sku Standard_LRS
 az storage container create --name $CONTAINER_NAME --account-name $STORAGE_ACCOUNT_NAME
 ```
+{% endraw %}
 
 ### 2. Configure `backend.tf`
 
+{% raw %}
 ```hcl
 terraform {
   backend "azurerm" {
@@ -158,12 +173,15 @@ terraform {
   }
 }
 ```
+{% endraw %}
 
 ### 3. Initialize Terraform
 
+{% raw %}
 ```bash
 terraform init
 ```
+{% endraw %}
 
 ---
 
@@ -171,6 +189,7 @@ terraform init
 
 ### `terraform.tfvars` example
 
+{% raw %}
 ```hcl
 environment          = "dev"
 region               = "East US"            # must be exactly one of: East US, West Europe, Southeast Asia
@@ -188,6 +207,7 @@ ssh_public_key_path  = "~/.ssh/id_ed25519.pub"
 nat_gateway_enabled        = true
 nat_idle_timeout_minutes   = 10
 ```
+{% endraw %}
 
 > Tip: Prefer `ssh_public_key_path` over embedding keys as plain strings.
 
@@ -197,37 +217,46 @@ nat_idle_timeout_minutes   = 10
 
 ### 1. Format & validate
 
+{% raw %}
 ```bash
 terraform fmt -recursive
 terraform validate
 ```
+{% endraw %}
+
 
 ### 2. Plan
 
+{% raw %}
 ```bash
 terraform plan
 ```
+{% endraw %}
 
 ### 3. Apply
 
+{% raw %}
 ```bash
 terraform apply --auto-approve
 ```
+{% endraw %}
 
 ### 4. Verify outputs
-
+{% raw %}
 ```bash
 terraform output lb_fqdn
 terraform output lb_public_ip
 terraform output nat_public_ip
 ```
+{% endraw %}
 
 ### 5. Test the application
-
+{% raw %}
 ```bash
 curl -I "http://$(terraform output -raw lb_public_ip)"
 curl -I "http://$(terraform output -raw lb_fqdn)"
 ```
+{% endraw %}
 
 If successful, you should receive an HTTP response (e.g., `200 OK` or `301/302` depending on Apache config).
 
@@ -343,10 +372,11 @@ It’s typically minimal cost unless you enable paid diagnostics/traffic analyti
 ## Clean up
 
 Destroy all resources created by Terraform:
-
+{% raw %}
 ```bash
 terraform destroy --auto-approve
 ```
+{% endraw %}
 
 If something remains due to partial state or manual changes:
 
