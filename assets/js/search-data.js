@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-understanding-ai-agents-and-agentic-ai",
+        },{id: "post-the-periodic-table-of-ai-systems-predicting-reactions-from-prompts-to-autonomous-agents",
+        
+          title: 'The Periodic Table of AI Systems: Predicting “Reactions” from Prompts to Autonomous Agents... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@suraj.unisiegen/the-periodic-table-of-ai-systems-predicting-reactions-from-prompts-to-autonomous-agents-abd2cccadfe3?source=rss-c33466f117a1------2", "_blank");
+          
+        },
+      },{id: "post-understanding-ai-agents-and-agentic-ai",
         
           title: "Understanding AI Agents and Agentic AI",
         
