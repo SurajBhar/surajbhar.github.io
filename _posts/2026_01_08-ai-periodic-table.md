@@ -2,7 +2,8 @@
 layout: distill
 title: AI Systems Periodic Table
 description: A practical framework to think about modern AI like chemistry — reusable components (LLMs, RAG, agents, guardrails) that combine into predictable reference architectures, including MCP-based tool integration.
-tags: genai rag agents llm mcp ai-systems ai-architecture
+tags: ai-systems ai-ml
+categories: ai-ml
 giscus_comments: false
 date: 2026-01-08 09:00:00
 featured: true # <-- Pinned!
@@ -19,7 +20,7 @@ toc:
     subsections:
       - name: Columns (Families / Groups)
       - name: Rows (Maturity)
-      - name: The Key Idea: Predict Reactions
+      - name: The Key Idea- Predict Reactions
   - name: The AI Systems Periodic Table
     subsections:
       - name: Element Map (Symbols Used in “Reaction Formulas”)
@@ -88,7 +89,7 @@ This periodic-table framing gives teams a shared language to design systems as *
 - **Row 3 — Deployment:** What you need to ship and operate reliably (agents, fine-tuning, frameworks, red teaming, small models).
 - **Row 4 — Emerging:** Rapidly evolving capabilities (multi-agent, synthetic data at scale, MCP, interpretability, thinking models).
 
-### The Key Idea: Predict Reactions
+### The Key Idea- Predict Reactions
 A practical system is a **reaction** that combines elements across columns (often across several rows).  
 The table helps you ask: *Which ingredients do we need to achieve a specific product outcome under constraints (latency, cost, security, compliance)?*
 

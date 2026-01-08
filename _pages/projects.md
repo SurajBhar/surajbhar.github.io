@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: A curated showcase of my research-driven and applied AI projects spanning LLMs, computer vision, and self-supervised learning.
+description: A curated showcase of my AI & Data Science projects.
 nav: true
 nav_order: 2
 # display_categories: [work, fun]
@@ -10,7 +10,9 @@ display_categories:
   - generative-ai
   - computer-vision
   - mlops
-  
+  - infrastructure-as-code
+  - visualization
+  - data
 horizontal: false
 ---
 
