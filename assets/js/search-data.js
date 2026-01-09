@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "A curated showcase of my research-driven and applied AI projects spanning LLMs, computer vision, and self-supervised learning.",
+          description: "A curated showcase of my AI &amp; Data Science projects.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -45,7 +45,18 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.open("https://medium.com/@suraj.unisiegen/the-periodic-table-of-ai-systems-predicting-reactions-from-prompts-to-autonomous-agents-abd2cccadfe3?source=rss-c33466f117a1------2", "_blank");
+            window.open("https://medium.com/@suraj.bhardwaj.de/the-periodic-table-of-ai-systems-predicting-reactions-from-prompts-to-autonomous-agents-abd2cccadfe3?source=rss-c33466f117a1------2", "_blank");
+          
+        },
+      },{id: "post-ai-systems-periodic-table",
+        
+          title: "AI Systems Periodic Table",
+        
+        description: "A practical framework to think about modern AI like chemistry — reusable components (LLMs, RAG, agents, guardrails) that combine into predictable reference architectures, including MCP-based tool integration.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/01/ai-periodic-table/";
           
         },
       },{id: "post-understanding-ai-agents-and-agentic-ai",
@@ -111,7 +122,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.open("https://medium.com/@suraj.unisiegen/git-stash-practically-how-to-keep-teams-moving-without-losing-work-affcbcd0053f?source=rss-c33466f117a1------2", "_blank");
+            window.open("https://medium.com/@suraj.bhardwaj.de/git-stash-practically-how-to-keep-teams-moving-without-losing-work-affcbcd0053f?source=rss-c33466f117a1------2", "_blank");
           
         },
       },{id: "post-mastering-advanced-git-amending-rebasing-reflog-and-remote-workflows",
@@ -122,7 +133,7 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.open("https://medium.com/@suraj.unisiegen/mastering-advanced-git-amending-rebasing-reflog-and-remote-workflows-fd1a16f82350?source=rss-c33466f117a1------2", "_blank");
+            window.open("https://medium.com/@suraj.bhardwaj.de/mastering-advanced-git-amending-rebasing-reflog-and-remote-workflows-fd1a16f82350?source=rss-c33466f117a1------2", "_blank");
           
         },
       },{id: "post-dinov3",
@@ -182,6 +193,21 @@ ninja.data = [{
           description: "Hotel Reservation Cancellation Prediction — From Notebook to Production on GCP",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
+            },},{id: "projects-amazon-sales-dashboard",
+          title: 'Amazon Sales Dashboard',
+          description: "Amazon Sales Dashboard using Tableau",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dashboards/1_amz-sales/";
+            },},{id: "projects-data-science-team-management",
+          title: 'Data Science Team Management',
+          description: "Relational Database Design &amp; Analysis for Data Science Team Management",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/data/1_sql-project/";
+            },},{id: "projects-azure-vm-scale-set-web-app-behind-standard-load-balancer",
+          title: 'Azure VM Scale Set Web App Behind Standard Load Balancer',
+          description: "Production-style Azure infrastructure provisioned with Terraform",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/iac/1_azure-vm/";
             },},{id: "projects-chat-with-your-documents",
           title: 'Chat with Your Documents',
           description: "Retrieval-Augmented Generation (RAG) chatbot with NVIDIA NIM and Streamlit",
