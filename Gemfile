@@ -29,6 +29,7 @@ end
 group :other_plugins do
     gem 'css_parser'
     gem 'feedjira'
+    gem 'nokogiri' # Added new package
     gem 'httparty'
     gem 'observer'       # used by jekyll-scholar
     gem 'ostruct'        # used by jekyll-twitter-plugin

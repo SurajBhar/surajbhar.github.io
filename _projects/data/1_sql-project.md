@@ -29,7 +29,15 @@ Built and tested on **IBM Db2 Cloud (Lite plan)**, keeping practical cloud const
 ## Visual overview
 
 **ERD / Schema**
-![ERD](/assets/img/p_sql_project/sql_project_erd.svg)
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/p_sql_project/sql_project_erd.svg" title="ERD Diagram" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    ERD Diagram!
+</div>
 
 ---
 
@@ -52,10 +60,8 @@ Built and tested on **IBM Db2 Cloud (Lite plan)**, keeping practical cloud const
 
 ## Key SQL highlights (click to expand)
 
-<details>
-  <summary><b>Schema (DDL)</b> — tables, keys, constraints, relationships</summary>
+<details markdown="1"><summary><b>Schema (DDL)</b> — tables, keys, constraints, relationships</summary>
 
-{% raw %}
 ```sql
 CREATE TABLE GENDERS (
   GENDER_ID CHAR(1) NOT NULL PRIMARY KEY,
@@ -106,15 +112,8 @@ CREATE TABLE DATASETS (
   FOREIGN KEY (PROJECT_ID) REFERENCES PROJECTS(PROJECT_ID)
 );
 ```
-{% endraw %}
+</details> <details markdown="1"> <summary><b>Seed data</b> — realistic inserts for members, projects, datasets</summary>
 
-</details>
-
-<details>
-  <summary><b>Seed data</b> — realistic inserts for members, projects, datasets</summary>
-
-
-{% raw %}
 ```sql
 -- Insert values into GENDERS
 INSERT INTO GENDERS (GENDER_ID, LABEL) VALUES
@@ -159,12 +158,8 @@ INSERT INTO DATASETS (
 ('DST02', 'Log Aggregation Set', 5120, DATE('2023-02-01'), 'PRJ02'),
 ('DST03', 'Chat History Dump', 1024, DATE('2024-03-10'), 'PRJ03');
 ```
-{% endraw %}
 
-</details>
-
-<details>
-  <summary><b>Analytics queries</b> — joins + aggregation (team, projects, datasets)</summary>
+</details> <details markdown="1"> <summary><b>Analytics queries</b> — joins + aggregation (team, projects, datasets)</summary>
 
 {% raw %}
 ```sql
@@ -202,10 +197,7 @@ JOIN PROJECTS P ON TM.MEMBER_ID = P.LEAD_ID;
 ```
 {% endraw %}
 
-</details>
-
-<details>
-  <summary><b>Change simulation</b> — update + delete + validation query</summary>
+</details> <details markdown="1"> <summary><b>Change simulation</b> — update + delete + validation query</summary>
 
 {% raw %}
 ```sql
@@ -226,10 +218,7 @@ WHERE D.DATASET_ID IS NULL;
 ```
 {% endraw %}
 
-</details>
-
-<details>
-  <summary><b>Advanced SQL</b> — CTE + window function + enriched joins</summary>
+</details> <details markdown="1"> <summary><b>Advanced SQL</b> — CTE + window function + enriched joins</summary>
 
 {% raw %}
 ```sql
@@ -275,10 +264,7 @@ ORDER BY D.SIZE_MB DESC
 ```
 {% endraw %}
 
-</details>
-
-<details>
-  <summary><b>CSV export queries</b> — outputs designed for dashboards & reporting</summary>
+</details> <details markdown="1"> <summary><b>CSV export queries</b> — outputs designed for dashboards & reporting</summary>
 
 {% raw %}
 ```sql

@@ -1,5 +1,6 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/jekyll
+// Line Changed: "ghcr.io/devcontainers-contrib/features/prettier:1": {}
 {
   "name": "Jekyll",
   "image": "mcr.microsoft.com/devcontainers/jekyll",
@@ -9,7 +10,7 @@
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
       "packages": "build-essential,imagemagick,inotify-tools,jupyter-nbconvert,procps,ruby-full,zlib1g-dev"
     },
-    "ghcr.io/devcontainers-contrib/features/prettier:1": {}
+    "ghcr.io/devcontainers-extra/features/prettier:1": {}
   },
 
   // Optionally: run jekyll serve automatically on container entering using the Docker entrypoint

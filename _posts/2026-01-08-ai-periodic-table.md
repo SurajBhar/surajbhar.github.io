@@ -2,10 +2,10 @@
 layout: distill
 title: AI Systems Periodic Table
 description: A practical framework to think about modern AI like chemistry — reusable components (LLMs, RAG, agents, guardrails) that combine into predictable reference architectures, including MCP-based tool integration.
-tags: ai-systems ai-ml
-categories: ai-ml
-giscus_comments: false
 date: 2026-01-08 09:00:00
+tags: ai-systems ai-ml
+giscus_comments: true
+
 featured: true # <-- Pinned!
 
 authors:
@@ -47,15 +47,21 @@ toc:
   - name: Want to collaborate?
 ---
 
-
-> **TL;DR**  
-> Real-world AI products are not “just an LLM.” They are **systems** assembled from reusable components—like chemistry.  
-> A periodic table is valuable not for memorization, but for **predicting reactions**: which parts combine well, where failures happen, and what validation makes systems trustworthy.
-
 **Connect:** [LinkedIn](https://www.linkedin.com/in/bhardwaj-suraj/) • [GitHub](https://github.com/SurajBhar) • [Website](https://surajbhar.github.io/)
 
-**Inspiration / credit:** This work is inspired by the IBM-style “AI Periodic Table” explained by Martin Keen (IBM).  
-Video: https://www.youtube.com/watch?v=ESBMgZHzfG0
+**Inspiration / credit:** This work is inspired by the IBM-style “AI Periodic Table” explained by Martin Keen (IBM).  [Video:](https://www.youtube.com/watch?v=ESBMgZHzfG0)
+
+> **TL;DR**  
+> Real-world AI products are not “just an LLM.” They are **systems** assembled from reusable components—like chemistry. A periodic table is valuable not for memorization, but for **predicting reactions**: which parts combine well, where failures happen, and what validation makes systems trustworthy.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/blogs/ai_periodic_table.png" title="AI Systems Periodic Table" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    AI Systems Periodic Table
+</div>
 
 ---
 
@@ -96,7 +102,15 @@ The table helps you ask: *Which ingredients do we need to achieve a specific pro
 ---
 
 ## The AI Systems Periodic Table
-![AI Systems Periodic Table (placeholder)](/assets/img/blogs/ai_periodic_table.png)
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/blogs/ai_periodic_table.png" title="AI Systems Periodic Table" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    AI Systems Periodic Table
+</div>
 
 ### Element Map (Symbols Used in “Reaction Formulas”)
 
