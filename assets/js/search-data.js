@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-the-periodic-table-of-ai-systems-predicting-reactions-from-prompts-to-autonomous-agents",
+        },{id: "post-generative-modeling-from-datasets-to-gans",
+        
+          title: "Generative Modeling- From Datasets to GANs",
+        
+        description: "A beginner-friendly, math-grounded journey from probability basics and classical density estimation to deep generative models and GANs.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/01/generative-modeling/";
+          
+        },
+      },{id: "post-the-periodic-table-of-ai-systems-predicting-reactions-from-prompts-to-autonomous-agents",
         
           title: 'The Periodic Table of AI Systems: Predicting “Reactions” from Prompts to Autonomous Agents... <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
