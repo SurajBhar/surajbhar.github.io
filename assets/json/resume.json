@@ -82,12 +82,7 @@
       "startDate": "2019-01-10",
       "endDate": "2025-01-30",
       "score": "GPA: 2.1 (German Scale)",
-      "courses": [
-        "Software Engineering",
-        "Unsupervised Deep Learning",
-        "Artificial Intelligence",
-        "Mechatronic Systems"
-      ]
+      "courses": ["Software Engineering", "Unsupervised Deep Learning", "Artificial Intelligence", "Mechatronic Systems"]
     },
     {
       "institution": "National Institute of Technology Hamirpur",
@@ -98,11 +93,7 @@
       "startDate": "2014-08-01",
       "endDate": "2018-05-31",
       "score": "GPA: 2.5 (German Scale)",
-      "courses": [
-        "Engineering Mathematics",
-        "Numerical Methods",
-        "Data Structures"
-      ]
+      "courses": ["Engineering Mathematics", "Numerical Methods", "Data Structures"]
     }
   ],
   "publications": [
@@ -148,10 +139,7 @@
     {
       "name": "Codeninja: AI Code Assistant",
       "summary": "Developed an LLM-based code assistant using Ollama, Gradio, and LangChain to enhance developer productivity.",
-      "highlights": [
-        "Integrated with a custom model served locally.",
-        "Provided contextual, real-time code generation and fixes."
-      ],
+      "highlights": ["Integrated with a custom model served locally.", "Provided contextual, real-time code generation and fixes."],
       "startDate": "2024-01-01",
       "endDate": "2024-03-01",
       "url": "https://github.com/SurajBhar/codeninja"
@@ -159,10 +147,7 @@
     {
       "name": "Implicit 3D Model Generation",
       "summary": "Built an implicit 3D object generator using Neural Unsigned Distance Fields (NDF) and latent diffusion.",
-      "highlights": [
-        "Trained on ShapeNet Cars using SLURM on OMNI cluster.",
-        "Implemented vector quantization and feature bottlenecks."
-      ],
+      "highlights": ["Trained on ShapeNet Cars using SLURM on OMNI cluster.", "Implemented vector quantization and feature bottlenecks."],
       "startDate": "2022-12-01",
       "endDate": "2023-04-01",
       "url": "https://github.com/SurajBhar/ndf"
@@ -170,10 +155,7 @@
     {
       "name": "OOD Robustness with AugMix",
       "summary": "Evaluated OOD robustness of ConvNeXt and ResNet18 on CIFAR variants using AugMix augmentation.",
-      "highlights": [
-        "Applied transfer learning and tuning with cosine LR scheduling.",
-        "Achieved superior robustness scores for ConvNeXt-tiny."
-      ],
+      "highlights": ["Applied transfer learning and tuning with cosine LR scheduling.", "Achieved superior robustness scores for ConvNeXt-tiny."],
       "startDate": "2022-10-01",
       "endDate": "2022-11-01",
       "url": "https://github.com/SurajBhar/augmix"
@@ -181,10 +163,7 @@
     {
       "name": "Real-Time Face Mask Detection",
       "summary": "Built a VGG16-based face mask detector with live webcam stream input using OpenCV and Haar cascades.",
-      "highlights": [
-        "Achieved 93.5% accuracy in real-time prediction pipeline.",
-        "Applied transfer learning on VGG16 features."
-      ],
+      "highlights": ["Achieved 93.5% accuracy in real-time prediction pipeline.", "Applied transfer learning on VGG16 features."],
       "startDate": "2022-06-01",
       "endDate": "2022-08-01",
       "url": "https://github.com/SurajBhar/Face_Mask_Detection"
@@ -219,34 +198,37 @@
       "level": "Proficient",
       "icon": "fa-solid fa-cubes",
       "keywords": [
-        "PyTorch", "TensorFlow", "Keras", "HuggingFace", "OpenCV", "Ray",
-        "FAISS", "LangChain", "ChromaDB", "Timm", "Optuna", "Scikit-learn"
+        "PyTorch",
+        "TensorFlow",
+        "Keras",
+        "HuggingFace",
+        "OpenCV",
+        "Ray",
+        "FAISS",
+        "LangChain",
+        "ChromaDB",
+        "Timm",
+        "Optuna",
+        "Scikit-learn"
       ]
     },
     {
       "name": "DevOps & Deployment",
       "level": "Intermediate",
       "icon": "fa-solid fa-rocket",
-      "keywords": [
-        "Docker", "AWS", "GitHub Actions", "GitLab CI/CD", "MLflow", "FastAPI", "Flask"
-      ]
+      "keywords": ["Docker", "AWS", "GitHub Actions", "GitLab CI/CD", "MLflow", "FastAPI", "Flask"]
     },
     {
       "name": "Data Visualization",
       "level": "Proficient",
       "icon": "fa-solid fa-chart-bar",
-      "keywords": [
-        "Matplotlib", "Seaborn", "Plotly", "Pandas", "NumPy",
-        "Tableau", "Power BI", "Open3D", "Trimesh"
-      ]
+      "keywords": ["Matplotlib", "Seaborn", "Plotly", "Pandas", "NumPy", "Tableau", "Power BI", "Open3D", "Trimesh"]
     },
     {
       "name": "NLP & LLMs",
       "level": "Advanced",
       "icon": "fa-solid fa-language",
-      "keywords": [
-        "LangChain", "Ollama", "Transformers", "SpaCy", "NLTK", "RAPTOR", "SentenceTransformers"
-      ]
+      "keywords": ["LangChain", "Ollama", "Transformers", "SpaCy", "NLTK", "RAPTOR", "SentenceTransformers"]
     }
   ],
   "languages": [
@@ -270,35 +252,17 @@
     {
       "name": "AI Research & Machine Learning",
       "icon": "fa-solid fa-brain",
-      "keywords": [
-        "Self-Supervised Learning",
-        "Large Language Models",
-        "Generative Models",
-        "Transformers",
-        "Deep Learning"
-      ]
+      "keywords": ["Self-Supervised Learning", "Large Language Models", "Generative Models", "Transformers", "Deep Learning"]
     },
     {
       "name": "Computer Vision & 3D Perception",
       "icon": "fa-solid fa-eye",
-      "keywords": [
-        "Object Detection",
-        "NeRF & DIVeR",
-        "Voxel-based Models",
-        "LiDAR Systems",
-        "Point Cloud Processing"
-      ]
+      "keywords": ["Object Detection", "NeRF & DIVeR", "Voxel-based Models", "LiDAR Systems", "Point Cloud Processing"]
     },
     {
       "name": "MLOps & Scalable Systems",
       "icon": "fa-solid fa-server",
-      "keywords": [
-        "Model Deployment",
-        "CI/CD",
-        "Docker",
-        "AWS",
-        "MLflow"
-      ]
+      "keywords": ["Model Deployment", "CI/CD", "Docker", "AWS", "MLflow"]
     }
   ],
   "certificates": [

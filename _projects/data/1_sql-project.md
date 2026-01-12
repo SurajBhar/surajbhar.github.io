@@ -44,14 +44,17 @@ Built and tested on **IBM Db2 Cloud (Lite plan)**, keeping practical cloud const
 ## Data model at a glance
 
 **Core entities**
+
 - `TEAM_MEMBERS` (who works in the team)
 - `PROJECTS` (what the team builds)
 - `DATASETS` (what projects produce)
 
 **Reference entities**
+
 - `SKILLS`, `OFFICES`, `GENDERS`
 
 **Relationships**
+
 - `TEAM_MEMBERS` → (`SKILLS`, `OFFICES`, `GENDERS`)
 - `PROJECTS.LEAD_ID` → `TEAM_MEMBERS.MEMBER_ID`
 - `DATASETS.PROJECT_ID` → `PROJECTS.PROJECT_ID`
@@ -112,6 +115,7 @@ CREATE TABLE DATASETS (
   FOREIGN KEY (PROJECT_ID) REFERENCES PROJECTS(PROJECT_ID)
 );
 ```
+
 </details> <details markdown="1"> <summary><b>Seed data</b> — realistic inserts for members, projects, datasets</summary>
 
 ```sql
@@ -162,6 +166,7 @@ INSERT INTO DATASETS (
 </details> <details markdown="1"> <summary><b>Analytics queries</b> — joins + aggregation (team, projects, datasets)</summary>
 
 {% raw %}
+
 ```sql
 -- 1. List members with their role, skill, gender and office
 SELECT
@@ -195,11 +200,13 @@ SELECT
 FROM TEAM_MEMBERS TM
 JOIN PROJECTS P ON TM.MEMBER_ID = P.LEAD_ID;
 ```
+
 {% endraw %}
 
 </details> <details markdown="1"> <summary><b>Change simulation</b> — update + delete + validation query</summary>
 
 {% raw %}
+
 ```sql
 -- UPDATE: Promote a team member
 UPDATE TEAM_MEMBERS
@@ -216,11 +223,13 @@ FROM PROJECTS P
 LEFT JOIN DATASETS D ON P.PROJECT_ID = D.PROJECT_ID
 WHERE D.DATASET_ID IS NULL;
 ```
+
 {% endraw %}
 
 </details> <details markdown="1"> <summary><b>Advanced SQL</b> — CTE + window function + enriched joins</summary>
 
 {% raw %}
+
 ```sql
 -- ALTER: Add a phone number column to TEAM_MEMBERS
 ALTER TABLE TEAM_MEMBERS
@@ -262,11 +271,13 @@ JOIN PROJECTS P ON D.PROJECT_ID = P.PROJECT_ID
 JOIN TEAM_MEMBERS TM ON P.LEAD_ID = TM.MEMBER_ID
 ORDER BY D.SIZE_MB DESC
 ```
+
 {% endraw %}
 
 </details> <details markdown="1"> <summary><b>CSV export queries</b> — outputs designed for dashboards & reporting</summary>
 
 {% raw %}
+
 ```sql
 -- 06_01_export_team_members.sql
 -- 1. Full list of team members with metadata (ideal for team directory report)
@@ -324,6 +335,7 @@ LEFT JOIN TEAM_MEMBERS TM ON TM.SKILL_ID = S.SKILL_ID
 GROUP BY S.SKILL_NAME
 ORDER BY "Number of Members" DESC;
 ```
+
 {% endraw %}
 
 </details>

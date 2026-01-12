@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Codeninja-Local Code Assistant 
+title: Codeninja-Local Code Assistant
 description: Local AI-powered coding assistant with Gradio and Ollama
 img: assets/img/p_rag/codeninja_demo.png
 importance: 2
@@ -8,13 +8,13 @@ category: generative-ai
 related_publications: false
 ---
 
-**Codeninja** is a lightweight, local **AI-powered coding assistant** built using a custom model (`codeninja`) hosted with **Ollama** and accessed through a **Gradio interface**. It provides contextual coding suggestions, keeps a history of prompts, and runs entirely offline — ensuring privacy and fast inference.  
+**Codeninja** is a lightweight, local **AI-powered coding assistant** built using a custom model (`codeninja`) hosted with **Ollama** and accessed through a **Gradio interface**. It provides contextual coding suggestions, keeps a history of prompts, and runs entirely offline — ensuring privacy and fast inference.
 
 ---
 
-## 1. Defining the Custom Model (Modelfile)  
+## 1. Defining the Custom Model (Modelfile)
 
-We start by defining a **custom model** in Ollama. This uses `codellama` as the base model, sets a temperature, and adds a **system prompt** to specialize the assistant:  
+We start by defining a **custom model** in Ollama. This uses `codellama` as the base model, sets a temperature, and adds a **system prompt** to specialize the assistant:
 
 ```dockerfile
 FROM codellama
@@ -27,9 +27,9 @@ SYSTEM """
 You are a code assistant named CodeNinja created by Suraj Bhardwaj.
 Answer all the queries related to code being asked.
 """
-````
+```
 
-*This customization transforms `codellama` into “Codeninja”, a coding-focused assistant with its own identity.*
+_This customization transforms `codellama` into “Codeninja”, a coding-focused assistant with its own identity._
 
 ---
 
@@ -72,7 +72,7 @@ def generate_response(prompt):
         print("error:", response.text)
 ```
 
-*Appending history allows the chatbot to maintain conversational memory across multiple turns.*
+_Appending history allows the chatbot to maintain conversational memory across multiple turns._
 
 ---
 
@@ -92,7 +92,7 @@ interface = gr.Interface(
 interface.launch()
 ```
 
-*Users can simply type a coding query in the textbox and get results instantly from the local model.*
+_Users can simply type a coding query in the textbox and get results instantly from the local model._
 
 ---
 
@@ -108,16 +108,15 @@ interface.launch()
 
 ## Key Features
 
-* **Custom AI Model**: Built on top of `codellama`, customized with a system prompt.
-* **Local Inference**: Runs entirely on your machine with Ollama.
-* **Context Awareness**: Keeps a history of previous prompts.
-* **Web Interface**: Simple, clean Gradio app.
-* **Privacy-Preserving**: No data leaves your machine.
+- **Custom AI Model**: Built on top of `codellama`, customized with a system prompt.
+- **Local Inference**: Runs entirely on your machine with Ollama.
+- **Context Awareness**: Keeps a history of previous prompts.
+- **Web Interface**: Simple, clean Gradio app.
+- **Privacy-Preserving**: No data leaves your machine.
 
 ---
 
 ## Resources
 
-* 💻 [View Source on GitHub](https://github.com/SurajBhar/codeninja)
-* 📄 [Project Documentation](https://github.com/SurajBhar/codeninja/blob/main/README.md)
-
+- 💻 [View Source on GitHub](https://github.com/SurajBhar/codeninja)
+- 📄 [Project Documentation](https://github.com/SurajBhar/codeninja/blob/main/README.md)

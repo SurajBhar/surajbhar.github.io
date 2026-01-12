@@ -8,9 +8,9 @@ category: generative-ai
 related_publications: false
 ---
 
-This project demonstrates how to build a **Retrieval-Augmented Generation (RAG) chatbot** that allows users to upload documents (PDFs) and query them in natural language. The chatbot is implemented in **Streamlit**, powered by **NVIDIA NIM** for embeddings and inference, and uses **LangChain** for document processing.  
+This project demonstrates how to build a **Retrieval-Augmented Generation (RAG) chatbot** that allows users to upload documents (PDFs) and query them in natural language. The chatbot is implemented in **Streamlit**, powered by **NVIDIA NIM** for embeddings and inference, and uses **LangChain** for document processing.
 
-The result: a clean interface where you can *ask questions to your own documents* and get context-aware answers in real time.  
+The result: a clean interface where you can _ask questions to your own documents_ and get context-aware answers in real time.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -25,7 +25,7 @@ The result: a clean interface where you can *ask questions to your own documents
 
 ## 1. Environment Setup
 
-The first step is configuring the environment and securely loading your NVIDIA API key.  
+The first step is configuring the environment and securely loading your NVIDIA API key.
 
 ```python
 from dotenv import load_dotenv
@@ -34,9 +34,9 @@ import os
 # Load environment variables: API Key
 load_dotenv()
 os.environ['NVIDIA_API_KEY'] = os.getenv("NVIDIA_API_KEY")
-````
+```
 
-*This ensures the app can access NVIDIA’s NIM endpoints without hardcoding secrets.*
+_This ensures the app can access NVIDIA’s NIM endpoints without hardcoding secrets._
 
 ---
 
@@ -54,7 +54,7 @@ llm = ChatNVIDIA(model="meta/llama3-70b-instruct")
 embeddings = NVIDIAEmbeddings()
 ```
 
-*The combination of embeddings + LLM forms the backbone of the RAG pipeline.*
+_The combination of embeddings + LLM forms the backbone of the RAG pipeline._
 
 ---
 
@@ -75,7 +75,7 @@ text_splitter = RecursiveCharacterTextSplitter(chunk_size=700, chunk_overlap=50)
 final_documents = text_splitter.split_documents(docs)
 ```
 
-*Chunking ensures that answers remain relevant and context-rich.*
+_Chunking ensures that answers remain relevant and context-rich._
 
 ---
 
@@ -90,7 +90,7 @@ from langchain_community.vectorstores import FAISS
 vectors = FAISS.from_documents(final_documents, embeddings)
 ```
 
-*Now the system can quickly retrieve the most relevant text snippets when answering queries.*
+_Now the system can quickly retrieve the most relevant text snippets when answering queries._
 
 ---
 
@@ -116,7 +116,7 @@ retriever = vectors.as_retriever()
 retrieval_chain = create_retrieval_chain(retriever, document_chain)
 ```
 
-*This ensures that the LLM only answers based on the retrieved documents, improving accuracy.*
+_This ensures that the LLM only answers based on the retrieved documents, improving accuracy._
 
 ---
 
@@ -136,7 +136,7 @@ if st.button("Submit"):
     st.write("**Bot:**", response['answer'])
 ```
 
-*Users can upload files, generate embeddings, and chat — all within the browser.*
+_Users can upload files, generate embeddings, and chat — all within the browser._
 
 ---
 
@@ -155,7 +155,7 @@ def visualize_embeddings(vectors):
     st.pyplot(plt)
 ```
 
-*This visualization shows how document chunks cluster semantically.*
+_This visualization shows how document chunks cluster semantically._
 
 ---
 
@@ -170,17 +170,18 @@ def visualize_embeddings(vectors):
 
 ## Technical Highlights
 
-* **LangChain + Streamlit** for modular pipeline + UI.
-* **NVIDIA NIM (Llama3-70B Instruct)** for large-scale inference.
-* **FAISS Vector Store** for fast retrieval.
-* **Embedding visualization** with t-SNE.
-* **Token-aware truncation** for large-context safety.
+- **LangChain + Streamlit** for modular pipeline + UI.
+- **NVIDIA NIM (Llama3-70B Instruct)** for large-scale inference.
+- **FAISS Vector Store** for fast retrieval.
+- **Embedding visualization** with t-SNE.
+- **Token-aware truncation** for large-context safety.
 
 ---
 
 ## Resources
-- 💻 [View Source on GitHub](https://github.com/SurajBhar/rag_nim)  
-- 📄 [Documentation](https://github.com/SurajBhar/rag_nim/blob/main/README.md) 
+
+- 💻 [View Source on GitHub](https://github.com/SurajBhar/rag_nim)
+- 📄 [Documentation](https://github.com/SurajBhar/rag_nim/blob/main/README.md)
 
 ---
 
@@ -189,7 +190,6 @@ def visualize_embeddings(vectors):
 This project shows how **RAG pipelines can make documents conversational**, combining retrieval accuracy with the power of modern LLMs.
 The same architecture can be extended to:
 
-* Multi-agent chatbots
-* Domain-specific knowledge bases
-* Real-time enterprise search
-
+- Multi-agent chatbots
+- Domain-specific knowledge bases
+- Real-time enterprise search

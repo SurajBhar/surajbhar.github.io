@@ -57,11 +57,11 @@ My goal was to automate the entire machine-learning lifecycle—data ingestion t
 
 I started with DrivenData’s Cookiecutter Data Science template to enforce a consistent project layout (`src/`, `data/`, `notebooks/`, `tests/`, configs). Conda managed a Python 3.10 environment so all dependencies stayed in sync. Core modules in `src/` break down each pipeline stage:
 
-* **Data Ingestion** retrieves raw review text from CSV or API sources.
-* **Preprocessing** cleans URLs, emojis, and stop words; normalizes punctuation.
-* **Feature Engineering** tokenizes text, applies TF-IDF and Bag-of-Words, and computes lexicon scores.
-* **Model Building** trains classifiers (Logistic Regression, Random Forest, XGBoost) with MLflow tracking.
-* **Evaluation & Registration** compares metrics, selects the best model, and registers it in the MLflow model registry.
+- **Data Ingestion** retrieves raw review text from CSV or API sources.
+- **Preprocessing** cleans URLs, emojis, and stop words; normalizes punctuation.
+- **Feature Engineering** tokenizes text, applies TF-IDF and Bag-of-Words, and computes lexicon scores.
+- **Model Building** trains classifiers (Logistic Regression, Random Forest, XGBoost) with MLflow tracking.
+- **Evaluation & Registration** compares metrics, selects the best model, and registers it in the MLflow model registry.
 
 I defined every hyperparameter in `params.yaml` and orchestrated the workflow with `dvc.yaml`, guaranteeing consistent, reproducible runs.
 
@@ -75,6 +75,7 @@ I defined every hyperparameter in `params.yaml` and orchestrated the workflow wi
 </div>
 
 ## Quick Setup & Installation
+
 {% raw %}
 
 ```bash
@@ -110,11 +111,11 @@ python flask_app/app.py
 # 7. Setup your AWS account for deployment
 
 # 8. Follow the ci.yaml file for deployment
-   - Login to AWS ECR 
-   - Build Docker image 
-   - Tag Docker image 
+   - Login to AWS ECR
+   - Build Docker image
+   - Tag Docker image
    - Push Docker image to ECR
-   - Create Kubernetes Secret 
+   - Create Kubernetes Secret
    - Deploy to EKS
 
 # 9. After deployment access the app at the 5000 port with External IP
@@ -192,8 +193,8 @@ My CI pipeline applied the Kubernetes manifests (`deployment.yaml`), launching t
 
 No production system is complete without monitoring. I provisioned two EC2 instances:
 
-* **Prometheus** scrapes custom metrics (request count, latency, error rates) from the Flask app every 15 seconds.
-* **Grafana** connects to Prometheus, displaying real-time dashboards and alerting on anomalies.
+- **Prometheus** scrapes custom metrics (request count, latency, error rates) from the Flask app every 15 seconds.
+- **Grafana** connects to Prometheus, displaying real-time dashboards and alerting on anomalies.
 
 This setup provides immediate visibility into performance regressions and infrastructure health.
 
