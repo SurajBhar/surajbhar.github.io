@@ -39,10 +39,10 @@ I started in a Jupyter notebook (`experimentation.ipynb`) to quickly iterate.
 
 ### EDA highlights
 
-- **Target balance:** Checked cancellation distribution to understand class imbalance.
-- **Data cleaning:** Removed duplicate rows; dropped `Booking_ID` and `Unnamed: 0`.
-- **Categoricals & numerics:** Reviewed distributions for features like `market_segment_type`, `type_of_meal_plan`, `room_type_reserved`; examined skew for `lead_time` and `avg_price_per_room`.
-- **Leakage scan:** Ensured no post-booking signals leak into training.
+* **Target balance:** Checked cancellation distribution to understand class imbalance.
+* **Data cleaning:** Removed duplicate rows; dropped `Booking_ID` and `Unnamed: 0`.
+* **Categoricals & numerics:** Reviewed distributions for features like `market_segment_type`, `type_of_meal_plan`, `room_type_reserved`; examined skew for `lead_time` and `avg_price_per_room`.
+* **Leakage scan:** Ensured no post-booking signals leak into training.
 
 ---
 
@@ -81,10 +81,10 @@ I started in a Jupyter notebook (`experimentation.ipynb`) to quickly iterate.
 
 ### Feature engineering & preprocessing (prototyped)
 
-- **Label encoding** for categorical columns (kept mappings).
-- **Skewness handling**: `log1p` for skewed numeric columns above a threshold.
-- **SMOTE**: Balanced the training set when needed.
-- **Feature selection**: Trained a quick Random Forest to get importances, then selected **top-K** features (configurable).
+* **Label encoding** for categorical columns (kept mappings).
+* **Skewness handling**: `log1p` for skewed numeric columns above a threshold.
+* **SMOTE**: Balanced the training set when needed.
+* **Feature selection**: Trained a quick Random Forest to get importances, then selected **top-K** features (configurable).
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -95,10 +95,10 @@ I started in a Jupyter notebook (`experimentation.ipynb`) to quickly iterate.
     Cumulative feature importance curve. How much of the model’s predictive power is explained by the top N features? Cumulative importance is the sum of the individual feature importances as you go down the sorted list of features (highest importance first). If the first 10 features have cumulative importance of 0.85, it means they explain 85% of the model’s predictive capability.
 </div>
 
-- **Lead time** is the strongest predictor — guests booking far in advance show higher cancellation likelihood.
-- **Customer engagement** indicators like `no_of_special_requests` significantly reduce cancellations.
-- **Pricing** (`avg_price_per_room`) plays a major role, with rate changes influencing booking behavior.
-- **Seasonality** (`arrival_month`, `arrival_date`) impacts cancellation trends, reflecting peak/off-peak periods.
+* **Lead time** is the strongest predictor — guests booking far in advance show higher cancellation likelihood.
+* **Customer engagement** indicators like `no_of_special_requests` significantly reduce cancellations.
+* **Pricing** (`avg_price_per_room`) plays a major role, with rate changes influencing booking behavior.
+* **Seasonality** (`arrival_month`, `arrival_date`) impacts cancellation trends, reflecting peak/off-peak periods.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -112,11 +112,12 @@ I started in a Jupyter notebook (`experimentation.ipynb`) to quickly iterate.
     Before and after SMOTE comparison.
 </div>
 
+
 ### Model trials
 
-- Baselines: Logistic Regression, Random Forest, XGBoost, LightGBM.
-- Metrics: **Accuracy** (primary), plus **Precision/Recall/F1**.
-- Results: **Random Forest** topped accuracy but yielded a **\~168 MB** model. **LightGBM** was nearly as accurate but much smaller; this trade-off drove the deployment decision.
+* Baselines: Logistic Regression, Random Forest, XGBoost, LightGBM.
+* Metrics: **Accuracy** (primary), plus **Precision/Recall/F1**.
+* Results: **Random Forest** topped accuracy but yielded a **\~168 MB** model. **LightGBM** was nearly as accurate but much smaller; this trade-off drove the deployment decision.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -127,11 +128,11 @@ I started in a Jupyter notebook (`experimentation.ipynb`) to quickly iterate.
     Performance comparison for different classifiers.
 </div>
 
-- **Random Forest** achieved the **highest overall performance** with Accuracy, Precision, Recall, and F1 all at \~**0.893**, indicating a well-balanced and reliable model.
-- **XGBoost** and **LightGBM** followed closely, with slightly lower accuracy but strong recall, making them good choices if **capturing more cancellations** is a priority.
-- **Gradient Boosting** offered a good **recall boost** (0.865) but slightly lower accuracy than Random Forest.
-- **Logistic Regression** and **Naive Bayes** performed moderately, but their recall lagged, meaning they might miss more cancellations.
-- **Support Vector Classifier** and **KNN** had the weakest overall balance, suggesting they may not be optimal for this dataset.
+* **Random Forest** achieved the **highest overall performance** with Accuracy, Precision, Recall, and F1 all at \~**0.893**, indicating a well-balanced and reliable model.
+* **XGBoost** and **LightGBM** followed closely, with slightly lower accuracy but strong recall, making them good choices if **capturing more cancellations** is a priority.
+* **Gradient Boosting** offered a good **recall boost** (0.865) but slightly lower accuracy than Random Forest.
+* **Logistic Regression** and **Naive Bayes** performed moderately, but their recall lagged, meaning they might miss more cancellations.
+* **Support Vector Classifier** and **KNN** had the weakest overall balance, suggesting they may not be optimal for this dataset.
 
 ---
 
@@ -147,35 +148,32 @@ After validating the approach in the notebook, I ported the logic into a clean, 
 
 ### Key modules
 
-- **`src/logger.py`** – Centralized logging (file + console), sensible formats/levels.
-- **`src/custom_exception.py`** – Exceptions with file/line context and original error chaining.
-- **`utils/utility_functions.py`** – Helpers to read YAML config and load CSV robustly.
-- **`src/data_ingestion.py`**
+* **`src/logger.py`** – Centralized logging (file + console), sensible formats/levels.
+* **`src/custom_exception.py`** – Exceptions with file/line context and original error chaining.
+* **`utils/utility_functions.py`** – Helpers to read YAML config and load CSV robustly.
+* **`src/data_ingestion.py`**
 
-  - Downloads the raw CSV from **GCS** (bucket + blob from `config/config.yaml`) using Application Default Credentials.
-  - Splits train/test by ratio; writes to `data/raw/…`.
+  * Downloads the raw CSV from **GCS** (bucket + blob from `config/config.yaml`) using Application Default Credentials.
+  * Splits train/test by ratio; writes to `data/raw/…`.
+* **`src/data_preprocessing.py`**
 
-- **`src/data_preprocessing.py`**
+  * Drops unneeded columns, deduplicates.
+  * Label-encodes configured categoricals; logs mappings for traceability.
+  * Applies log1p to skewed numerics above threshold.
+  * Balances with SMOTE (train set).
+  * Performs feature selection with RF importances; keeps **top-K** + target.
+  * Saves processed train/test to constants: `PROCESSED_TRAIN_DATA_PATH`, `PROCESSED_TEST_DATA_PATH`.
+* **`src/model_training.py`**
 
-  - Drops unneeded columns, deduplicates.
-  - Label-encodes configured categoricals; logs mappings for traceability.
-  - Applies log1p to skewed numerics above threshold.
-  - Balances with SMOTE (train set).
-  - Performs feature selection with RF importances; keeps **top-K** + target.
-  - Saves processed train/test to constants: `PROCESSED_TRAIN_DATA_PATH`, `PROCESSED_TEST_DATA_PATH`.
+  * Loads processed data, splits features/target.
+  * **LightGBM** tuned via `RandomizedSearchCV` (configurable params).
+  * Computes Accuracy/Precision/Recall/F1 (binary-safe with `zero_division=0`).
+  * Saves the best model (joblib) to `MODEL_OUTPUT_PATH`.
+  * Logs datasets, params, and metrics to **MLflow**.
+* **`pipeline/training_pipeline.py`**
 
-- **`src/model_training.py`**
-
-  - Loads processed data, splits features/target.
-  - **LightGBM** tuned via `RandomizedSearchCV` (configurable params).
-  - Computes Accuracy/Precision/Recall/F1 (binary-safe with `zero_division=0`).
-  - Saves the best model (joblib) to `MODEL_OUTPUT_PATH`.
-  - Logs datasets, params, and metrics to **MLflow**.
-
-- **`pipeline/training_pipeline.py`**
-
-  - Orchestrates: **Ingestion → Preprocessing → Training**
-  - One function call `run_pipeline()` runs the end-to-end process with clear stage logs and robust error handling.
+  * Orchestrates: **Ingestion → Preprocessing → Training**
+  * One function call `run_pipeline()` runs the end-to-end process with clear stage logs and robust error handling.
 
 ---
 
@@ -183,12 +181,11 @@ After validating the approach in the notebook, I ported the logic into a clean, 
 
 The app is intentionally straightforward for portability and clarity.
 
-- **`application.py`** loads the trained joblib model from `MODEL_OUTPUT_PATH`.
-- **`templates/index.html`** + **`static/style.css`** provide a small form to enter the 10 features used in training:
+* **`application.py`** loads the trained joblib model from `MODEL_OUTPUT_PATH`.
+* **`templates/index.html`** + **`static/style.css`** provide a small form to enter the 10 features used in training:
 
-  - `lead_time`, `no_of_special_request`, `avg_price_per_room`, `arrival_month`, `arrival_date`, `market_segment_type`, `no_of_week_nights`, `no_of_weekend_nights`, `type_of_meal_plan`, `room_type_reserved`
-
-- On POST, the app constructs a feature vector in the **exact order** used during training and returns a cancellation prediction (cancel / not cancel).
+  * `lead_time`, `no_of_special_request`, `avg_price_per_room`, `arrival_month`, `arrival_date`, `market_segment_type`, `no_of_week_nights`, `no_of_weekend_nights`, `type_of_meal_plan`, `room_type_reserved`
+* On POST, the app constructs a feature vector in the **exact order** used during training and returns a cancellation prediction (cancel / not cancel).
 
 ---
 
@@ -209,10 +206,10 @@ Running the training step inside `docker build` forces credentials into an image
 
 ### Dockerfile (runtime-only image)
 
-- Based on `python:slim`
-- Installs system deps (e.g., `libgomp1` for LightGBM)
-- Copies the repo and installs the package
-- **Does not train**—just runs `application.py` on port **8080**
+* Based on `python:slim`
+* Installs system deps (e.g., `libgomp1` for LightGBM)
+* Copies the repo and installs the package
+* **Does not train**—just runs `application.py` on port **8080**
 
 ### Jenkins pipeline (Option A: train first, then build)
 
@@ -222,42 +219,40 @@ Stages:
 2. **Create venv & install**: `pip install -e .`
 3. **Train model (with ADC)**:
 
-   - Jenkins injects the GCP service account file as a credential (`withCredentials(file: ...)`).
-   - Runs `pipeline/training_pipeline.py` which downloads data from GCS, preprocesses, and trains LightGBM.
-   - The model is saved under the repo at **`MODEL_OUTPUT_PATH`** so it gets included by `COPY . .` later.
-
+   * Jenkins injects the GCP service account file as a credential (`withCredentials(file: ...)`).
+   * Runs `pipeline/training_pipeline.py` which downloads data from GCS, preprocesses, and trains LightGBM.
+   * The model is saved under the repo at **`MODEL_OUTPUT_PATH`** so it gets included by `COPY . .` later.
 4. **Build & push image**:
 
-   - Tags with both commit SHA and `latest`
-   - Pushes to **GCR** (`gcr.io/<project>/ml-project`)
-
+   * Tags with both commit SHA and `latest`
+   * Pushes to **GCR** (`gcr.io/<project>/ml-project`)
 5. **Deploy to Cloud Run**:
 
-   - `gcloud run deploy ml-project --image gcr.io/<project>/ml-project:<sha> --region us-central1 --platform managed --port 8080 --allow-unauthenticated`
+   * `gcloud run deploy ml-project --image gcr.io/<project>/ml-project:<sha> --region us-central1 --platform managed --port 8080 --allow-unauthenticated`
 
 ### Secrets & configuration
 
-- **ADC** only during training in Jenkins; never copied into the image.
-- The app reads the model from `MODEL_OUTPUT_PATH` at runtime; no cloud credentials are required for serving.
-- A `.dockerignore` keeps images lean (`venv/`, `.git/`, caches, local artifacts).
+* **ADC** only during training in Jenkins; never copied into the image.
+* The app reads the model from `MODEL_OUTPUT_PATH` at runtime; no cloud credentials are required for serving.
+* A `.dockerignore` keeps images lean (`venv/`, `.git/`, caches, local artifacts).
 
 ---
 
 ## Results & trade-offs
 
-- **Best offline model:** Random Forest (highest accuracy), but **\~168 MB**.
-- **Deployed model:** LightGBM (near-parity accuracy), **significantly smaller** binary.
-- **Operational benefits:** Faster container pulls, quicker cold starts on Cloud Run, and lower memory footprint → **lower cost** and better UX.
+* **Best offline model:** Random Forest (highest accuracy), but **\~168 MB**.
+* **Deployed model:** LightGBM (near-parity accuracy), **significantly smaller** binary.
+* **Operational benefits:** Faster container pulls, quicker cold starts on Cloud Run, and lower memory footprint → **lower cost** and better UX.
 
 ---
 
 ## What I’d improve next
 
-- **Persist and load label mappings** so the UI can submit human-readable values and the server maps them to model codes robustly.
-- **Add AUC/PR-AUC** for a fuller performance picture.
-- **MLflow model registry** + staged promotions (Staging → Production).
-- **Monitoring & retraining triggers** (Cloud Run logs + periodic data drift checks).
-- **Traffic-split canaries** on Cloud Run for safe rollouts.
+* **Persist and load label mappings** so the UI can submit human-readable values and the server maps them to model codes robustly.
+* **Add AUC/PR-AUC** for a fuller performance picture.
+* **MLflow model registry** + staged promotions (Staging → Production).
+* **Monitoring & retraining triggers** (Cloud Run logs + periodic data drift checks).
+* **Traffic-split canaries** on Cloud Run for safe rollouts.
 
 ---
 

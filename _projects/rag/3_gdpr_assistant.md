@@ -12,18 +12,18 @@ The **GDPR RAG Assistant** is a production-style, **evaluation-first Retrieval-A
 
 The system is designed to:
 
-- Return **grounded answers with citations** to specific GDPR Articles/Recitals
-- **Gracefully fall back** when the dataset doesn’t contain the answer
-- Handle **off-topic questions neutrally** (no fake citations)
+- Return **grounded answers with citations** to specific GDPR Articles/Recitals  
+- **Gracefully fall back** when the dataset doesn’t contain the answer  
+- Handle **off-topic questions neutrally** (no fake citations)  
 - Be **fully evaluated** (retriever + generator + routing) using **offline metrics** and **online LLM-as-a-judge pipelines**
 
 **Tech highlights:**
 
-- **Backend:** FastAPI · Python 3.10+ · Azure OpenAI (GPT-4o) · Azure AI Search
-- **RAG Core:** Three-tier routing logic (Grounded → Hybrid → Off-topic)
-- **Frontend:** Lightweight SPA (HTML/CSS/JS) with citations and a **3D retrieval viz** (Plotly)
-- **Deploy:** Docker · GitHub Container Registry (GHCR) · Azure Container Apps · GitHub Actions CI/CD
-- **Evaluation:** Custom offline evaluation harness + **Giskard** + **RAGAS** for online RAG evaluation
+- **Backend:** FastAPI · Python 3.10+ · Azure OpenAI (GPT-4o) · Azure AI Search  
+- **RAG Core:** Three-tier routing logic (Grounded → Hybrid → Off-topic)  
+- **Frontend:** Lightweight SPA (HTML/CSS/JS) with citations and a **3D retrieval viz** (Plotly)  
+- **Deploy:** Docker · GitHub Container Registry (GHCR) · Azure Container Apps · GitHub Actions CI/CD  
+- **Evaluation:** Custom offline evaluation harness + **Giskard** + **RAGAS** for online RAG evaluation  
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -40,9 +40,9 @@ The system is designed to:
 
 **Goal:** Build a GDPR assistant that:
 
-- Answers questions using **actual GDPR law text** (Articles + Recitals),
-- Is **honest** about missing coverage,
-- Is guarded against **hallucinations and off-topic answers**, and
+- Answers questions using **actual GDPR law text** (Articles + Recitals),  
+- Is **honest** about missing coverage,  
+- Is guarded against **hallucinations and off-topic answers**, and  
 - Can be **measured and improved** using a proper evaluation pipeline.
 
 Most GDPR “chatbots” simply send the question to an LLM.  
@@ -58,9 +58,9 @@ A short walkthrough of the deployed MVP is available on YouTube:
 
 The demo shows:
 
-- How questions are routed through the three-tier RAG logic
-- How citations to GDPR Articles/Recitals are displayed
-- The 3D visualization of retrieved chunks for the last question
+- How questions are routed through the three-tier RAG logic  
+- How citations to GDPR Articles/Recitals are displayed  
+- The 3D visualization of retrieved chunks for the last question  
 
 ---
 
@@ -68,31 +68,28 @@ The demo shows:
 
 **Core components:**
 
-- **Backend:**
+- **Backend:**  
+  - `FastAPI` for the API and static file serving  
+  - `Azure OpenAI` (GPT-4o) for generation and embeddings  
+  - `Azure AI Search` as the vector search backend for GDPR chunks  
 
-  - `FastAPI` for the API and static file serving
-  - `Azure OpenAI` (GPT-4o) for generation and embeddings
-  - `Azure AI Search` as the vector search backend for GDPR chunks
-
-- **RAG Core (app/rag.py):**
-
-  - Intent classification / routing
-  - Retrieval using Azure AI Search
-  - Branching into grounded, hybrid, or off-topic answers
+- **RAG Core (app/rag.py):**  
+  - Intent classification / routing  
+  - Retrieval using Azure AI Search  
+  - Branching into grounded, hybrid, or off-topic answers  
   - Answer formatting with structured `Source` objects (article id, title, snippet, score)
 
-- **Frontend (web/):**
+- **Frontend (web/):**  
+  - Minimalist SPA (HTML + CSS + vanilla JS)  
+  - Chat interface, copy-to-clipboard, “Jump to latest” helper  
+  - Dataset & About panels  
+  - 3D Plotly visualization of retrieved chunks on a **unit sphere** using `acos(similarity)` as angles  
 
-  - Minimalist SPA (HTML + CSS + vanilla JS)
-  - Chat interface, copy-to-clipboard, “Jump to latest” helper
-  - Dataset & About panels
-  - 3D Plotly visualization of retrieved chunks on a **unit sphere** using `acos(similarity)` as angles
-
-- **Deployment:**
-  - Docker image for the FastAPI + static SPA
-  - Image published to **GitHub Container Registry (GHCR)**
-  - Hosted as an **Azure Container App** (2 vCPU / 4 GB recommended)
-  - Automated CI/CD pipeline via **GitHub Actions** (build → push → deploy)
+- **Deployment:**  
+  - Docker image for the FastAPI + static SPA  
+  - Image published to **GitHub Container Registry (GHCR)**  
+  - Hosted as an **Azure Container App** (2 vCPU / 4 GB recommended)  
+  - Automated CI/CD pipeline via **GitHub Actions** (build → push → deploy)  
 
 ---
 
@@ -100,27 +97,25 @@ The demo shows:
 
 The heart of the system is a **three-tier RAG flow**:
 
-1. **Grounded Answer (GDPR Dataset)**
+1. **Grounded Answer (GDPR Dataset)**  
+   - Retrieve top-K chunks from Azure AI Search  
+   - Answer **only using retrieved context**  
+   - If the dataset doesn’t explicitly contain an answer, emit a **sentinel string** (“no answer from dataset”)  
 
-   - Retrieve top-K chunks from Azure AI Search
-   - Answer **only using retrieved context**
-   - If the dataset doesn’t explicitly contain an answer, emit a **sentinel string** (“no answer from dataset”)
+2. **Hybrid GDPR Guidance**  
+   - Triggered when retrieval is weak or the sentinel is emitted  
+   - Clearly states that **no direct answer** was found in the dataset  
+   - Provides a **concise expert-style explanation**, still labeled as guidance  
 
-2. **Hybrid GDPR Guidance**
-
-   - Triggered when retrieval is weak or the sentinel is emitted
-   - Clearly states that **no direct answer** was found in the dataset
-   - Provides a **concise expert-style explanation**, still labeled as guidance
-
-3. **Off-topic Neutral Answer**
-   - For non-GDPR questions
-   - Returns a **short, factual reply** with **no GDPR citations**
-   - Prevents the system from giving legal-looking answers on irrelevant topics
+3. **Off-topic Neutral Answer**  
+   - For non-GDPR questions  
+   - Returns a **short, factual reply** with **no GDPR citations**  
+   - Prevents the system from giving legal-looking answers on irrelevant topics  
 
 **Entrypoints:**
 
-- Backend: `app/main.py` → `/api/chat` → `rag_answer()`
-- RAG core: `app/rag.py` (classification → retrieval → branch → answer)
+- Backend: `app/main.py` → `/api/chat` → `rag_answer()`  
+- RAG core: `app/rag.py` (classification → retrieval → branch → answer)  
 
 ---
 
@@ -128,23 +123,23 @@ The heart of the system is a **three-tier RAG flow**:
 
 The assistant is powered by the **GDPR Articles & Recitals** dataset:
 
-- Hugging Face: **`AndreaSimeri/GDPR`**
-- **99 Articles** across 11 chapters
-- **173 Recitals** providing interpretive context
+- Hugging Face: **`AndreaSimeri/GDPR`**  
+- **99 Articles** across 11 chapters  
+- **173 Recitals** providing interpretive context  
 
 Example:  
 Article **7(2)** (Conditions for consent) is interpreted with Recital **42** which clarifies:
 
-- Proof of consent
-- Identity of the controller
-- Purpose of the processing
+- Proof of consent  
+- Identity of the controller  
+- Purpose of the processing  
 
 The frontend’s **Dataset** panel links to:
 
-- The Hugging Face dataset
+- The Hugging Face dataset  
 - The original paper:
 
-> _Simeri, A. and Tagarelli, A. (2023). GDPR Article Retrieval based on Domain-adaptive and Task-adaptive Legal Pre-trained Language Models. LIRAI 2023 (CEUR Vol. 3594), pp. 63–76._
+> *Simeri, A. and Tagarelli, A. (2023). GDPR Article Retrieval based on Domain-adaptive and Task-adaptive Legal Pre-trained Language Models. LIRAI 2023 (CEUR Vol. 3594), pp. 63–76.*
 
 ---
 
@@ -152,10 +147,10 @@ The frontend’s **Dataset** panel links to:
 
 **Prerequisites:**
 
-- Python **3.10+**
+- Python **3.10+**  
 - Azure subscription with:
-  - **Azure OpenAI** (chat + embedding deployments)
-  - **Azure AI Search** (index loaded with GDPR chunks)
+  - **Azure OpenAI** (chat + embedding deployments)  
+  - **Azure AI Search** (index loaded with GDPR chunks)  
 
 ### Configuration
 
@@ -234,9 +229,9 @@ az containerapp create -g <rg> -n gdpr-rag \
 
 The repository includes guidance on:
 
-- Creating a **GitHub PAT** for GHCR
-- Creating an **Azure Service Principal** for CI/CD
-- Resource sizing (2 vCPU / 4 GB RAM) and common deployment **gotchas**
+* Creating a **GitHub PAT** for GHCR
+* Creating an **Azure Service Principal** for CI/CD
+* Resource sizing (2 vCPU / 4 GB RAM) and common deployment **gotchas**
 
 ---
 
@@ -275,9 +270,9 @@ POST /api/chat
 
 Pydantic models are defined in `app/schemas.py`:
 
-- `ChatRequest { message: str }`
-- `Source { article_id, article_title, chunk_id, snippet, score }`
-- `ChatResponse { answer: str, sources: Source[] }`
+* `ChatRequest { message: str }`
+* `Source { article_id, article_title, chunk_id, snippet, score }`
+* `ChatResponse { answer: str, sources: Source[] }`
 
 ---
 
@@ -292,26 +287,26 @@ A Python evaluation pipeline generates an HTML report with retrieval & answering
 
 **Key metrics (N = 50 GDPR Q/A pairs):**
 
-- **Retrieval**
+* **Retrieval**
 
-  - Recall@K ≈ **0.96**
-  - MRR ≈ **0.93**
-  - Mean top-1 similarity ≈ **0.75** (p50 ≈ 0.76, p90 ≈ 0.82)
+  * Recall@K ≈ **0.96**
+  * MRR ≈ **0.93**
+  * Mean top-1 similarity ≈ **0.75** (p50 ≈ 0.76, p90 ≈ 0.82)
 
-- **Answering**
+* **Answering**
 
-  - Exact Match (EM) = **0.0** (due to strict legal phrasing)
-  - Token-level F1 ≈ **0.66**
+  * Exact Match (EM) = **0.0** (due to strict legal phrasing)
+  * Token-level F1 ≈ **0.66**
 
-- **Groundedness & Routing**
+* **Groundedness & Routing**
 
-  - Groundedness (when grounded) ≈ **0.96**
-  - Routing: 100% of this eval set passed through the **grounded** route
+  * Groundedness (when grounded) ≈ **0.96**
+  * Routing: 100% of this eval set passed through the **grounded** route
 
-- **Latency**
+* **Latency**
 
-  - Average end-to-end latency ≈ **2.19 s**
-  - p95 latency ≈ **4.63 s** (Azure Container Apps)
+  * Average end-to-end latency ≈ **2.19 s**
+  * p95 latency ≈ **4.63 s** (Azure Container Apps)
 
 Visuals include retrieval metrics, top-1 score distribution, F1 by route, and latency.
 
@@ -330,25 +325,25 @@ Visuals include retrieval metrics, top-1 score distribution, F1 by route, and la
 
 To evaluate the **deployed** system, the project integrates:
 
-- **Giskard LLM Evaluation** for:
+* **Giskard LLM Evaluation** for:
 
-  - Generator correctness
-  - Retriever correctness
-  - Rewriter & router behavior
-  - Safety scans (harmfulness, prompt injection, stereotypes)
+  * Generator correctness
+  * Retriever correctness
+  * Rewriter & router behavior
+  * Safety scans (harmfulness, prompt injection, stereotypes)
 
-- **RAGAS metrics** (LLM-as-a-judge) for:
+* **RAGAS metrics** (LLM-as-a-judge) for:
 
-  - `answer_correctness`
-  - `faithfulness` / groundedness
-  - `context_precision`, `context_recall`, `context_relevancy`
-  - `answer_relevancy`
+  * `answer_correctness`
+  * `faithfulness` / groundedness
+  * `context_precision`, `context_recall`, `context_relevancy`
+  * `answer_relevancy`
 
 This online evaluation:
 
-- Confirms **good routing behavior** (on-topic vs off-topic)
-- Surfaces **weak areas** (e.g. query rewriting, missing topic coverage such as DPIA & some data subject rights)
-- Feeds directly into the **backlog**: better chunking, enriched KB, stronger safety prompts
+* Confirms **good routing behavior** (on-topic vs off-topic)
+* Surfaces **weak areas** (e.g. query rewriting, missing topic coverage such as DPIA & some data subject rights)
+* Feeds directly into the **backlog**: better chunking, enriched KB, stronger safety prompts
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -379,10 +374,10 @@ During integration with **RAGAS 0.3.9**, two breaking issues appeared in Giskard
 
 **Fixes contributed:**
 
-- Implemented `is_finished()` in `RagasLLMWrapper` to comply with `BaseRagasLLM`
-- Updated Giskard’s RAGAS integration to use the new `SingleTurnSample` + `single_turn_score(...)` API
-- Added a compatibility fallback for older RAGAS versions
-- Submitted a reproducible test script + PR following contribution guidelines
+* Implemented `is_finished()` in `RagasLLMWrapper` to comply with `BaseRagasLLM`
+* Updated Giskard’s RAGAS integration to use the new `SingleTurnSample` + `single_turn_score(...)` API
+* Added a compatibility fallback for older RAGAS versions
+* Submitted a reproducible test script + PR following contribution guidelines
 
 As a result, **Giskard now works smoothly with RAGAS 0.3.9 and Azure OpenAI** in RAG evaluation pipelines like this one.
 
@@ -392,22 +387,22 @@ As a result, **Giskard now works smoothly with RAGAS 0.3.9 and Azure OpenAI** in
 
 Some planned extensions include:
 
-- `/healthz` and `/metrics` endpoints (Prometheus-friendly)
-- Inline citations auto-tagging (e.g. `[Article X]` in the answer text)
-- Hybrid retrieval (lexical + vector) on Azure AI Search
-- More standardized evaluation scripts (`/scripts/eval.py`) with a reusable gold Q/A set
+* `/healthz` and `/metrics` endpoints (Prometheus-friendly)
+* Inline citations auto-tagging (e.g. `[Article X]` in the answer text)
+* Hybrid retrieval (lexical + vector) on Azure AI Search
+* More standardized evaluation scripts (`/scripts/eval.py`) with a reusable gold Q/A set
 
 ---
 
 ## 12. Resources
 
-- 💻 **GitHub Repository:**
+* 💻 **GitHub Repository:**
   [https://github.com/BharAI-Lab/rag_azure_fastapi](https://github.com/BharAI-Lab/rag_azure_fastapi)
 
-- 📺 **Demo Video:**
+* 📺 **Demo Video:**
   [https://www.youtube.com/watch?v=jpLyntoomu4](https://www.youtube.com/watch?v=jpLyntoomu4)
 
-- 📄 **Offline Evaluation Report (HTML):**
+* 📄 **Offline Evaluation Report (HTML):**
   Generated under `docs/report.html` from the evaluation pipeline
 
 ---
@@ -416,15 +411,15 @@ Some planned extensions include:
 
 This project is less about “wrapping GPT in a chat UI” and more about:
 
-- Treating **RAG as a measurable system** (retrieval, context use, generation, routing, safety),
-- Designing for **transparent, citation-backed answers** in a legal domain,
-- And using **evaluation as the main driver** for iteration.
+* Treating **RAG as a measurable system** (retrieval, context use, generation, routing, safety),
+* Designing for **transparent, citation-backed answers** in a legal domain,
+* And using **evaluation as the main driver** for iteration.
 
 The same architecture and evaluation approach can be adapted to:
 
-- Financial regulations
-- Clinical/pharma documentation
-- Enterprise knowledge bases with strong compliance requirements
+* Financial regulations
+* Clinical/pharma documentation
+* Enterprise knowledge bases with strong compliance requirements
 
 > **If it’s not evaluated, it’s just a demo.**
 > The GDPR RAG Assistant is a concrete step towards **trustworthy, observable, and improvable** RAG systems.

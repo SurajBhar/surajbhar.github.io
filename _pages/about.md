@@ -9,10 +9,10 @@ profile:
   image: b1_flip2.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Data Scientist/AI Engineer</p>
+     <p>Data Scientist/AI Engineer</p>
 #    <p>555 your office number</p>
 #    <p>123 your address street</p>
-
+    
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
@@ -25,7 +25,7 @@ latest_posts:
   enabled: false # After posting something switch to "true"
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
----
+---  
 
 I’m **Suraj Bhardwaj**, a **Data Scientist and AI Engineer** based in **Germany**, focused on turning messy real-world data into **measurable outcomes** and **reliable systems**. I work comfortably across the full data science lifecycle: framing problems with stakeholders, building data pipelines and analysis, training and validating ML/DL models, and delivering production-ready services with monitoring and continuous improvement.
 
@@ -37,11 +37,12 @@ Earlier, in the [Visual Computing Group](https://www.vc.informatik.uni-siegen.de
 
 ### What you can expect from me
 
-- **Data Science & Analytics**: EDA, feature engineering, statistical thinking (ANOVA, A/B testing), forecasting, calibration/error analysis, KPI storytelling, and dashboarding (Tableau/Plotly).
-- **Data Engineering foundations**: SQL (data modeling, quality checks), APIs, pipeline thinking; currently expanding hands-on **PySpark** for big-data workflows.
-- **ML/DL & Applied Research**: robust evaluation, ablations, generalization checks, imbalance-aware metrics; CV/NLP/multimodal systems.
-- **Production delivery (MLOps mindset)**: Dockerized services, CI/CD (GitHub/GitLab), MLflow/DVC, monitoring/drift detection, cloud deployment on Azure/AWS.
-- **GenAI & Agentic AI**: RAG pipelines, evaluation-first iteration (RAGAS/Giskard), and agentic tooling (AutoGen, LangGraph, MCP-style servers).
+* **Data Science & Analytics**: EDA, feature engineering, statistical thinking (ANOVA, A/B testing), forecasting, calibration/error analysis, KPI storytelling, and dashboarding (Tableau/Plotly).
+* **Data Engineering foundations**: SQL (data modeling, quality checks), APIs, pipeline thinking; currently expanding hands-on **PySpark** for big-data workflows. 
+* **ML/DL & Applied Research**: robust evaluation, ablations, generalization checks, imbalance-aware metrics; CV/NLP/multimodal systems.
+* **Production delivery (MLOps mindset)**: Dockerized services, CI/CD (GitHub/GitLab), MLflow/DVC, monitoring/drift detection, cloud deployment on Azure/AWS.
+* **GenAI & Agentic AI**: RAG pipelines, evaluation-first iteration (RAGAS/Giskard), and agentic tooling (AutoGen, LangGraph, MCP-style servers).
+
 
 If you’re hiring for **Data Scientist / AI Engineer** roles and care about both **solid analytics** and **production-grade AI**, feel free to reach out (LinkedIn is the fastest).
 

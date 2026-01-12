@@ -10,7 +10,7 @@ permalink: /news/
   Developed the Movie Sentiment Prediction Microservice which delivers an end-to-end workflow—from raw data to live inference—so you can develop, deploy, version, and monitor sentiment models in production with confidence.
 
 - **July 2025 — Paper Accepted for publication through IEEE ITSC 2025**  
-  My paper _"Self-supervised Driver Distraction Detection for Imbalanced Datasets"_ got accepted for publication and presentation as full paper in the IEEE 28th International Conference on Intelligent Transportation Systems (ITSC 2025).
+  My paper *"Self-supervised Driver Distraction Detection for Imbalanced Datasets"* got accepted for publication and presentation as full paper in the IEEE 28th International Conference on Intelligent Transportation Systems (ITSC 2025).
 
 - **December 2024 — VoxelNeXt Deployed for Industrial LiDAR**  
   Trained VoxelNeXt on Pandaset and contributed to the deployment of VoxelNext for inference, improving 3D object detection in urban scenarios for industrial LiDAR applications.
@@ -25,7 +25,7 @@ permalink: /news/
   Presented my novel Clustered Feature Weighting (CFW) algorithm for long-tailed datasets to academic and industrial stakeholders at the KARLI project closing event.
 
 - **May 2024 — Master's Thesis Completed at Fraunhofer IOSB**  
-  Successfully defended my thesis _"Improved Driver Distraction Detection using Self-Supervised Learning"_ under the guidance of Prof. Michael Möller, Dr. Jovita Lukasik and M.Sc. David Lerch. Research supported by Fraunhofer IOSB under KARLI project.
+  Successfully defended my thesis *"Improved Driver Distraction Detection using Self-Supervised Learning"* under the guidance of Prof. Michael Möller, Dr. Jovita Lukasik and M.Sc. David Lerch. Research supported by Fraunhofer IOSB under KARLI project.
 
 - **April 2024 — Delivered Real-Time Object Detection Demo in CARLA**  
   Deployed a fine-tuned YOLO11-m model in CARLA simulator for real-time 2D object detection using multi-sensor simulation data.

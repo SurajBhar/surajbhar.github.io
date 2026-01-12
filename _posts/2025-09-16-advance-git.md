@@ -58,9 +58,7 @@ toc:
 Git is more than `add`, `commit`, and `push`. Once you start collaborating on real projects, you’ll often need to rewrite history, clean up commits, rebase branches, or even recover “lost” work. This guide explores advanced Git features with explanations and space for practical demonstrations.
 
 ## 1. Commit History Rewriting in Git
-
 ### 1.1 Amending Git Commits
-
 Amending in Git is like fixing or updating your most recent commit without creating a brand-new one. Instead of stacking another commit on top, you “rewrite” the last one.
 
 ```bash
@@ -74,14 +72,14 @@ git commit -am "main:modified the title - blog.html"
  2 files changed, 9 insertions(+), 1 deletion(-)
 
 
-git log --oneline
+git log --oneline                                   
 ab40261 (HEAD -> main) main:modified the title - blog.html
 0832375 (origin/main) HTML File
 f86213d first commit
 ```
 
 - Lets's suppose you have a file named 404.html and you want to commit the changes made inside this file as well in the previous commit.
-
+ 
 ```bash
 # Stage the changes
 git add 404.html
@@ -96,8 +94,7 @@ Changes to be committed:
         new file:   404.html
 
 ```
-
-In other words, now we want to rewrite the previous commit SHA "ab40261" and
+In other words, now we want to rewrite the previous commit SHA "ab40261" and 
 amend it to reflect the changes made in both blog.html and 404.html file.
 
 ```bash
@@ -110,17 +107,16 @@ git commit --amend --no-edit
  create mode 100644 404.html
 
 # The commit has been made with new SHA and the old commit shaw is deleted
-git log --oneline
+git log --oneline           
 4bf9f69 (HEAD -> main) main:modified the title - blog.html
 0832375 (origin/main) HTML File
 f86213d first commit
 
 ```
-
 - "--no-edit" flag let's you make the amendment to your commit without changing its commit message.
 - Amending rewrites history. If you already pushed that commit to a shared branch, amending it means the hash changes, which can cause confusion for others. Safe rule of thumb:
-  - Amend freely on local commits you haven’t shared.
-  - Avoid amending commits that are already pushed to remote unless you know how to handle a force-push.
+    - Amend freely on local commits you haven’t shared.
+    - Avoid amending commits that are already pushed to remote unless you know how to handle a force-push.
 
 #### Tomake changes to the message of the commit:
 
@@ -134,13 +130,12 @@ git commit --amend
  create mode 100644 404.html
  create mode 100644 config.yaml
 
-git log --oneline
+git log --oneline  
 65cf379 (HEAD -> main) main:modified the title - blog.html and added 404.html; added config.yaml
 0832375 (origin/main) HTML File
 f86213d first commit
 
 ```
-
 If you only want to fix the **commit message** and not change the files, Git gives you a flag for that:
 
 ```bash
@@ -158,12 +153,11 @@ git commit --amend
 Just don’t stage any new files before running it—otherwise Git will also include those changes in the amended commit.
 
 ## 2. Git Rebase
-
-**Rebase** moves your commits to a new base commit. Instead of merging two branches (which creates a merge commit), rebase **replays** your branch’s commits _on top of_ another branch, producing a **linear history**.
+**Rebase** moves your commits to a new base commit. Instead of merging two branches (which creates a merge commit), rebase **replays** your branch’s commits *on top of* another branch, producing a **linear history**.
 
 ```bash
 # Create a new branch named feature-branch
-git checkout -b feature-branch
+git checkout -b feature-branch 
 
 # sample command for rebase
 git rebase <BASE>
@@ -182,9 +176,7 @@ git log --oneline --decorate --graph --all
 ```
 
 #### Practical Example (with Conflict Simulation)
-
 In this walkthrough, we will simulate a real scenario: creating a feature branch, making changes, modifying `main`, and then rebasing with conflicts.
-
 #### Step 1- Create a New Feature Branch
 
 ```bash
@@ -235,11 +227,10 @@ git commit -am "main: modified Error Message again- 404.html"
 * 84900fe main: modified title again- 404.html
 | * e7f8a2e (feature-branch) feature-branch: modified Error Message - 404.html
 | * 82ff182 feature-branch: modified title - 404.html
-|/
+|/  
 * 89293e4 (origin/main) Rebasing
 * 86bcbc6 Updated Readme with future section
 ```
-
 Now both branches have diverged.
 
 #### Step 4- Start Rebasing
@@ -366,29 +357,28 @@ Deleted branch feature-branch (was fca2f48).
 
 #### Handy Rebase Commands
 
-- **Abort rebase and go back**:
+* **Abort rebase and go back**:
 
   ```bash
   git rebase --abort
   ```
-
-- **Skip a conflicting commit**:
+* **Skip a conflicting commit**:
 
   ```bash
   git rebase --skip
   ```
-
-- **Continue after fixing conflicts**:
+* **Continue after fixing conflicts**:
 
   ```bash
   git rebase --continue
   ```
 
+
 #### Key Takeaways
 
-- Rebasing helps maintain a **clean, linear history**.
-- Conflicts must be **resolved commit by commit** during rebase.
-- Rebasing is typically done on **feature branches** before merging into `main` to ensure history clarity.
+* Rebasing helps maintain a **clean, linear history**.
+* Conflicts must be **resolved commit by commit** during rebase.
+* Rebasing is typically done on **feature branches** before merging into `main` to ensure history clarity.
 
 This simulation demonstrated a real-world rebasing scenario with conflicts, including how to resolve them and preserve a clean history.
 
@@ -402,9 +392,9 @@ The command:
 git fetch origin
 ```
 
-- **Downloads** objects and refs from the remote repository (`origin`).
-- **Updates your remote-tracking branches** (e.g., `origin/main`) to match the remote.
-- **Does not modify your local branches** (e.g., `main`).
+* **Downloads** objects and refs from the remote repository (`origin`).
+* **Updates your remote-tracking branches** (e.g., `origin/main`) to match the remote.
+* **Does not modify your local branches** (e.g., `main`).
 
 This makes `git fetch` a safe operation—you can inspect remote changes before deciding whether to merge or rebase them into your local branch.
 
@@ -423,8 +413,8 @@ Output:
   remotes/origin/main
 ```
 
-- `main` → local branch
-- `remotes/origin/main` → remote-tracking branch (your local copy of the remote branch)
+* `main` → local branch
+* `remotes/origin/main` → remote-tracking branch (your local copy of the remote branch)
 
 Check only local branches:
 
@@ -457,8 +447,8 @@ git branch -av
 
 ### Explanation
 
-- **`main`**: local branch, currently checked out (`*`).
-- **`remotes/origin/main`**: remote-tracking branch, representing the `main` branch on `origin`.
+* **`main`**: local branch, currently checked out (`*`).
+* **`remotes/origin/main`**: remote-tracking branch, representing the `main` branch on `origin`.
 
 Both point to the same commit `453b2c9`, meaning your local branch is **in sync** with remote.
 
@@ -520,8 +510,9 @@ Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
 
 At this point:
 
-- `origin/main` knows about the **2 new commits**.
-- `main` is **2 commits behind**.
+* `origin/main` knows about the **2 new commits**.
+* `main` is **2 commits behind**.
+
 
 ## Step 4- Merging Remote Changes
 
@@ -553,6 +544,7 @@ git log --oneline --decorate --graph --all
 
 Your local `main` is synced with `origin/main`.
 
+
 ## Advantages of `git fetch`
 
 - **Safe** – does not change your working branch.
@@ -573,18 +565,19 @@ Your local `main` is synced with `origin/main`.
 - **Inspect before merging**: Use `git log origin/main` to review remote commits.
 - **Combine with prune**: `git fetch --prune` cleans up deleted remote branches.
 
+
 ### Key Takeaway
 
-- `git fetch` updates your **view of the remote repository**.
-- Your local branch remains unchanged until you explicitly merge/rebase.
-- Think of it as “checking for mail” without opening the letters.
+* `git fetch` updates your **view of the remote repository**.
+* Your local branch remains unchanged until you explicitly merge/rebase.
+* Think of it as “checking for mail” without opening the letters.
+
 
 ## 4. Git Pull and Pull with Rebase
-
 When collaborating with others, keeping your local repository in sync with the remote repository is crucial. After all, you’re not the only one pushing changes!
 
-- **`git fetch`** brings your remote-tracking branches (like `origin/main`) up to date but does not touch your local working branch.
-- **`git pull`** goes further: it fetches changes **and merges them into your local branch**.
+* **`git fetch`** brings your remote-tracking branches (like `origin/main`) up to date but does not touch your local working branch.
+* **`git pull`** goes further: it fetches changes **and merges them into your local branch**.
 
 In other words:
 
@@ -600,20 +593,20 @@ Let’s say you are on `main` and new commits have appeared on the remote reposi
 git pull origin main
 ```
 
-- Fetches the new commits from `origin/main`.
-- Merges them into your local `main`.
-- If there are no conflicts, you get a **fast-forward merge**.
-- If there are conflicts, Git will stop and ask you to resolve them.
+* Fetches the new commits from `origin/main`.
+* Merges them into your local `main`.
+* If there are no conflicts, you get a **fast-forward merge**.
+* If there are conflicts, Git will stop and ask you to resolve them.
 
-* **Advantage**: quick and simple, your local branch matches remote.
-* **Disadvantage**: history may become cluttered with merge commits, especially when you pull frequently.
+- **Advantage**: quick and simple, your local branch matches remote.
+- **Disadvantage**: history may become cluttered with merge commits, especially when you pull frequently.
 
 ## Step 2- Why Pull with Rebase?
 
 Sometimes merging is not the cleanest solution. If you are working on **local changes** but also want to integrate the latest updates from remote:
 
-- A normal merge will produce a merge commit and mix histories.
-- A rebase will **reapply your local commits on top of the remote commits**, producing a cleaner, linear history.
+* A normal merge will produce a merge commit and mix histories.
+* A rebase will **reapply your local commits on top of the remote commits**, producing a cleaner, linear history.
 
 The command:
 
@@ -677,9 +670,9 @@ git log --oneline --decorate --graph --all
 
 Notice the difference:
 
-- The remote commits (`d9b0764`, `0535e79`) were applied first.
-- Your local commit (`ebf7c5c main: modified readme`) was **rebased on top**.
-- The history is linear, without extra merge commits.
+* The remote commits (`d9b0764`, `0535e79`) were applied first.
+* Your local commit (`ebf7c5c main: modified readme`) was **rebased on top**.
+* The history is linear, without extra merge commits.
 
 ## Advantages of `git pull --rebase`
 
@@ -712,22 +705,22 @@ git rebase --abort
 
 ### Key Takeaway
 
-- **`git pull`** = fetch + merge → quick but may clutter history.
-- **`git pull --rebase`** = fetch + rebase → cleaner history, local commits reapplied on top of remote.
-- Choose **merge** for long-lived, collaborative branches and **rebase** for short-lived, personal branches where you want a tidy history.
+* **`git pull`** = fetch + merge → quick but may clutter history.
+* **`git pull --rebase`** = fetch + rebase → cleaner history, local commits reapplied on top of remote.
+* Choose **merge** for long-lived, collaborative branches and **rebase** for short-lived, personal branches where you want a tidy history.
 
 ## 5. Git Reference Logs (Reflog)
-
 Git’s **reference logs (reflog)** act as a **safety net** for your repository. While `git log` shows the commits that are part of your branch’s history, `git reflog` records **all changes to the tips of branches and other references**—even if those commits don’t appear in the visible history anymore.
 
 Think of the reflog as a **personal diary of your Git actions**, maintained locally. Every time you:
 
-- Checkout a branch
-- Commit changes
-- Reset or rebase
-- Merge or pull
+* Checkout a branch
+* Commit changes
+* Reset or rebase
+* Merge or pull
 
 …the `HEAD` reference is updated, and the reflog records it.
+
 
 ## Step 1- Viewing the Reflog
 
@@ -751,9 +744,9 @@ e5c4de0 HEAD@{4}: merge origin/main: Fast-forward
 
 Here’s what’s happening:
 
-- `HEAD@{0}` – The most recent action. In this case, completing a pull with rebase.
-- `HEAD@{3}` – A commit made earlier (`main: modified readme`).
-- `HEAD@{5}` – A commit you thought might be “lost” if you reset later.
+* `HEAD@{0}` – The most recent action. In this case, completing a pull with rebase.
+* `HEAD@{3}` – A commit made earlier (`main: modified readme`).
+* `HEAD@{5}` – A commit you thought might be “lost” if you reset later.
 
 Unlike `git log`, these entries **remain visible even after resets or rebases**.
 
@@ -761,8 +754,8 @@ Unlike `git log`, these entries **remain visible even after resets or rebases**.
 
 Let’s say you reset a branch or made changes you regret.
 
-- `git log` may no longer show those commits (they are detached from the branch).
-- But reflog keeps them recorded, allowing you to **recover lost commits**.
+* `git log` may no longer show those commits (they are detached from the branch).
+* But reflog keeps them recorded, allowing you to **recover lost commits**.
 
 That’s why reflog is Git’s **time machine**.
 
@@ -814,6 +807,7 @@ Date:   Fri Sep 12 10:29:35 2025 +0200
     Included Hyperparameter tuning
 ```
 
+
 ## Step 4- Using Reflog to Recover from Mistakes
 
 ### Scenario: Hard Reset
@@ -859,9 +853,10 @@ Now your “lost” commits are restored into your main history.
 
 ## Step 5- Where Reflog Data Lives
 
-- Reflog entries are stored inside `.git/logs/`
-- They are **local only** – other collaborators cannot see your reflog.
-- Git garbage collection (`git gc`) may eventually clean up very old reflog entries.
+* Reflog entries are stored inside `.git/logs/`
+* They are **local only** – other collaborators cannot see your reflog.
+* Git garbage collection (`git gc`) may eventually clean up very old reflog entries.
+
 
 ## Step 6- Cheat Sheet
 
@@ -896,31 +891,30 @@ git log -g
 
 ## Key Takeaways
 
-- **Reflog is your safety net**: it tracks all branch tip movements.
-- You can **restore commits** even after resets, rebases, and amends.
-- It is **local-only** – don’t expect teammates to see your reflog.
-- Always check reflog when you think “I lost my commits!”
+* **Reflog is your safety net**: it tracks all branch tip movements.
+* You can **restore commits** even after resets, rebases, and amends.
+* It is **local-only** – don’t expect teammates to see your reflog.
+* Always check reflog when you think “I lost my commits!”
 
 ## Final Thoughts
 
-In real-world projects, Git is more than just a tool for saving code — it’s the foundation of teamwork and clean collaboration.
+In real-world projects, Git is more than just a tool for saving code — it’s the foundation of teamwork and clean collaboration.  
 
-The commands we covered — **amending commits, rebasing, fetching, pulling with rebase, and using reflog** — are the safety nets and precision tools that keep your history tidy and your team in sync. They also give you confidence that no mistake is truly permanent, since Git always keeps a trace.
+The commands we covered — **amending commits, rebasing, fetching, pulling with rebase, and using reflog** — are the safety nets and precision tools that keep your history tidy and your team in sync. They also give you confidence that no mistake is truly permanent, since Git always keeps a trace.  
 
-As an AI/ML Engineer, I’ve seen how messy histories and merge chaos can slow teams down. Mastering these advanced commands makes a big difference: your commits stay meaningful, your branches merge cleanly, and your teammates trust the process more.
+As an AI/ML Engineer, I’ve seen how messy histories and merge chaos can slow teams down. Mastering these advanced commands makes a big difference: your commits stay meaningful, your branches merge cleanly, and your teammates trust the process more.  
 
-Next time you’re unsure about a Git situation, take a step back:
-
-- **Amend** to fix local mistakes.
-- **Rebase** to replay history cleanly.
-- **Fetch** to stay aware without changing your branch.
-- **Pull with rebase** for cleaner integration.
-- **Reflog** when you think all hope is lost.
+Next time you’re unsure about a Git situation, take a step back:  
+- **Amend** to fix local mistakes.  
+- **Rebase** to replay history cleanly.  
+- **Fetch** to stay aware without changing your branch.  
+- **Pull with rebase** for cleaner integration.  
+- **Reflog** when you think all hope is lost.  
 
 Keep practicing these on side projects — they’ll become second nature. And once they do, you’ll find that Git feels less like a source of stress and more like a true partner in your development workflow.
 
 ## What’s Next?
 
-In the next post, I’ll explore **Git Stash** — a lifesaver for juggling multiple tasks in real-world AI/ML projects.
+In the next post, I’ll explore **Git Stash** — a lifesaver for juggling multiple tasks in real-world AI/ML projects.  
 
 You can also check out the [official Git documentation](https://git-scm.com/doc) for deeper details.

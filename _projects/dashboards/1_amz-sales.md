@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Amazon Sales Dashboard
+title: Amazon Sales Dashboard 
 description: Amazon Sales Dashboard using Tableau
 img: assets/img/p_amz_sales_dashboard/Home.png
 importance: 1
@@ -8,9 +8,9 @@ category: visualization
 related_publications: false
 ---
 
-This project is a multi-page Tableau dashboard built on an _Amazon Sales_ dataset and packaged as a Tableau workbook (`.twbx`) with an embedded extract (`.hyper`). It provides executive-level KPIs and drill-down views for **revenue, profit, cost, orders, shipping time**, and **item-level performance**.
+This project is a multi-page Tableau dashboard built on an *Amazon Sales* dataset and packaged as a Tableau workbook (`.twbx`) with an embedded extract (`.hyper`).  It provides executive-level KPIs and drill-down views for **revenue, profit, cost, orders, shipping time**, and **item-level performance**.
 
-**Published on Tableau Public:**
+**Published on Tableau Public:** 
 
 [Click here to interact with live dashboard](https://public.tableau.com/app/profile/suraj.bhardwaj2195/viz/Amz_Dashboard_22Sep/ItemAnalysis)
 
@@ -29,13 +29,10 @@ This project is a multi-page Tableau dashboard built on an _Amazon Sales_ datase
 ## Dataset
 
 ### Source & storage
-
 - The original dataset consists of a CSV file ingested into (Tableau “textscan”), then extracted to Hyper for performance.
 
 ### Main fields used
-
 Dimensions:
-
 - **Region**
 - **Country**
 - **Item Type**
@@ -46,7 +43,6 @@ Dimensions:
 - **Order ID** (used for counting orders)
 
 Measures:
-
 - **Units Sold**
 - **Total Revenue**
 - **Total Cost**
@@ -68,7 +64,7 @@ These are defined inside the workbook and used across views:
 
 - **Shipment**  
   `Shipment = COUNT([Order ID])`  
-  _(A duplicate of Total Orders, used in specific sheets.)_
+  *(A duplicate of Total Orders, used in specific sheets.)*
 
 - **color max row (highlight helper)**  
   Highlights the max performer in a view:  
@@ -103,14 +99,12 @@ Each page is built from dedicated worksheets (listed below) and connected via da
 </div>
 
 ### KPI tiles (single-value cards)
-
 - **Revenue** (SUM of Total Revenue)
 - **Profit** (SUM of Profit)
 - **Units Sold** (SUM of Units Sold)
 - **Shipment Days** (AVG of Ship Days)
 
 ### Breakdown views
-
 - **Profit Wise Regions**  
   Profit by Region (bar-style comparison) with max highlight support.
 
@@ -118,11 +112,9 @@ Each page is built from dedicated worksheets (listed below) and connected via da
   A geographic map plotting profit by **Country** (color encodes SUM(Profit)).
 
 ### Interactivity
-
 - The KPI tiles and map are designed to respond to **Region-based selections** (dashboard filter actions), enabling quick drill-down from region comparisons into the KPIs.
 
 Worksheets used:
-
 - `Revenue`, `Profit`, `Units Sold`, `Shipment Days`, `Profit Wise Regions`, `Profit Wise Countries`
 
 ---
@@ -141,7 +133,6 @@ Worksheets used:
 </div>
 
 ### Views included
-
 - **Orders Per Year**  
   Orders (COUNT(Order ID)) by **Order Date (Year)**.
 
@@ -155,11 +146,9 @@ Worksheets used:
   Sales Channel share view (uses SUM(Total Revenue) with size/wedge-size encoding, i.e., a share visualization).
 
 ### Interactivity
-
 - Cross-filtering is implemented via **Order Priority** and **Sales Channel** actions so that selecting a category focuses the other charts on the same subset.
 
 Worksheets used:
-
 - `Orders Per Year`, `Shipments Per Year`, `Priority Wise Orders`, `Sales Channel Analysis`
 
 ---
@@ -178,17 +167,14 @@ Worksheets used:
 </div>
 
 ### View included
-
 - **Revenue Per Year**
   - X-axis: **Ship Date (Year)**
   - Measures: **SUM(Total Revenue)** (and Ship Days is included in the view definition, enabling combined analysis via tooltip/secondary measure depending on chart setup)
 
 ### Interactivity
-
 - This page supports filtering by **Item Type** through dashboard actions.
 
 Worksheets used:
-
 - `Revenue Per Year`
 
 ---
@@ -207,20 +193,17 @@ Worksheets used:
 </div>
 
 ### Views included
+All four views are organized by **Item Type** and highlight the best performer using the *color max row* helper.
 
-All four views are organized by **Item Type** and highlight the best performer using the _color max row_ helper.
-
-- **Revenue Split**: SUM(Total Revenue) by Item Type
-- **Profit Split**: SUM(Profit) by Item Type
-- **Cost Split**: SUM(Total Cost) by Item Type
-- **Order Split**: Total Orders (COUNT(Order ID)) by Item Type
+- **Revenue Split**: SUM(Total Revenue) by Item Type  
+- **Profit Split**: SUM(Profit) by Item Type  
+- **Cost Split**: SUM(Total Cost) by Item Type  
+- **Order Split**: Total Orders (COUNT(Order ID)) by Item Type  
 
 ### Interactivity
-
 - The Item Analysis page uses **Item Type** actions to filter/drive the split views for fast, focused comparisons (e.g., selecting an item type to see its contribution across metrics).
 
 Worksheets used:
-
 - `Revenue Split`, `Profit Split`, `Cost Split`, `Order Split`
 
 ---
@@ -228,27 +211,22 @@ Worksheets used:
 ## Sheet inventory (for maintainability)
 
 KPI / single-value sheets:
-
 - `Revenue`, `Profit`, `Units Sold`, `Shipment Days`
 
 Geography:
-
 - `Profit Wise Countries` (map)
 
 Comparisons:
-
 - `Profit Wise Regions`
 - `Priority Wise Orders`
 - `Sales Channel Analysis`
 
 Time series:
-
 - `Orders Per Year`
 - `Shipments Per Year`
 - `Revenue Per Year`
 
 Item drill-down:
-
 - `Revenue Split`, `Profit Split`, `Cost Split`, `Order Split`
 
 ---
@@ -277,7 +255,6 @@ Item drill-down:
 ---
 
 ## Recommended enhancements (if you iterate on this)
-
 - Add a **data dictionary** page (field definitions + grain + assumptions).
 - Add **parameter controls**:
   - KPI selector (Revenue vs Profit vs Units Sold)
@@ -288,7 +265,6 @@ Item drill-down:
 ---
 
 ## Author
-
 **Suraj Bhardwaj**  
 [Portfolio](https://surajbhar.github.io)
 [GitHub](https://github.com/SurajBhar)  

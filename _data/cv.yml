@@ -41,7 +41,7 @@
   contents:
     - title: <a href="https://github.com/SurajBhar/masterarbeit_sb">Master Thesis- Improved Driver Distraction Detection using Self-Supervised Learning</a>
       year: 2023-2024
-      description:
+      description: 
         - Innovated the Clustered Feature Weighting (CFW) algorithm using HDBSCAN to address long-tailed label distributions in the Drive&Act dataset, achieving balanced training in a label-free setting.
         - Discovered that a self-supervised vision transformer (ViT-B/14 with DINOv2 pre-training) excels in cross-modality generalization, outperforming a supervised counterpart (ViT-B/16 pre-trained on ImageNet-1K) by 7.17% in adapting from RGB to infrared imagery.
         - Identified significant challenges in view-invariant feature extraction and cross-view generalization with the self-supervised vision transformer model.
@@ -49,7 +49,7 @@
 
     - title: <a href="https://github.com/SurajBhar/studienarbeit_repository">Studienarbeit- YOLO-Based Real-Time Object Detection for Autonomous Driving in CARLA</a>
       year: 2024-2024
-      description:
+      description: 
         - Built a high-fidelity sensor simulation pipeline in CARLA, collecting synchronized data from 8 cameras, radar, and 12 ultrasonic sensors at 30 FPS on a simulated Tesla Model 3.
         - Trained and evaluated 12 YOLO models (versions 8 to 11) on a custom image dataset, with YOLO8-m and YOLO11-m significantly outperforming others by achieving a mAP@(50-95) of 0.588, showcasing enhanced accuracy and efficiency in detecting cars, pedestrians, traffic lights and signs.
         - Implemented a real-time inference pipeline for camera based 2D object detection by integrating the fine-tuned YOLO11-m model in Carla Simulation, demonstrating its practical applicability for real-world scenarios.
