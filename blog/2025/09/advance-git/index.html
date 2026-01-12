@@ -44,7 +44,7 @@ git commit <span class="nt">-am</span> <span class="s2">"main:modified the title
  2 files changed, 9 insertions<span class="o">(</span>+<span class="o">)</span>, 1 deletion<span class="o">(</span>-<span class="o">)</span>
 
 
-git log <span class="nt">--oneline</span>                                   
+git log <span class="nt">--oneline</span>
 ab40261 <span class="o">(</span>HEAD -&gt; main<span class="o">)</span> main:modified the title - blog.html
 0832375 <span class="o">(</span>origin/main<span class="o">)</span> HTML File
 f86213d first commit
@@ -69,7 +69,7 @@ git commit <span class="nt">--amend</span> <span class="nt">--no-edit</span>
  create mode 100644 404.html
 
 <span class="c"># The commit has been made with new SHA and the old commit shaw is deleted</span>
-git log <span class="nt">--oneline</span>           
+git log <span class="nt">--oneline</span>
 4bf9f69 <span class="o">(</span>HEAD -&gt; main<span class="o">)</span> main:modified the title - blog.html
 0832375 <span class="o">(</span>origin/main<span class="o">)</span> HTML File
 f86213d first commit
@@ -83,7 +83,7 @@ git commit <span class="nt">--amend</span>
  create mode 100644 404.html
  create mode 100644 config.yaml
 
-git log <span class="nt">--oneline</span>  
+git log <span class="nt">--oneline</span>
 65cf379 <span class="o">(</span>HEAD -&gt; main<span class="o">)</span> main:modified the title - blog.html and added 404.html<span class="p">;</span> added config.yaml
 0832375 <span class="o">(</span>origin/main<span class="o">)</span> HTML File
 f86213d first commit
@@ -91,7 +91,7 @@ f86213d first commit
 </code></pre></div></div> <p>If you only want to fix the <strong>commit message</strong> and not change the files, Git gives you a flag for that:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">--amend</span> <span class="nt">-m</span> <span class="s2">"New, corrected commit message"</span>
 </code></pre></div></div> <p>That command replaces the old message with the new one while keeping the commit’s content exactly the same.</p> <p>Alternatively, if you want to open your editor to edit the message interactively:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit <span class="nt">--amend</span>
 </code></pre></div></div> <p>Just don’t stage any new files before running it—otherwise Git will also include those changes in the amended commit.</p> <h2 id="2-git-rebase">2. Git Rebase</h2> <p><strong>Rebase</strong> moves your commits to a new base commit. Instead of merging two branches (which creates a merge commit), rebase <strong>replays</strong> your branch’s commits <em>on top of</em> another branch, producing a <strong>linear history</strong>.</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create a new branch named feature-branch</span>
-git checkout <span class="nt">-b</span> feature-branch 
+git checkout <span class="nt">-b</span> feature-branch
 
 <span class="c"># sample command for rebase</span>
 git rebase &lt;BASE&gt;
@@ -125,7 +125,7 @@ git commit <span class="nt">-am</span> <span class="s2">"main: modified Error Me
 * 84900fe main: modified title again- 404.html
 | * e7f8a2e (feature-branch) feature-branch: modified Error Message - 404.html
 | * 82ff182 feature-branch: modified title - 404.html
-|/  
+|/
 * 89293e4 (origin/main) Rebasing
 * 86bcbc6 Updated Readme with future section
 </code></pre></div></div> <p>Now both branches have diverged.</p> <h4 id="step-4--start-rebasing">Step 4- Start Rebasing</h4> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout feature-branch
