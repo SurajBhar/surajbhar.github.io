@@ -1,0 +1,116 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta name="google-site-verification" content="XvJiFrNFzPsZIg5PT03kJ4OPAwssBTjgTZVfaa6Yvc4"> <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Expense Tracker MCP Server (FastMCP) | Suraj Bhardwaj </title> <meta name="author" content="Suraj Bhardwaj"> <meta name="description" content="A local Model Context Protocol (MCP) server for personal expense tracking built with FastMCP + SQLite."> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/sb_logo.jpg?7d7bac962cfcbf2457ae432a480a2c2b"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://surajbhar.github.io/projects/mcp/1_mcpserver-expense/"> <script src="/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Suraj</span> Bhardwaj </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">About </a> </li> <li class="nav-item "> <a class="nav-link" href="/blog/">Blog </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">Projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">Repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="ti ti-search"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Expense Tracker MCP Server (FastMCP)</h1> <p class="post-description">A local Model Context Protocol (MCP) server for personal expense tracking built with FastMCP + SQLite.</p> </header> <article> <p>This project is a local <strong>Expense Tracker MCP (Model Context Protocol) Server</strong> built with <strong>FastMCP</strong> and <strong>SQLite</strong>. It exposes a set of structured tools for expense CRUD, analytics, reporting, and German tax-friendly summaries—designed to be tested directly via the FastMCP tools UI and integrated into agentic workflows.</p> <p>The implementation focuses on <strong>robustness in <code class="language-plaintext highlighter-rouge">fastmcp dev</code> mode</strong>, where the server is imported as a standalone module (not a Python package). Key outcomes:</p> <ul> <li>No fragile relative imports</li> <li>Database schema is guaranteed on every DB connection</li> <li>Output/report paths are safe (directory vs file path)</li> </ul> <p><a href="https://github.com/SurajBhar/MCP_SERVER_Expense_Tracker" rel="external nofollow noopener" target="_blank"> View the source code on GitHub</a></p> <hr> <pre><code class="language-plotly">{
+  "data": [
+    {
+      "type": "pie",
+      "labels": ["Insurance", "Food", "Telecom", "business", "Shopping", "Health", "Transport", "education", "Subscriptions", "Entertainment"],
+      "values": [9252.0, 7323.26, 5004.0, 3089.0, 2337.15, 2297.82, 2268.0, 1989.0, 1692.0, 572.54],
+      "hole": 0.3,
+      "textinfo": "percent+label",
+      "textposition": "inside",
+      "hovertemplate": "label=%{label}&lt;br&gt;value=%{value}&lt;extra&gt;&lt;/extra&gt;",
+      "showlegend": true
+    }
+  ],
+  "layout": {
+    "title": { "text": "Spending by Category" },
+    "legend": { "orientation": "v" }
+  }
+}
+
+
+</code></pre> <pre><code class="language-plotly">{
+  "data": [
+    {
+      "type": "scatter",
+      "mode": "lines+markers",
+      "name": "Total Spending",
+      "x": ["2023-01","2023-02","2023-03","2023-04","2023-05","2023-06","2023-07","2023-08","2023-09","2023-10","2023-11","2023-12","2024-01","2024-02","2024-03","2024-04","2024-05","2024-06","2024-07","2024-08","2024-09","2024-10","2024-11","2024-12","2025-01","2025-02","2025-03","2025-04","2025-05","2025-06","2025-07","2025-08","2025-09","2025-10","2025-11","2025-12","2026-01"],
+      "y": [791.75,1373.54,1161.17,1349.78,920.66,1752.03,798.65,879.05,785.97,828.95,855.48,787.54,862.28,1068.09,1005.64,1081.78,909.37,1800.44,1130.89,917.06,843.0,932.18,812.17,853.12,849.58,981.55,991.04,815.96,964.6,1786.48,826.24,827.87,1117.27,896.02,805.28,870.78,94.7]
+    }
+  ],
+  "layout": {
+    "title": { "text": "Spending Trends Over Time" },
+    "xaxis": { "title": { "text": "Period" } },
+    "yaxis": { "title": { "text": "Amount (EUR)" } },
+    "hovermode": "x unified"
+  }
+}
+
+</code></pre> <pre><code class="language-plotly">{
+  "data": [
+    {
+      "type": "bar",
+      "x": ["Insurance", "Food", "Telecom", "business", "Shopping", "Health", "Transport", "education", "Subscriptions", "Entertainment"],
+      "y": [9252.0, 7323.26, 5004.0, 3089.0, 2337.15, 2297.82, 2268.0, 1989.0, 1692.0, 572.54]
+    }
+  ],
+  "layout": {
+    "title": { "text": "Top 10 Spending Categories" },
+    "xaxis": { "title": { "text": "Category" }, "tickangle": -45 },
+    "yaxis": { "title": { "text": "Total Amount (EUR)" } }
+  }
+}
+
+</code></pre> <hr> <h2 id="key-features">Key features</h2> <h3 id="expense-management">Expense management</h3> <ul> <li>Add, edit, delete expenses</li> <li>List expenses by date range</li> <li>Search &amp; filter by category, amount range, note substring, tax deductible flag (with pagination)</li> </ul> <h3 id="analytics">Analytics</h3> <ul> <li>Quick stats: totals, averages, min/max, top category, most expensive day</li> <li>Category analytics with percentages</li> <li>Trend analysis grouped by day, week, month</li> <li>Month-to-month comparison</li> <li>Moving-average forecast</li> </ul> <h3 id="reporting-and-data-workflows">Reporting and data workflows</h3> <ul> <li>Interactive HTML report (Plotly)</li> <li>PNG chart generation (Matplotlib): pie, bar, line, stacked bar</li> <li>Export to CSV / JSON / Excel (optional analytics sheet)</li> <li>Import from CSV / JSON with tolerant parsing (header normalization, comma/decimal support)</li> </ul> <h3 id="german-tax-support">German tax support</h3> <ul> <li>Mark expenses as tax-deductible</li> <li>Yearly <code class="language-plaintext highlighter-rouge">tax_summary</code> grouped into German-friendly buckets: Werbungskosten, Gesundheitskosten, Versicherungen, Spenden, Sonstige</li> </ul> <hr> <h2 id="architecture-and-directory-structure">Architecture and directory structure</h2> <p>The project follows a “thin tools, fat services” design:</p> <ul> <li> <code class="language-plaintext highlighter-rouge">server.py</code> contains only MCP tool wrappers</li> <li> <code class="language-plaintext highlighter-rouge">services/*</code> contains testable business logic</li> <li> <code class="language-plaintext highlighter-rouge">db.py</code> guarantees schema on every <code class="language-plaintext highlighter-rouge">connect()</code> call</li> </ul> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>expense_tracker/
+  server.py
+  config.py
+  db.py
+  utils/
+    __init__.py
+    dates.py
+  services/
+    __init__.py
+    expenses_service.py
+    analytics_service.py
+    reports_service.py
+    io_service.py
+  data/
+    categories.json
+    expenses.db
+  reports/
+  outputs/
+</code></pre></div></div> <p><strong>Why this matters:</strong> in <code class="language-plaintext highlighter-rouge">fastmcp dev server.py</code>, FastMCP imports the file as a top-level module. This project avoids the common “attempted relative import” issues by using <strong>absolute imports everywhere</strong>.</p> <hr> <h2 id="local-setup">Local setup</h2> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install dependencies</span>
+uv add fastmcp matplotlib plotly pandas openpyxl
+
+<span class="c"># Run server in dev mode</span>
+uv run fastmcp dev server.py
+</code></pre></div></div> <p>If FastMCP can’t infer the server object:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uv run fastmcp dev server.py:mcp
+</code></pre></div></div> <hr> <h2 id="example-usage-copypaste-payloads">Example usage (copy/paste payloads)</h2> <h3 id="add-an-expense">Add an expense</h3> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-01-10"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">12.50</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"food"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"subcategory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"groceries"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rewe weekly shopping"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"tax_deductible"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EUR"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"payment_method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"card"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <h3 id="monthly-statistics">Monthly statistics</h3> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-01-01"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-01-31"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <h3 id="generate-an-html-report">Generate an HTML report</h3> <p>Directory paths are supported (a filename is created automatically):</p> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-12-01"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-12-31"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"output_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./reports"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <h3 id="export-to-excel-with-analytics">Export to Excel with analytics</h3> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"start_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-01-01"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"end_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-12-31"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"excel"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"include_analytics"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"output_path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./outputs"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> <hr> <h2 id="implementation-highlights">Implementation highlights</h2> <ul> <li> <strong>Schema-first DB layer</strong>: <code class="language-plaintext highlighter-rouge">connect()</code> ensures the database file exists and calls <code class="language-plaintext highlighter-rouge">init_db()</code> to create/migrate the <code class="language-plaintext highlighter-rouge">expenses</code> table before any operation.</li> <li> <strong>Robust output handling</strong>: report/export tools accept either a directory or a full file path without errors.</li> <li> <strong>Service modularization</strong>: business logic is separated into CRUD, analytics, reports, and IO services, making the code easier to maintain and test.</li> </ul> <hr> <h2 id="what-i-learned">What I learned</h2> <ul> <li>Designing MCP tools that are <strong>LLM-friendly</strong> (optional args, safe defaults, deterministic output structures)</li> <li>Avoiding common FastMCP dev pitfalls: import mechanics, tool wrappers vs callables, and filesystem outputs</li> <li>Building a small but complete data product pipeline: ingest → store → analyze → visualize → export</li> </ul> <hr> <h2 id="links">Links</h2> <ul> <li>GitHub repository: <a href="https://github.com/SurajBhar/MCP_SERVER_Expense_Tracker/tree/main" rel="external nofollow noopener" target="_blank">Link</a> </li> <li>Categories schema: <code class="language-plaintext highlighter-rouge">data/categories.json</code> </li> <li>Local reports: <code class="language-plaintext highlighter-rouge">reports/</code> </li> <li>Exports: <code class="language-plaintext highlighter-rouge">outputs/</code> </li> </ul> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Suraj Bhardwaj. Last updated: January 23, 2026. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/plotly.js@3.0.1/dist/plotly.min.js" integrity="sha256-oy6Be7Eh6eiQFs5M7oXuPxxm9qbJXEtTpfSI93dW16Q=" crossorigin="anonymous"></script> <script defer src="/assets/js/plotly-setup.js?5e81fc889064852664784cb29c0d6970" type="text/javascript"></script> <script src="/assets/js/tooltips-setup.js?53023e960fbc64cccb90d32e9363de2b"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script> <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-VK12MS1F1R"></script> <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-VK12MS1F1R');
+  </script> <script defer src="/assets/js/google-analytics-setup.js"></script> <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script> </body> </html>

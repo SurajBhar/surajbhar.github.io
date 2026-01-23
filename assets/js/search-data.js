@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-generative-modeling-from-datasets-to-gans",
+        },{id: "post-in-context-learning-in-multimodal-foundation-models-language-vision-and-robotics",
+        
+          title: 'In-Context Learning in Multimodal Foundation Models: Language, Vision, and Robotics <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@suraj.bhardwaj.de/in-context-learning-in-multimodal-foundation-models-language-vision-and-robotics-4b3538a9a054?source=rss-c33466f117a1------2", "_blank");
+          
+        },
+      },{id: "post-generative-modeling-from-datasets-to-gans",
         
           title: "Generative Modeling- From Datasets to GANs",
         
@@ -194,13 +205,13 @@ ninja.data = [{
           section: "News",},{id: "news-project-alert-developed-the-gdpr-rag-assistant-evaluation-first-legal-compliance-chatbot-framed-and-implemented-the-problem-of-trustworthy-gdpr-q-amp-amp-a-a-rag-system-that-provides-auditable-citation-backed-answers-and-clearly-signals-when-the-knowledge-base-lacks-coverage",
           title: 'Project Alert: Developed the GDPR RAG Assistant – Evaluation-First Legal Compliance Chatbot. Framed...',
           description: "",
-          section: "News",},{id: "projects-predicting-movie-sentiment-end-to-end-from-code-to-cloud",
-          title: 'Predicting Movie Sentiment End-to-End- From Code to Cloud',
+          section: "News",},{id: "projects-end-to-end-movie-sentiment-prediction",
+          title: 'End-to-End Movie Sentiment Prediction',
           description: "Movie Sentiment Prediction Microservice",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-hotel-reservation-cancellation-prediction",
-          title: 'Hotel Reservation Cancellation Prediction',
+            },},{id: "projects-end-to-end-hotel-reservation-cancellation-prediction",
+          title: 'End-to-End Hotel Reservation Cancellation Prediction',
           description: "Hotel Reservation Cancellation Prediction — From Notebook to Production on GCP",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
@@ -214,11 +225,16 @@ ninja.data = [{
           description: "Relational Database Design &amp; Analysis for Data Science Team Management",
           section: "Projects",handler: () => {
               window.location.href = "/projects/data/1_sql-project/";
-            },},{id: "projects-azure-vm-scale-set-web-app-behind-standard-load-balancer",
-          title: 'Azure VM Scale Set Web App Behind Standard Load Balancer',
+            },},{id: "projects-azure-vm-scale-set",
+          title: 'Azure VM Scale Set',
           description: "Production-style Azure infrastructure provisioned with Terraform",
           section: "Projects",handler: () => {
               window.location.href = "/projects/iac/1_azure-vm/";
+            },},{id: "projects-expense-tracker-mcp-server-fastmcp",
+          title: 'Expense Tracker MCP Server (FastMCP)',
+          description: "A local Model Context Protocol (MCP) server for personal expense tracking built with FastMCP + SQLite.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mcp/1_mcpserver-expense/";
             },},{id: "projects-chat-with-your-documents",
           title: 'Chat with Your Documents',
           description: "Retrieval-Augmented Generation (RAG) chatbot with NVIDIA NIM and Streamlit",
@@ -234,13 +250,13 @@ ninja.data = [{
           description: "Evaluation-first GDPR Retrieval-Augmented Generation (RAG) assistant with FastAPI, Azure OpenAI, Azure AI Search, and automated RAG evaluation.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rag/3_gdpr_assistant/";
-            },},{id: "projects-master-thesis",
-          title: 'Master Thesis',
+            },},{id: "projects-driver-distraction-detection",
+          title: 'Driver Distraction Detection',
           description: "Improved Driver Distraction Detection Using Self-Supervised Learning",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research/1_master-thesis/";
-            },},{id: "projects-studienarbeit-real-time-object-detection",
-          title: 'Studienarbeit-Real-Time Object Detection',
+            },},{id: "projects-real-time-object-detection",
+          title: 'Real-Time Object Detection',
           description: "YOLO-Based Real-Time Object Detection for Autonomous Driving in CARLA",
           section: "Projects",handler: () => {
               window.location.href = "/projects/research/2_yolo-project/";
