@@ -3,8 +3,8 @@ layout: page
 title: Amazon Sales Dashboard 
 description: Amazon Sales Dashboard using Tableau
 img: assets/img/p_amz_sales_dashboard/Home.png
-importance: 1
-category: visualization
+importance: 2
+category: data
 related_publications: false
 ---
 

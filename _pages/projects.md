@@ -8,10 +8,7 @@ nav_order: 2
 # display_categories: [work, fun]
 display_categories:
   - generative-ai
-  - computer-vision
-  - mlops
-  - infrastructure-as-code
-  - visualization
+  - machine-learning
   - data
 horizontal: false
 ---

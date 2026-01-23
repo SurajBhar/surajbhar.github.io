@@ -4,13 +4,11 @@ github_users:
 repo_description_lines_max: 1
 
 github_repos:
+  - SurajBhar/hrprediction
+  - SurajBhar/moviesentiment
+  - SurajBhar/MCP_SERVER_Expense_Tracker
   - SurajBhar/masterarbeit_sb
   - SurajBhar/studienarbeit_repository
-  - SurajBhar/data_science_sql_project
-  - SurajBhar/rag_nim
   - SurajBhar/bayesian_opt
-  - SurajBhar/codeninja
-  - SurajBhar/langchain_projects
-  - SurajBhar/Face_Mask_Detection
   - SurajBhar/augmix
   - SurajBhar/ndf

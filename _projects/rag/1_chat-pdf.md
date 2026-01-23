@@ -3,7 +3,7 @@ layout: page
 title: Chat with Your Documents
 description: Retrieval-Augmented Generation (RAG) chatbot with NVIDIA NIM and Streamlit
 img: assets/img/p_rag/rag_demo.png
-importance: 3
+importance: 4
 category: generative-ai
 related_publications: false
 ---

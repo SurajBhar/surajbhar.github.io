@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Predicting Movie Sentiment End-to-End- From Code to Cloud
+title: End-to-End Movie Sentiment Prediction
 description: Movie Sentiment Prediction Microservice
 img: assets/img/p_moviesentiment/3_app_1.png
 importance: 1
-category: mlops
+category: machine-learning
 related_publications: false
 ---
 

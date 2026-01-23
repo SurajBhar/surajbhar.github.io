@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Azure VM Scale Set Web App Behind Standard Load Balancer
+title: Azure VM Scale Set
 description: Production-style Azure infrastructure provisioned with Terraform
 img: assets/img/p_azure_vm/vmss_tf.png
-importance: 1
-category: infrastructure-as-code
+importance: 8
+category: machine-learning
 related_publications: false
 ---
 

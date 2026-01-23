@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Hotel Reservation Cancellation Prediction
+title: End-to-End Hotel Reservation Cancellation Prediction
 description: Hotel Reservation Cancellation Prediction — From Notebook to Production on GCP
 img: assets/img/p_hrprediction/app.png
 importance: 2
-category: mlops
+category: machine-learning
 giscus_comments: false
 ---
 

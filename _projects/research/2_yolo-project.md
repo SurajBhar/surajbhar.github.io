@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Studienarbeit-Real-Time Object Detection
+title: Real-Time Object Detection
 description: YOLO-Based Real-Time Object Detection for Autonomous Driving in CARLA
 img: assets/img/p_research/advantage_higly_occluded_detection_town_3_daytime_w1.PNG
-importance: 2
-category: computer-vision
+importance: 4
+category: machine-learning
 related_publications: false
 ---
 

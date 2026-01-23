@@ -3,8 +3,8 @@ layout: page
 title: 3D Representation Learning
 description: Advancing Neural Unsigned Distance Fields for Implicit 3D Function Learning
 img: assets/img/p_research/ndf_shapenet2.png
-importance: 4
-category: computer-vision
+importance: 6
+category: machine-learning
 related_publications: false
 ---
 

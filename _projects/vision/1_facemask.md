@@ -3,8 +3,8 @@ layout: page
 title: Face Mask Detection
 description: Real-time mask detection using VGG16 and HaarCascade
 img: assets/img/p_vision/face_mask_detection_featured.jpg
-importance: 5
-category: computer-vision
+importance: 7
+category: machine-learning
 related_publications: false
 --- 
 
