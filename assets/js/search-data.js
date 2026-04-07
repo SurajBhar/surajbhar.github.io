@@ -23,13 +23,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-repositories",
-          title: "Repositories",
-          description: "A collection of my open-source projects and research code.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/repositories/";
-          },
         },{id: "nav-publications",
           title: "Publications",
           description: "Research publications and conference papers, listed in reverse chronological order.",
@@ -215,6 +208,16 @@ ninja.data = [{
           description: "Hotel Reservation Cancellation Prediction — From Notebook to Production on GCP",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
+            },},{id: "projects-technical-content-writer-agentic-platform",
+          title: 'Technical Content Writer Agentic Platform',
+          description: "Agentic AI system for automated technical blog generation using LangGraph, Streamlit, and LLMs.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/agents/1_deep-blog-agent/";
+            },},{id: "projects-strands-multi-agent-orchestrator",
+          title: 'Strands Multi-Agent Orchestrator',
+          description: "Multi-agent personal assistant using Strands agent-as-tool pattern with orchestration across calendar, coding, and search.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/agents/2_personal-assistant/";
             },},{id: "projects-amazon-sales-dashboard",
           title: 'Amazon Sales Dashboard',
           description: "Amazon Sales Dashboard using Tableau",
