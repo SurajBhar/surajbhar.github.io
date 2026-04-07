@@ -3,7 +3,7 @@ layout: page
 title: Expense Tracker MCP Server (FastMCP)
 description: A local Model Context Protocol (MCP) server for personal expense tracking built with FastMCP + SQLite.
 img: assets/img/p_mcp/mcp_1.png
-importance: 1
+importance: 3
 category: generative-ai
 related_publications: false
 

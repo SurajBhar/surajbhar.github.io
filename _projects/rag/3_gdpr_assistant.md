@@ -3,7 +3,7 @@ layout: page
 title: GDPR RAG Assistant
 description: Evaluation-first GDPR Retrieval-Augmented Generation (RAG) assistant with FastAPI, Azure OpenAI, Azure AI Search, and automated RAG evaluation.
 img: assets/img/p_gdpr_rag/eval2.png
-importance: 2
+importance: 4
 category: generative-ai
 related_publications: false
 ---
